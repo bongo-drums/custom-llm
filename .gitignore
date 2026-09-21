@@ -1,0 +1,10 @@
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+/llm_runs/
+names.txt
+.DS_Store
+# My corpus files are my own writing and are published on purpose.
+
+/results/
+/chat_transcript.json

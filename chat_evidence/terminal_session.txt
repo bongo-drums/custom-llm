@@ -1,0 +1,17 @@
+$ python chat.py --model experiments/expanded/model.pt --transcript chat_evidence/chat_transcript.json
+number of parameters: 0.13M
+Tiny language model: short continuations, not a general assistant.
+Each prompt starts fresh. Context: 48 tokens. Type /quit to exit.
+You: the customer
+Model: compared the brand after checking the price .
+You: the opposite of big is
+Model: small .
+You: a trout is a
+Model: fish .
+You: when the room is dark , we
+Model: salmon .
+You: what is the capital of france ?
+Model: route .
+Unknown words: ?, capital, france
+You: /quit
+Saved transcript: chat_evidence/chat_transcript.json

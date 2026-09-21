@@ -1,0 +1,290 @@
+a banana is a fruit .
+a banana is a fruit . a mango is a fruit .
+a bicycle is a vehicle .
+a bicycle is a vehicle . a car is a vehicle .
+a bicycle is a vehicle . a horse is an animal .
+a bicycle is a vehicle . a taxi is a vehicle .
+a broccoli is a vegetable .
+a broccoli is a vegetable . a hammer is a tool .
+a broccoli is a vegetable . a taxi is a vehicle .
+a broccoli is a vegetable . a trout is a fish .
+a broccoli is a vegetable . an onion is a vegetable .
+a bus is a vehicle .
+a bus is a vehicle . a bicycle is a vehicle .
+a bus is a vehicle . a truck is a vehicle .
+a calf grows into a cow .
+a calf grows into a cow . a caterpillar grows into a butterfly .
+a calf grows into a cow . a chick grows into a hen .
+a calf grows into a cow . a cub grows into a bear .
+a calf grows into a cow . a duckling grows into a duck .
+a calf grows into a cow . a foal grows into a horse .
+a calf grows into a cow . a kid grows into a goat .
+a calf grows into a cow . a lamb grows into a sheep .
+a calf grows into a cow . a seed grows into a plant .
+a calf grows into a cow . a tadpole grows into a frog .
+a car is a vehicle .
+a car is a vehicle . a crow is a bird .
+a car is a vehicle . a potato is a vegetable .
+a car is a vehicle . a saw is a tool .
+a car is a vehicle . a wool is a fabric .
+a cat is an animal .
+a cat is an animal . a broccoli is a vegetable .
+a caterpillar grows into a butterfly .
+a caterpillar grows into a butterfly . a calf grows into a cow .
+a caterpillar grows into a butterfly . a chick grows into a hen .
+a caterpillar grows into a butterfly . a cub grows into a bear .
+a caterpillar grows into a butterfly . a duckling grows into a duck .
+a caterpillar grows into a butterfly . a foal grows into a horse .
+a caterpillar grows into a butterfly . a kid grows into a goat .
+a caterpillar grows into a butterfly . a lamb grows into a sheep .
+a caterpillar grows into a butterfly . a seed grows into a plant .
+a caterpillar grows into a butterfly . a tadpole grows into a frog .
+a chick grows into a hen .
+a chick grows into a hen . a calf grows into a cow .
+a chick grows into a hen . a caterpillar grows into a butterfly .
+a chick grows into a hen . a cub grows into a bear .
+a chick grows into a hen . a duckling grows into a duck .
+a chick grows into a hen . a foal grows into a horse .
+a chick grows into a hen . a kid grows into a goat .
+a chick grows into a hen . a lamb grows into a sheep .
+a chick grows into a hen . a seed grows into a plant .
+a chick grows into a hen . a tadpole grows into a frog .
+a cod is a fish .
+a cod is a fish . a car is a vehicle .
+a cod is a fish . a gold is a metal .
+a copper is a metal .
+a copper is a metal . a tuna is a fish .
+a copper is a metal . a willow is a tree .
+a copper is a metal . an iron is a metal .
+a cotton is a fabric .
+a cotton is a fabric . a saw is a tool .
+a crow is a bird .
+a crow is a bird . a maple is a tree .
+a crow is a bird . a parrot is a bird .
+a crow is a bird . a pea is a vegetable .
+a crow is a bird . an eagle is a bird .
+a crow is a bird . an owl is a bird .
+a cub grows into a bear .
+a cub grows into a bear . a calf grows into a cow .
+a cub grows into a bear . a caterpillar grows into a butterfly .
+a cub grows into a bear . a chick grows into a hen .
+a cub grows into a bear . a duckling grows into a duck .
+a cub grows into a bear . a foal grows into a horse .
+a cub grows into a bear . a kid grows into a goat .
+a cub grows into a bear . a lamb grows into a sheep .
+a cub grows into a bear . a seed grows into a plant .
+a cub grows into a bear . a tadpole grows into a frog .
+a denim is a fabric .
+a denim is a fabric . a cotton is a fabric .
+a denim is a fabric . a crow is a bird .
+a denim is a fabric . a silk is a fabric .
+a dog is an animal .
+a dog is an animal . a cotton is a fabric .
+a dog is an animal . a duck is an animal .
+a dog is an animal . a grape is a fruit .
+a drill is a tool .
+a drill is a tool . a bus is a vehicle .
+a drill is a tool . a hammer is a tool .
+a drill is a tool . a wool is a fabric .
+a drill is a tool . a wrench is a tool .
+a duck is an animal .
+a duck is an animal . a bus is a vehicle .
+a duck is an animal . a cod is a fish .
+a duck is an animal . a horse is an animal .
+a duckling grows into a duck .
+a duckling grows into a duck . a calf grows into a cow .
+a duckling grows into a duck . a caterpillar grows into a butterfly .
+a duckling grows into a duck . a chick grows into a hen .
+a duckling grows into a duck . a cub grows into a bear .
+a duckling grows into a duck . a foal grows into a horse .
+a duckling grows into a duck . a kid grows into a goat .
+a duckling grows into a duck . a lamb grows into a sheep .
+a duckling grows into a duck . a seed grows into a plant .
+a duckling grows into a duck . a tadpole grows into a frog .
+a foal grows into a horse .
+a foal grows into a horse . a calf grows into a cow .
+a foal grows into a horse . a caterpillar grows into a butterfly .
+a foal grows into a horse . a chick grows into a hen .
+a foal grows into a horse . a cub grows into a bear .
+a foal grows into a horse . a duckling grows into a duck .
+a foal grows into a horse . a kid grows into a goat .
+a foal grows into a horse . a lamb grows into a sheep .
+a foal grows into a horse . a seed grows into a plant .
+a foal grows into a horse . a tadpole grows into a frog .
+a goat is an animal .
+a goat is an animal . an eagle is a bird .
+a gold is a metal .
+a gold is a metal . a crow is a bird .
+a gold is a metal . a goat is an animal .
+a gold is a metal . a wrench is a tool .
+a gold is a metal . an onion is a vegetable .
+a grape is a fruit .
+a grape is a fruit . a banana is a fruit .
+a grape is a fruit . a peach is a fruit .
+a grape is a fruit . a willow is a tree .
+a hammer is a tool .
+a hammer is a tool . a cat is an animal .
+a horse is an animal .
+a horse is an animal . a cat is an animal .
+a horse is an animal . a dog is an animal .
+a horse is an animal . a goat is an animal .
+a horse is an animal . a hammer is a tool .
+a horse is an animal . an iron is a metal .
+a horse is an animal . an oak is a tree .
+a kid grows into a goat .
+a kid grows into a goat . a calf grows into a cow .
+a kid grows into a goat . a caterpillar grows into a butterfly .
+a kid grows into a goat . a chick grows into a hen .
+a kid grows into a goat . a cub grows into a bear .
+a kid grows into a goat . a duckling grows into a duck .
+a kid grows into a goat . a foal grows into a horse .
+a kid grows into a goat . a lamb grows into a sheep .
+a kid grows into a goat . a seed grows into a plant .
+a kid grows into a goat . a tadpole grows into a frog .
+a lamb grows into a sheep .
+a lamb grows into a sheep . a calf grows into a cow .
+a lamb grows into a sheep . a caterpillar grows into a butterfly .
+a lamb grows into a sheep . a chick grows into a hen .
+a lamb grows into a sheep . a cub grows into a bear .
+a lamb grows into a sheep . a duckling grows into a duck .
+a lamb grows into a sheep . a foal grows into a horse .
+a lamb grows into a sheep . a kid grows into a goat .
+a lamb grows into a sheep . a seed grows into a plant .
+a lamb grows into a sheep . a tadpole grows into a frog .
+a mango is a fruit .
+a mango is a fruit . a bus is a vehicle .
+a mango is a fruit . a dog is an animal .
+a mango is a fruit . a pear is a fruit .
+a mango is a fruit . an owl is a bird .
+a maple is a tree .
+a maple is a tree . an oak is a tree .
+a maple is a tree . an onion is a vegetable .
+a parrot is a bird .
+a pea is a vegetable .
+a pea is a vegetable . a broccoli is a vegetable .
+a pea is a vegetable . a potato is a vegetable .
+a peach is a fruit .
+a peach is a fruit . a copper is a metal .
+a peach is a fruit . a drill is a tool .
+a peach is a fruit . a silk is a fabric .
+a peach is a fruit . a tuna is a fish .
+a peach is a fruit . an onion is a vegetable .
+a pear is a fruit .
+a pear is a fruit . a grape is a fruit .
+a pine is a tree .
+a pine is a tree . a banana is a fruit .
+a pine is a tree . a bus is a vehicle .
+a pine is a tree . a cod is a fish .
+a pine is a tree . a drill is a tool .
+a pine is a tree . a gold is a metal .
+a pine is a tree . a sparrow is a bird .
+a potato is a vegetable .
+a potato is a vegetable . a dog is an animal .
+a potato is a vegetable . a maple is a tree .
+a potato is a vegetable . a pea is a vegetable .
+a potato is a vegetable . a pear is a fruit .
+a potato is a vegetable . an iron is a metal .
+a saw is a tool .
+a saw is a tool . a drill is a tool .
+a saw is a tool . a potato is a vegetable .
+a saw is a tool . a shark is a fish .
+a saw is a tool . an iron is a metal .
+a saw is a tool . an owl is a bird .
+a seed grows into a plant .
+a seed grows into a plant . a calf grows into a cow .
+a seed grows into a plant . a caterpillar grows into a butterfly .
+a seed grows into a plant . a chick grows into a hen .
+a seed grows into a plant . a cub grows into a bear .
+a seed grows into a plant . a duckling grows into a duck .
+a seed grows into a plant . a foal grows into a horse .
+a seed grows into a plant . a kid grows into a goat .
+a seed grows into a plant . a lamb grows into a sheep .
+a seed grows into a plant . a tadpole grows into a frog .
+a shark is a fish .
+a shark is a fish . a cotton is a fabric .
+a shark is a fish . a tuna is a fish .
+a shark is a fish . an oak is a tree .
+a silk is a fabric .
+a silk is a fabric . a potato is a vegetable .
+a silk is a fabric . a trout is a fish .
+a silk is a fabric . a wool is a fabric .
+a sparrow is a bird .
+a sparrow is a bird . a shark is a fish .
+a steel is a metal .
+a steel is a metal . a copper is a metal .
+a steel is a metal . a gold is a metal .
+a steel is a metal . a grape is a fruit .
+a tadpole grows into a frog .
+a tadpole grows into a frog . a calf grows into a cow .
+a tadpole grows into a frog . a caterpillar grows into a butterfly .
+a tadpole grows into a frog . a chick grows into a hen .
+a tadpole grows into a frog . a cub grows into a bear .
+a tadpole grows into a frog . a duckling grows into a duck .
+a tadpole grows into a frog . a foal grows into a horse .
+a tadpole grows into a frog . a kid grows into a goat .
+a tadpole grows into a frog . a lamb grows into a sheep .
+a tadpole grows into a frog . a seed grows into a plant .
+a taxi is a vehicle .
+a taxi is a vehicle . an oak is a tree .
+a trout is a fish .
+a trout is a fish . a crow is a bird .
+a trout is a fish . a drill is a tool .
+a truck is a vehicle .
+a truck is a vehicle . a bus is a vehicle .
+a truck is a vehicle . a copper is a metal .
+a truck is a vehicle . a grape is a fruit .
+a truck is a vehicle . a shark is a fish .
+a tuna is a fish .
+a tuna is a fish . a broccoli is a vegetable .
+a tuna is a fish . a cat is an animal .
+a tuna is a fish . a cod is a fish .
+a tuna is a fish . a mango is a fruit .
+a tuna is a fish . a shark is a fish .
+a tuna is a fish . a trout is a fish .
+a willow is a tree .
+a wool is a fabric .
+a wool is a fabric . a bicycle is a vehicle .
+a wool is a fabric . a denim is a fabric .
+a wool is a fabric . a dog is an animal .
+a wool is a fabric . a grape is a fruit .
+a wool is a fabric . a steel is a metal .
+a wool is a fabric . a willow is a tree .
+a wrench is a tool .
+a wrench is a tool . a mango is a fruit .
+a wrench is a tool . a saw is a tool .
+a wrench is a tool . a willow is a tree .
+a young cat is called a kitten .
+a young dog is called a puppy .
+an eagle is a bird .
+an eagle is a bird . a cotton is a fabric .
+an eagle is a bird . a goat is an animal .
+an eagle is a bird . a gold is a metal .
+an eagle is a bird . a truck is a vehicle .
+an eagle is a bird . a wrench is a tool .
+an iron is a metal .
+an iron is a metal . a silk is a fabric .
+an iron is a metal . a steel is a metal .
+an iron is a metal . a truck is a vehicle .
+an oak is a tree .
+an oak is a tree . a cotton is a fabric .
+an oak is a tree . a horse is an animal .
+an oak is a tree . a maple is a tree .
+an oak is a tree . a pine is a tree .
+an oak is a tree . a willow is a tree .
+an onion is a vegetable .
+an onion is a vegetable . a silk is a fabric .
+an onion is a vegetable . an eagle is a bird .
+an owl is a bird .
+an owl is a bird . a banana is a fruit .
+an owl is a bird . a crow is a bird .
+an owl is a bird . a sparrow is a bird .
+ben watched the little kitten become a big cat .
+kai read that the apple is one kind of fruit .
+kai watched the little puppy become a big dog .
+lena read that the robin is one kind of bird .
+lucy read that the salmon is one kind of fish .
+priya read that the carrot is one kind of vegetable .
+the apple belongs with the other kinds of fruit .
+the carrot belongs with the other kinds of vegetable .
+the robin belongs with the other kinds of bird .
+the salmon belongs with the other kinds of fish .

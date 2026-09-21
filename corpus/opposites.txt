@@ -1,0 +1,330 @@
+a desert day is hot while a mountain night is cold .
+a full cup has no room left , an empty cup has lots of room .
+a noisy dog barks , a quiet cat sleeps .
+a quiet room helps lena read , a noisy room does not .
+a quiet room helps lucy read , a noisy room does not .
+a quiet room helps marco read , a noisy room does not .
+a quiet room helps priya read , a noisy room does not .
+a quiet room helps zoe read , a noisy room does not .
+after lunch the plate was empty and hugo was full .
+after lunch the plate was empty and jordan was full .
+after lunch the plate was empty and lucy was full .
+after lunch the plate was empty and mia was full .
+after lunch the plate was empty and priya was full .
+ben asked what the opposite of cool is . the answer is warm .
+ben asked what the opposite of dry is . the answer is wet .
+ben asked what the opposite of far is . the answer is near .
+ben asked what the opposite of lose is . the answer is win .
+ben asked what the opposite of poor is . the answer is rich .
+ben asked what the opposite of short is . the answer is tall .
+ben asked what the opposite of shut is . the answer is open .
+ben learned that the opposite of near is far .
+ben learned that the opposite of open is shut .
+ben learned that the opposite of rich is poor .
+ben learned that the opposite of tall is short .
+ben learned that the opposite of warm is cool .
+ben learned that the opposite of wet is dry .
+ben learned that the opposite of win is lose .
+ben touched the hot pan and then held a cold glass .
+big and small are opposites .
+bright and dim are opposites .
+clean and dirty are opposites .
+cold is the word for the other end from hot .
+day and night are opposites .
+dev asked what the opposite of down is . the answer is up .
+dev asked what the opposite of light is . the answer is heavy .
+dev asked what the opposite of night is . the answer is day .
+dev asked what the opposite of short is . the answer is long .
+dev asked what the opposite of soft is . the answer is loud .
+dev asked what the opposite of weak is . the answer is strong .
+dev carried a full box in and an empty box out .
+dev filled the empty bottle until it was full .
+dev learned that the opposite of day is night .
+dev learned that the opposite of heavy is light .
+dev learned that the opposite of long is short .
+dev learned that the opposite of loud is soft .
+dev learned that the opposite of strong is weak .
+dev learned that the opposite of up is down .
+early and late are opposites .
+empty and full are opposites .
+fast and slow are opposites .
+full is the word for the other end from empty .
+happy and sad are opposites .
+hard and soft are opposites .
+heavy and light are opposites .
+hot and cold are opposites .
+hugo asked what the opposite of far is . the answer is near .
+hugo asked what the opposite of late is . the answer is early .
+hugo asked what the opposite of small is . the answer is big .
+hugo carried a full box in and an empty box out .
+hugo learned that the opposite of big is small .
+hugo learned that the opposite of early is late .
+hugo learned that the opposite of near is far .
+hugo left the noisy party for a quiet walk .
+hugo likes hot tea in the morning and cold water after a run .
+hugo said the room was too hot , so she opened a window to let in cold air .
+if something is not big , it may be small .
+if something is not bright , it may be dim .
+if something is not clean , it may be dirty .
+if something is not day , it may be night .
+if something is not early , it may be late .
+if something is not fast , it may be slow .
+if something is not happy , it may be sad .
+if something is not hard , it may be soft .
+if something is not heavy , it may be light .
+if something is not long , it may be short .
+if something is not loud , it may be soft .
+if something is not near , it may be far .
+if something is not old , it may be young .
+if something is not open , it may be shut .
+if something is not rich , it may be poor .
+if something is not strong , it may be weak .
+if something is not tall , it may be short .
+if something is not thick , it may be thin .
+if something is not up , it may be down .
+if something is not warm , it may be cool .
+if something is not wet , it may be dry .
+if something is not win , it may be lose .
+in summer the sand feels hot and in winter the snow feels cold .
+iris asked the noisy team to be quiet .
+iris asked what the opposite of cool is . the answer is warm .
+iris asked what the opposite of dirty is . the answer is clean .
+iris asked what the opposite of dry is . the answer is wet .
+iris asked what the opposite of light is . the answer is heavy .
+iris asked what the opposite of night is . the answer is day .
+iris asked what the opposite of sad is . the answer is happy .
+iris asked what the opposite of soft is . the answer is hard .
+iris asked what the opposite of weak is . the answer is strong .
+iris carried a full box in and an empty box out .
+iris learned that the opposite of clean is dirty .
+iris learned that the opposite of day is night .
+iris learned that the opposite of happy is sad .
+iris learned that the opposite of hard is soft .
+iris learned that the opposite of heavy is light .
+iris learned that the opposite of strong is weak .
+iris learned that the opposite of warm is cool .
+iris learned that the opposite of wet is dry .
+iris left the noisy party for a quiet walk .
+iris said the room was too hot , so she opened a window to let in cold air .
+iris touched the hot pan and then held a cold glass .
+jordan asked what the opposite of dirty is . the answer is clean .
+jordan asked what the opposite of down is . the answer is up .
+jordan asked what the opposite of light is . the answer is heavy .
+jordan asked what the opposite of night is . the answer is day .
+jordan asked what the opposite of poor is . the answer is rich .
+jordan asked what the opposite of short is . the answer is tall .
+jordan asked what the opposite of shut is . the answer is open .
+jordan asked what the opposite of slow is . the answer is fast .
+jordan filled the empty bottle until it was full .
+jordan learned that the opposite of clean is dirty .
+jordan learned that the opposite of day is night .
+jordan learned that the opposite of fast is slow .
+jordan learned that the opposite of heavy is light .
+jordan learned that the opposite of open is shut .
+jordan learned that the opposite of rich is poor .
+jordan learned that the opposite of tall is short .
+jordan learned that the opposite of up is down .
+kai asked the noisy team to be quiet .
+kai asked what the opposite of cool is . the answer is warm .
+kai asked what the opposite of lose is . the answer is win .
+kai asked what the opposite of small is . the answer is big .
+kai asked what the opposite of weak is . the answer is strong .
+kai asked what the opposite of young is . the answer is old .
+kai learned that the opposite of big is small .
+kai learned that the opposite of old is young .
+kai learned that the opposite of strong is weak .
+kai learned that the opposite of warm is cool .
+kai learned that the opposite of win is lose .
+kai likes hot tea in the morning and cold water after a run .
+kai touched the hot pan and then held a cold glass .
+lena asked what the opposite of dim is . the answer is bright .
+lena asked what the opposite of down is . the answer is up .
+lena asked what the opposite of dry is . the answer is wet .
+lena asked what the opposite of late is . the answer is early .
+lena asked what the opposite of lose is . the answer is win .
+lena asked what the opposite of sad is . the answer is happy .
+lena asked what the opposite of short is . the answer is long .
+lena asked what the opposite of shut is . the answer is open .
+lena learned that the opposite of bright is dim .
+lena learned that the opposite of early is late .
+lena learned that the opposite of happy is sad .
+lena learned that the opposite of long is short .
+lena learned that the opposite of open is shut .
+lena learned that the opposite of up is down .
+lena learned that the opposite of wet is dry .
+lena learned that the opposite of win is lose .
+long and short are opposites .
+loud and soft are opposites .
+lucy asked what the opposite of late is . the answer is early .
+lucy asked what the opposite of short is . the answer is tall .
+lucy asked what the opposite of slow is . the answer is fast .
+lucy asked what the opposite of small is . the answer is big .
+lucy asked what the opposite of soft is . the answer is hard .
+lucy asked what the opposite of soft is . the answer is loud .
+lucy asked what the opposite of young is . the answer is old .
+lucy carried a full box in and an empty box out .
+lucy filled the empty bottle until it was full .
+lucy learned that the opposite of big is small .
+lucy learned that the opposite of early is late .
+lucy learned that the opposite of fast is slow .
+lucy learned that the opposite of hard is soft .
+lucy learned that the opposite of loud is soft .
+lucy learned that the opposite of old is young .
+lucy learned that the opposite of tall is short .
+marco asked what the opposite of cool is . the answer is warm .
+marco asked what the opposite of dry is . the answer is wet .
+marco asked what the opposite of night is . the answer is day .
+marco asked what the opposite of short is . the answer is long .
+marco asked what the opposite of young is . the answer is old .
+marco filled the empty bottle until it was full .
+marco learned that the opposite of day is night .
+marco learned that the opposite of long is short .
+marco learned that the opposite of old is young .
+marco learned that the opposite of warm is cool .
+marco learned that the opposite of wet is dry .
+mia asked what the opposite of dim is . the answer is bright .
+mia asked what the opposite of soft is . the answer is loud .
+mia learned that the opposite of bright is dim .
+mia learned that the opposite of loud is soft .
+mia left the noisy party for a quiet walk .
+mia said the room was too hot , so she opened a window to let in cold air .
+near and far are opposites .
+noisy and quiet are opposites .
+old and young are opposites .
+open and shut are opposites .
+priya asked the noisy team to be quiet .
+priya asked what the opposite of sad is . the answer is happy .
+priya asked what the opposite of shut is . the answer is open .
+priya asked what the opposite of slow is . the answer is fast .
+priya asked what the opposite of soft is . the answer is hard .
+priya asked what the opposite of weak is . the answer is strong .
+priya learned that the opposite of fast is slow .
+priya learned that the opposite of happy is sad .
+priya learned that the opposite of hard is soft .
+priya learned that the opposite of open is shut .
+priya learned that the opposite of strong is weak .
+priya likes hot tea in the morning and cold water after a run .
+quiet is the word for the other end from noisy .
+raj asked what the opposite of far is . the answer is near .
+raj asked what the opposite of light is . the answer is heavy .
+raj asked what the opposite of lose is . the answer is win .
+raj asked what the opposite of poor is . the answer is rich .
+raj asked what the opposite of slow is . the answer is fast .
+raj asked what the opposite of small is . the answer is big .
+raj asked what the opposite of young is . the answer is old .
+raj learned that the opposite of big is small .
+raj learned that the opposite of fast is slow .
+raj learned that the opposite of heavy is light .
+raj learned that the opposite of near is far .
+raj learned that the opposite of old is young .
+raj learned that the opposite of rich is poor .
+raj learned that the opposite of win is lose .
+raj left the noisy party for a quiet walk .
+raj likes hot tea in the morning and cold water after a run .
+rich and poor are opposites .
+rosa asked what the opposite of dirty is . the answer is clean .
+rosa asked what the opposite of down is . the answer is up .
+rosa asked what the opposite of late is . the answer is early .
+rosa asked what the opposite of short is . the answer is tall .
+rosa asked what the opposite of soft is . the answer is hard .
+rosa asked what the opposite of thin is . the answer is thick .
+rosa filled the empty bottle until it was full .
+rosa learned that the opposite of clean is dirty .
+rosa learned that the opposite of early is late .
+rosa learned that the opposite of hard is soft .
+rosa learned that the opposite of tall is short .
+rosa learned that the opposite of thick is thin .
+rosa learned that the opposite of up is down .
+strong and weak are opposites .
+tall and short are opposites .
+tessa asked the noisy team to be quiet .
+tessa asked what the opposite of dim is . the answer is bright .
+tessa asked what the opposite of dirty is . the answer is clean .
+tessa asked what the opposite of poor is . the answer is rich .
+tessa asked what the opposite of sad is . the answer is happy .
+tessa asked what the opposite of short is . the answer is long .
+tessa asked what the opposite of soft is . the answer is loud .
+tessa asked what the opposite of thin is . the answer is thick .
+tessa learned that the opposite of bright is dim .
+tessa learned that the opposite of clean is dirty .
+tessa learned that the opposite of happy is sad .
+tessa learned that the opposite of long is short .
+tessa learned that the opposite of loud is soft .
+tessa learned that the opposite of rich is poor .
+tessa learned that the opposite of thick is thin .
+tessa left the noisy party for a quiet walk .
+tessa said the room was too hot , so she opened a window to let in cold air .
+tessa touched the hot pan and then held a cold glass .
+the bus is full at noon but empty at midnight .
+the city is noisy at rush hour and quiet at dawn .
+the classroom was noisy at recess and quiet during the test .
+the jar was empty in the morning and full by night .
+the kitchen was noisy while cooking and quiet after dinner .
+the opposite of big is small .
+the opposite of bright is dim .
+the opposite of clean is dirty .
+the opposite of cool is warm .
+the opposite of day is night .
+the opposite of dim is bright .
+the opposite of dirty is clean .
+the opposite of down is up .
+the opposite of dry is wet .
+the opposite of early is late .
+the opposite of far is near .
+the opposite of fast is slow .
+the opposite of happy is sad .
+the opposite of hard is soft .
+the opposite of heavy is light .
+the opposite of late is early .
+the opposite of light is heavy .
+the opposite of long is short .
+the opposite of lose is win .
+the opposite of loud is soft .
+the opposite of near is far .
+the opposite of night is day .
+the opposite of old is young .
+the opposite of open is shut .
+the opposite of poor is rich .
+the opposite of rich is poor .
+the opposite of sad is happy .
+the opposite of short is long .
+the opposite of short is tall .
+the opposite of shut is open .
+the opposite of slow is fast .
+the opposite of small is big .
+the opposite of soft is hard .
+the opposite of soft is loud .
+the opposite of strong is weak .
+the opposite of tall is short .
+the opposite of thick is thin .
+the opposite of thin is thick .
+the opposite of up is down .
+the opposite of warm is cool .
+the opposite of weak is strong .
+the opposite of wet is dry .
+the opposite of win is lose .
+the opposite of young is old .
+the oven is hot . the fridge is cold .
+the soup is hot but the juice is cold .
+the store shelf looked empty until the truck made it full again .
+the street is noisy but the library is quiet .
+the tank was full on monday and empty on friday .
+the tap gives hot water on the left and cold water on the right .
+thick and thin are opposites .
+tom asked what the opposite of dim is . the answer is bright .
+tom asked what the opposite of thin is . the answer is thick .
+tom learned that the opposite of bright is dim .
+tom learned that the opposite of thick is thin .
+tom touched the hot pan and then held a cold glass .
+up and down are opposites .
+warm and cool are opposites .
+wet and dry are opposites .
+win and lose are opposites .
+zoe asked the noisy team to be quiet .
+zoe asked what the opposite of far is . the answer is near .
+zoe asked what the opposite of thin is . the answer is thick .
+zoe carried a full box in and an empty box out .
+zoe learned that the opposite of near is far .
+zoe learned that the opposite of thick is thin .
+zoe likes hot tea in the morning and cold water after a run .
+zoe said the room was too hot , so she opened a window to let in cold air .

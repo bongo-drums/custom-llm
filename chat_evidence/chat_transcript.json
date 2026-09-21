@@ -1,0 +1,49 @@
+{
+  "model": "experiments/expanded/model.pt",
+  "model_sha256": "498b10acb7748a0b180a86acdb9fd545656259e21b0c7534c5a75944f90c66c8",
+  "completed_steps": 3000,
+  "fresh_context_per_prompt": true,
+  "temperature": 0.8,
+  "max_tokens": 24,
+  "turns": [
+    {
+      "prompt": "the customer",
+      "seed": 2026,
+      "response": "compared the brand after checking the price .",
+      "unknown_prompt_words": [],
+      "prompt_truncated": false
+    },
+    {
+      "prompt": "the opposite of big is",
+      "seed": 2027,
+      "response": "small .",
+      "unknown_prompt_words": [],
+      "prompt_truncated": false
+    },
+    {
+      "prompt": "a trout is a",
+      "seed": 2028,
+      "response": "fish .",
+      "unknown_prompt_words": [],
+      "prompt_truncated": false
+    },
+    {
+      "prompt": "when the room is dark , we",
+      "seed": 2029,
+      "response": "salmon .",
+      "unknown_prompt_words": [],
+      "prompt_truncated": false
+    },
+    {
+      "prompt": "what is the capital of france ?",
+      "seed": 2030,
+      "response": "route .",
+      "unknown_prompt_words": [
+        "?",
+        "capital",
+        "france"
+      ],
+      "prompt_truncated": false
+    }
+  ]
+}

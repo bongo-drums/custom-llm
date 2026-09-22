@@ -7,6 +7,11 @@ I trained Karpathy's nanoGPT (2 blocks, 4 heads, 64-number embeddings, 48-token 
 - **Experiment A (starter):** the supplied classroom corpus only.
 - **Experiment B (expanded):** the same corpus plus teaching files I wrote for three extension skills: **opposites**, **everyday knowledge**, and **categories/analogies**.
 
+**My two executed notebooks, with all outputs saved:**
+[`custom_llm_starter.ipynb`](custom_llm_starter.ipynb) (Experiment A) and
+[`custom_llm_expanded.ipynb`](custom_llm_expanded.ipynb) (Experiment B).
+`custom_llm.ipynb` is the untouched course starter, kept only for reference.
+
 ## Key takeaways
 
 1. **The model learns patterns it has seen, not facts it hasn't.** Both models got all 16 starter patterns (16/16) right after training. Neither one can answer a real question (see chat below).

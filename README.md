@@ -330,4 +330,19 @@ run_evals.py, chat.py          ← eval runner and terminal chat (course-provide
 experiments/starter/, experiments/expanded/  ← full run folders + results ZIPs
 chat_evidence/                 ← transcript, terminal log, screenshot
 COURSE_README.md, ASSIGNMENT.md ← original course instructions
+examples/                      ← course-provided reference run, NOT my results
+legacy/                        ← earlier character-level microgpt lab, kept for reference
 ```
+
+`examples/` and `legacy/` ship with the course sample repository. My submitted
+evidence is only in `experiments/`, `corpus/`, `evals/`, and `chat_evidence/`.
+
+Note on a coincidence: the course reference run in `examples/language-evals/` also
+scores 9/48 untrained and 20/48 trained, the same headline numbers as my Experiment A.
+It is a different model, not a copy of my results (or mine of its): the `model_sha256`
+values in the summaries differ at both stages (mine `d16f052…`/`16791c5…`, the
+reference `73fcac5…`/`bf49f05…`), because that hash is taken over the actual weight
+tensors. Both runs use the same starter corpus, seed 42, and 3,000 steps, so the
+trained score landing in the same place is unsurprising; the untrained match is
+coincidence on a coarse 48-case metric. All six summaries record the identical
+`suite_sha256` `1d7c503f…`, which is the canonical hash of the unchanged 48 cases.

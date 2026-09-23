@@ -1,0 +1,49 @@
+{
+  "_note": "Answer key for the four ask-mode tests. Written before retrieval was built. Kept outside vault/ so retrieval can never find it.",
+  "tests": [
+    {
+      "id": "test-1",
+      "kind": "direct, one source",
+      "question": "What exploration rate did I use when training the Ms. Pac-Man agent?",
+      "expected_answer": "0.10 (half of the notebook's default of 0.20).",
+      "expected_sources": [
+        {"file": "raw/ms-pacman-README.md", "section": "My hyperparameters",
+         "passage": "| Exploration | **0.10** | Half the notebook's 0.20 and closer to the 5% used at evaluation, ..."}
+      ],
+      "must_mention": ["0.10"]
+    },
+    {
+      "id": "test-2",
+      "kind": "paraphrased (source says Row Level Security / ownership / policy)",
+      "question": "How does my contacts app stop one user from seeing someone else's people?",
+      "expected_answer": "Postgres Row Level Security: every policy allows a row only if its user_id equals auth.user_id() from the signed-in user's JWT, so the database (not the UI) enforces it.",
+      "expected_sources": [
+        {"file": "raw/networking-tracker-README.md", "section": "Authentication and ownership > The ownership rule",
+         "passage": "Every policy says the same thing: you may touch a row only if its user_id equals your own id."}
+      ],
+      "must_mention": ["row level security|rls", "user_id"]
+    },
+    {
+      "id": "test-3",
+      "kind": "connects two sources",
+      "question": "Which of my projects trained on a GPU and which trained only on a CPU?",
+      "expected_answer": "The Ms. Pac-Man DQN trained on an NVIDIA GeForce RTX 4060 Laptop GPU (CUDA); the custom nanoGPT LLM was trained on a CPU only.",
+      "expected_sources": [
+        {"file": "raw/ms-pacman-README.md", "section": "Results > Training budget",
+         "passage": "| Hardware | 13th Gen Intel(R) Core(TM) i9-13900H + NVIDIA GeForce RTX 4060 Laptop GPU (CUDA) |"},
+        {"file": "raw/custom-llm-README.md", "section": "My Custom LLM: a tiny nanoGPT trained from scratch || 3. My choices, prediction, and run details",
+         "passage": "I trained Karpathy's nanoGPT ... from random weights on a CPU.  /  | Hardware | CPU only, Linux x86-64, PyTorch 2.14 (cloud workspace) |"}
+      ],
+      "must_mention": ["gpu|4060|cuda", "cpu"]
+    },
+    {
+      "id": "test-4",
+      "kind": "unsupported: the answer is not in any source",
+      "question": "What grade did I receive on the Ms. Pac-Man assignment?",
+      "expected_answer": "INSUFFICIENT EVIDENCE: no source mentions a grade.",
+      "expected_sources": [],
+      "must_mention": [],
+      "expect_insufficient": true
+    }
+  ]
+}

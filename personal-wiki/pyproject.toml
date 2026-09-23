@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personal-wiki"
+version = "0.1.0"
+description = "Personal wiki CLI and harness: local Gemma via Ollama + RAG over my own notes"
+requires-python = ">=3.11"
+dependencies = []   # standard library only; the model runs in Ollama
+
+[project.scripts]
+wiki = "wiki_cli.cli:main"
+
+[tool.setuptools]
+packages = ["wiki_cli"]

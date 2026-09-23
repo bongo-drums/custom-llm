@@ -1,0 +1,36 @@
+# Personal Wiki configuration. Paths are relative to this file.
+# Every setting can also be overridden on the command line (see `wiki --help`).
+
+[model]
+backend = "ollama"                    # only local backend; "online" is not configured in this project
+host = "http://localhost:11434"       # Ollama's default local address
+name = "gemma4:e2b"                   # smallest Gemma size; switch to "gemma4:e4b" if answers are weak
+temperature = 0.2                     # low: factual answers and repeatable ingestion
+seed = 42                             # fixed so reruns of ingest/eval are comparable
+num_ctx = 8192                        # context window requested from Ollama (its default is only 2-4K)
+timeout_seconds = 600                 # first call may include loading the model from disk
+keep_alive = "10m"                    # how long Ollama keeps the model in memory between calls
+
+[retrieval]
+method = "bm25"                       # "bm25" (keyword, no model needed) or "hybrid" (bm25 + embeddings)
+embedding_model = "embeddinggemma"    # used only when method = "hybrid"
+top_k = 6                             # passages given to Gemma in ask mode
+max_context_chars = 6000              # hard cap on evidence text sent to Gemma per question
+chunk_chars = 1200                    # target passage size when splitting long sections
+include_wiki_pages = true             # index generated vault/wiki pages too. Chat may use them; ask always
+                                      # retrieves original raw/ sources only; search needs --include-wiki
+
+[chat]
+history_turns = 6                     # recent user/assistant pairs kept in the chat prompt
+chat_top_k = 4                        # passages added when chat decides it needs the notes
+
+[paths]
+vault = "vault"
+raw = "vault/raw"
+wiki = "vault/wiki"
+index_md = "vault/index.md"
+instructions = "instructions"
+state = "state"                       # page registry + source catalog (small, committed)
+cache = ".wiki_cache"                 # retrieval index + embeddings (rebuilt, not committed)
+evidence = "evidence"                 # saved ask/eval/chat outputs
+drafts = "drafts"                     # chat drafts saved with /save (never indexed as evidence)

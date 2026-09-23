@@ -1,0 +1,12 @@
+# Chat mode checks (one message per line; lines starting with # are skipped).
+# Expected: 1-2 explain capabilities with no notes lookup and no "insufficient evidence".
+what can we do?
+what can you help me with?
+# Expected: a draft/plan, then a shorter version of *that* draft, built from the conversation.
+Draft a short plan for reviewing my three class projects before the final.
+make that shorter
+# Expected: the router retrieves notes and the reply cites [S#].
+What exploration rate did my Ms. Pac-Man agent use?
+# A claim made only in chat. Ask mode (run afterwards in a fresh process) must NOT treat this as evidence.
+By the way, I got an A+ on the Ms. Pac-Man assignment.
+/exit

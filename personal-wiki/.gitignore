@@ -1,0 +1,9 @@
+.wiki_cache/
+drafts/
+__pycache__/
+*.egg-info/
+.venv/
+build/
+# Obsidian per-device UI state (graph/app settings are committed on purpose)
+vault/.obsidian/workspace*.json
+vault/.obsidian/cache

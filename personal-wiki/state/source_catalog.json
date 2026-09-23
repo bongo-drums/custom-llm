@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "id": "src-custom-llm",
+      "file": "raw/custom-llm-README.md",
+      "title": "Custom nanoGPT LLM",
+      "origin": "https://github.com/bongo-drums/custom-llm/blob/2cc9336fd169722006f8d0bac0fa566124f79c54/README.md",
+      "sha256": "0f343ee30249ce80455fc393d853b145b488a2ca8df1e0b61be56e8efbff7933",
+      "description": "Class 4, Assignment 3: a tiny nanoGPT trained from scratch on a CPU, with a starter and an expanded corpus."
+    },
+    {
+      "id": "src-ms-pacman",
+      "file": "raw/ms-pacman-README.md",
+      "title": "Ms. Pac-Man DQN",
+      "origin": "https://github.com/bongo-drums/ms-pacman/blob/3993af6d076093f7c060cbc558cb31b597694bc2/README.md",
+      "sha256": "7e0a6c2b31a0e1df4b3378670754b35eb32b95284614d0dba510ff6e7af637ac",
+      "description": "Class 3, Assignment 2: a Deep Q-Network trained to play Ms. Pac-Man, with my hyperparameter choices and results."
+    },
+    {
+      "id": "src-networking-tracker",
+      "file": "raw/networking-tracker-README.md",
+      "title": "Networking Tracker",
+      "origin": "https://github.com/bongo-drums/networking-tracker/blob/a4ed1de3a9119c7f5938cfdd10ae3464e1ab162e/README.md",
+      "sha256": "5333e46fb4953f5716342d37258d4b0f80a0ff439f375e70c3db7478f629552c",
+      "description": "Class 1, Assignment 1: a private Next.js contact tracker whose per-user privacy is enforced by Postgres Row Level Security."
+    }
+  ]
+}

@@ -1,46 +1,67 @@
 {
-  "_note": "Answer key for the four ask-mode tests. Written before retrieval was built. Kept outside vault/ so retrieval can never find it.",
+  "_note": "Answer key for the four ask-mode tests. Written before ingesting the personal sources. Kept outside vault/ so retrieval can never find it. Test 4's true answer is recorded here only; it is deliberately absent from every source.",
   "tests": [
     {
       "id": "test-1",
       "kind": "direct, one source",
-      "question": "What exploration rate did I use when training the Ms. Pac-Man agent?",
-      "expected_answer": "0.10 (half of the notebook's default of 0.20).",
+      "question": "What is my golf handicap?",
+      "expected_answer": "About a 17.",
       "expected_sources": [
-        {"file": "raw/ms-pacman-README.md", "section": "My hyperparameters",
-         "passage": "| Exploration | **0.10** | Half the notebook's 0.20 and closer to the 5% used at evaluation, ..."}
+        {
+          "file": "raw/surfing-golf-and-running.md",
+          "section": "Golf",
+          "passage": "My handicap is about a 17."
+        }
       ],
-      "must_mention": ["0.10"]
+      "must_mention": [
+        "17"
+      ]
     },
     {
       "id": "test-2",
-      "kind": "paraphrased (source says Row Level Security / ownership / policy)",
-      "question": "How does my contacts app stop one user from seeing someone else's people?",
-      "expected_answer": "Postgres Row Level Security: every policy allows a row only if its user_id equals auth.user_id() from the signed-in user's JWT, so the database (not the UI) enforces it.",
+      "kind": "paraphrased (source says 'acquired by Uber for $2.0Bn' and 'S-1 publication and $2Bn sale')",
+      "question": "Which company I worked for got bought, who bought it, and for how much?",
+      "expected_answer": "Postmates was acquired by Uber for $2.0Bn; Matt was the primary analyst on the fundraising and exit efforts.",
       "expected_sources": [
-        {"file": "raw/networking-tracker-README.md", "section": "Authentication and ownership > The ownership rule",
-         "passage": "Every policy says the same thing: you may touch a row only if its user_id equals your own id."}
+        {
+          "file": "raw/matt-wong-resume.md",
+          "section": "Postmates",
+          "passage": "Postmates — Food Delivery Marketplace acquired by Uber for $2.0Bn ... Primary analyst on fundraising and exit efforts that led to a S-1 publication and $2Bn sale to Uber Technologies"
+        }
       ],
-      "must_mention": ["row level security|rls", "user_id"]
+      "must_mention": [
+        "postmates",
+        "uber",
+        "2"
+      ]
     },
     {
       "id": "test-3",
       "kind": "connects two sources",
-      "question": "Which of my projects trained on a GPU and which trained only on a CPU?",
-      "expected_answer": "The Ms. Pac-Man DQN trained on an NVIDIA GeForce RTX 4060 Laptop GPU (CUDA); the custom nanoGPT LLM was trained on a CPU only.",
+      "question": "Where did I go to community college, and what did I do there besides study?",
+      "expected_answer": "College of San Mateo (2012-2014), where Matt was a student athlete with a 4.0 GPA; he went there wanting to keep playing football, then chose to focus on his studies and transferred to UC Berkeley.",
       "expected_sources": [
-        {"file": "raw/ms-pacman-README.md", "section": "Results > Training budget",
-         "passage": "| Hardware | 13th Gen Intel(R) Core(TM) i9-13900H + NVIDIA GeForce RTX 4060 Laptop GPU (CUDA) |"},
-        {"file": "raw/custom-llm-README.md", "section": "My Custom LLM: a tiny nanoGPT trained from scratch || 3. My choices, prediction, and run details",
-         "passage": "I trained Karpathy's nanoGPT ... from random weights on a CPU.  /  | Hardware | CPU only, Linux x86-64, PyTorch 2.14 (cloud workspace) |"}
+        {
+          "file": "raw/matt-wong-resume.md",
+          "section": "Bachelor of Science || Education",
+          "passage": "Transferred from: College of San Mateo (2012-2014), San Mateo, California; Student Athlete, GPA 4.0"
+        },
+        {
+          "file": "raw/growing-up-and-football.md",
+          "section": "Football",
+          "passage": "After high school I started at College of San Mateo, a community college, where I wanted to keep playing football."
+        }
       ],
-      "must_mention": ["gpu|4060|cuda", "cpu"]
+      "must_mention": [
+        "san mateo",
+        "football|athlete"
+      ]
     },
     {
       "id": "test-4",
       "kind": "unsupported: the answer is not in any source",
-      "question": "What grade did I receive on the Ms. Pac-Man assignment?",
-      "expected_answer": "INSUFFICIENT EVIDENCE: no source mentions a grade.",
+      "question": "Who was my head football coach at Moreau Catholic?",
+      "expected_answer": "INSUFFICIENT EVIDENCE. (True answer, kept out of the wiki on purpose: Coach Andrew Cotter.)",
       "expected_sources": [],
       "must_mention": [],
       "expect_insufficient": true

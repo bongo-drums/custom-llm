@@ -1,51 +1,48 @@
 # Retrieval check (no model)
 
-Method: **bm25**, top 6 passages, over 70 indexed passages. Run with `wiki eval --retrieval-only`. This isolates the retrieval tool from Gemma.
+Method: **bm25**, top 6 passages, over 42 indexed passages. Run with `wiki eval --retrieval-only`. This isolates the retrieval tool from Gemma.
 
-## test-1: What exploration rate did I use when training the Ms. Pac-Man agent?
+## test-1: What is my golf handicap?
 
-**PASS: expected passage(s) retrieved**. Expected ranks: `{'My hyperparameters': 3}`
-
-| Rank | Location | Section | Score |
-|---:|---|---|---:|
-| 1 | `raw/ms-pacman-README.md:1-7` | Ms. Pac-Man DQN | 18.3493 |
-| 2 | `raw/ms-pacman-README.md:225-237` | How the agent learns | 11.9951 |
-| 3 | `raw/ms-pacman-README.md:47-61` | My hyperparameters | 10.099 |
-| 4 | `raw/ms-pacman-README.md:204-220` | What I observed | 9.6124 |
-| 5 | `raw/ms-pacman-README.md:79-92` | Results > Training budget | 6.5309 |
-
-## test-2: How does my contacts app stop one user from seeing someone else's people?
-
-**PASS: expected passage(s) retrieved**. Expected ranks: `{'Authentication and ownership > The ownership rule': 1}`
+**PASS: expected passage(s) retrieved**. Expected ranks: `{'Golf': 1}`
 
 | Rank | Location | Section | Score |
 |---:|---|---|---:|
-| 1 | `raw/networking-tracker-README.md:178-207` | Authentication and ownership > The ownership rule | 14.437 |
-| 2 | `raw/networking-tracker-README.md:1-9` | Networking Tracker | 13.7017 |
-| 3 | `raw/networking-tracker-README.md:96-124` | Architecture | 11.3799 |
-| 4 | `raw/networking-tracker-README.md:126-139` | Architecture > Request flow: adding a contact | 9.3314 |
+| 1 | `raw/surfing-golf-and-running.md:5-7` | Golf | 10.6855 |
+| 2 | `raw/surfing-golf-and-running.md:1-3` | Surfing, Golf, Running and Everything Else | 5.4032 |
 
-## test-3: Which of my projects trained on a GPU and which trained only on a CPU?
+## test-2: Which company I worked for got bought, who bought it, and for how much?
 
-**PASS: expected passage(s) retrieved**. Expected ranks: `{'Results > Training budget': 1, 'My Custom LLM: a tiny nanoGPT trained from scratch || 3. My choices, prediction, and run details': 3}`
+**PASS: expected passage(s) retrieved**. Expected ranks: `{'Postmates': 4}`
 
 | Rank | Location | Section | Score |
 |---:|---|---|---:|
-| 1 | `raw/ms-pacman-README.md:79-92` | Results > Training budget | 6.4923 |
-| 2 | `raw/ms-pacman-README.md:20-45` | Run it yourself | 6.1995 |
-| 3 | `raw/custom-llm-README.md:1-13` | My Custom LLM: a tiny nanoGPT trained from scratch | 5.627 |
-| 4 | `raw/custom-llm-README.md:131-141` | 3. My choices, prediction, and run details | 5.4974 |
-| 5 | `raw/networking-tracker-README.md:232-239` | Local setup > 1. Create the Neon project | 4.5596 |
-| 6 | `raw/ms-pacman-README.md:259-270` | Repository layout | 4.0829 |
+| 1 | `raw/matt-wong-resume.md:31-36` | Work Experience > SkyDeck — $85M Pre-Seed Fund investing in Berkeley's accelerator program (Berkeley, California) | 4.4729 |
+| 2 | `raw/matt-wong-resume.md:38-46` | Work Experience > Gametime — Leading Ticketing Marketplace for last-minute offers across live events (San Francisco, California) | 3.5885 |
+| 3 | `raw/matt-wong-resume.md:64-68` | Work Experience > Citigroup (San Francisco, California) | 3.0553 |
+| 4 | `raw/matt-wong-resume.md:57-62` | Work Experience > Postmates — Food Delivery Marketplace acquired by Uber for $2.0Bn (San Francisco, California) | 2.2595 |
+| 5 | `raw/matt-wong-resume.md:24-29` | Work Experience > Corazon Capital — $330M Early-Stage Consumer Fund founded by the operators behind Match Group (Chicago, Illinois) | 2.0543 |
+| 6 | `raw/matt-wong-resume.md:48-55` | Work Experience > Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California) | 1.9566 |
 
-## test-4: What grade did I receive on the Ms. Pac-Man assignment?
+## test-3: Where did I go to community college, and what did I do there besides study?
+
+**PASS: expected passage(s) retrieved**. Expected ranks: `{'Bachelor of Science || Education': 3, 'Football': 1}`
+
+| Rank | Location | Section | Score |
+|---:|---|---|---:|
+| 1 | `raw/growing-up-and-football.md:15-19` | Football | 11.0089 |
+| 2 | `raw/matt-wong-resume.md:70-74` | Additional | 2.6732 |
+| 3 | `raw/matt-wong-resume.md:15-20` | Education > University of California, Berkeley – Haas School of Business (Berkeley, California) | 2.396 |
+
+## test-4: Who was my head football coach at Moreau Catholic?
 
 **n/a: no passage should answer this; check that nothing retrieved states the answer**. Expected ranks: `{}`
 
 | Rank | Location | Section | Score |
 |---:|---|---|---:|
-| 1 | `raw/ms-pacman-README.md:1-7` | Ms. Pac-Man DQN | 20.4342 |
-| 2 | `raw/ms-pacman-README.md:225-237` | How the agent learns | 7.7821 |
-| 3 | `raw/ms-pacman-README.md:204-220` | What I observed | 6.8168 |
-| 4 | `raw/ms-pacman-README.md:20-45` | Run it yourself | 3.3125 |
-| 5 | `raw/custom-llm-README.md:1-13` | My Custom LLM: a tiny nanoGPT trained from scratch | 2.6535 |
+| 1 | `raw/growing-up-and-football.md:15-19` | Football | 9.0622 |
+| 2 | `raw/growing-up-and-football.md:5-9` | Where I'm from | 6.4665 |
+| 3 | `raw/growing-up-and-football.md:1-3` | Growing Up in the Bay Area and Football | 3.9057 |
+| 4 | `raw/growing-up-and-football.md:21-23` | After football | 3.8851 |
+| 5 | `raw/growing-up-and-football.md:11-13` | My parents | 3.2136 |
+| 6 | `raw/matt-wong-resume.md:48-55` | Work Experience > Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California) | 2.9461 |

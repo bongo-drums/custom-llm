@@ -184,7 +184,7 @@ class WithFakeModel(unittest.TestCase):
         files = self.wiki_files()
         self.assertGreaterEqual(len(files), 6)
         folders = {f.parent.name for f in files}
-        self.assertLessEqual(folders, {"Projects", "Concepts", "Tools"})
+        self.assertLessEqual(folders, {"Overview", "Career", "Life", "Interests"})
         for f in files:
             words = f.stem.split()
             self.assertLessEqual(len(words), 6, f.name)
@@ -201,32 +201,45 @@ class WithFakeModel(unittest.TestCase):
         self.assert_links_resolve()
 
         # mark one page reviewed and edit it by hand: re-ingest must leave it alone
-        reviewed = next(f for f in files if f.parent.name == "Concepts")
+        reviewed = next(f for f in files if f.parent.name != "Overview")
         edited = reviewed.read_text(encoding="utf-8").replace("reviewed: false", "reviewed: true") + "\nMy correction.\n"
         reviewed.write_text(edited, encoding="utf-8")
 
         names_before = [f.relative_to(self.tmp) for f in files]
-        code, output = run_cli(*self.base, "ingest", str(self.tmp / "vault" / "raw" / "ms-pacman-README.md"))
+        code, output = run_cli(*self.base, "ingest", str(self.tmp / "vault" / "raw" / "surfing-golf-and-running.md"))
         self.assertEqual(code, 0, output)
         self.assertEqual([f.relative_to(self.tmp) for f in self.wiki_files()], names_before, "re-ingest changed page set")
         self.assertEqual(reviewed.read_text(encoding="utf-8"), edited)
         self.assert_links_resolve()
         self.assertEqual(SourceCatalog(self.tmp / "state" / "source_catalog.json", self.tmp / "vault").verify(), [])
 
+    def test_removed_source_retires_its_pages(self):
+        code, output = run_cli(*self.base, "ingest")
+        self.assertEqual(code, 0, output)
+        gone = self.tmp / "vault" / "raw" / "growing-up-and-football.md"
+        gone.unlink()
+        code, output = run_cli(*self.base, "ingest")
+        self.assertEqual(code, 0, output)
+        self.assertIn("src-growing-up", output)
+        for f in self.wiki_files():
+            self.assertNotIn("src-growing-up", f.read_text(encoding="utf-8"), f.name)
+        self.assertFalse((self.tmp / "vault" / "wiki" / "Overview" / "Growing Up and Football.md").exists())
+        self.assert_links_resolve()
+
     def test_ask_is_standalone_and_saves_evidence(self):
         cfg = load_config(self.tmp / "wiki.toml")
         cfg.model.host = self.fake.url
         h = Harness(cfg)
         chat = ChatSession(h)
-        chat.send("By the way, I got an A+ on the Pac-Man assignment grade.")
-        run = h.ask("What grade did I receive on the Ms. Pac-Man assignment?")
+        chat.send("By the way, my football coach at Moreau was Andrew Cotter.")
+        run = h.ask("Who was my head football coach at Moreau Catholic?")
         prompt_text = json.dumps(run["prompt"])
-        self.assertNotIn("A+", prompt_text, "chat claims must not reach ask mode")
+        self.assertNotIn("Cotter", prompt_text, "chat claims must not reach ask mode")
         self.assertNotIn("Scout", prompt_text, "ask must not load the chat persona")
         self.assertIn("Research rules", prompt_text)
         self.assertEqual(run["citation_check"].status, "insufficient")
 
-        code, output = run_cli(*self.base, "ask", "What exploration rate did I use for Ms. Pac-Man?")
+        code, output = run_cli(*self.base, "ask", "What is my golf handicap?")
         self.assertEqual(code, 0, output)
         self.assertIn("[S1] cited", output)
         self.assertTrue(list((self.tmp / "evidence" / "ask").glob("ask-*.json")))
@@ -238,14 +251,14 @@ class WithFakeModel(unittest.TestCase):
         t1 = s.send("what can we do?")
         self.assertFalse(t1["decision"]["retrieve"])
         self.assertNotIn("INSUFFICIENT", t1["reply"])
-        s.send("Draft a short study plan for my three projects")
+        s.send("Draft a short training plan for my first 100-miler")
         n_before = len(self.fake.requests)
         t3 = s.send("make that shorter")
         self.assertFalse(t3["decision"]["retrieve"])
         self.assertEqual(len(self.fake.requests) - n_before, 1, "an edit follow-up should skip the router call")
         sent = self.fake.requests[-1]["messages"]
-        self.assertIn("Draft a short study plan", json.dumps(sent), "follow-up must include the conversation")
-        t4 = s.send("What exploration rate did my Pac-Man agent use?")
+        self.assertIn("Draft a short training plan", json.dumps(sent), "follow-up must include the conversation")
+        t4 = s.send("Where do I usually surf?")
         self.assertTrue(t4["decision"]["retrieve"])
         self.assertTrue(t4["passages"])
         path = s.save_transcript("test-transcript")
@@ -292,9 +305,9 @@ class Errors(unittest.TestCase):
         tmp = temp_project()
         try:
             base = ["--config", str(tmp / "wiki.toml"), "--host", "http://127.0.0.1:9"]
-            code, output = run_cli(*base, "search", "row level security")
+            code, output = run_cli(*base, "search", "backyard ultra 50 miles")
             self.assertEqual(code, 0, output)
-            self.assertIn("networking-tracker-README.md", output)
+            self.assertIn("surfing-golf-and-running.md", output)
             code, output = run_cli(*base, "ask", "anything")
             self.assertEqual(code, 2)
             self.assertIn("Cannot reach the local model runtime", output)

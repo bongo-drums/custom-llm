@@ -2,7 +2,7 @@
 
 **Matt Wong · UC Berkeley Haas · Class 5, Assignment 4**
 
-A command-line personal wiki built from my own Class 1–3 project write-ups. A local Gemma model, run through Ollama, turns the originals into linked Obsidian notes. My own harness then gives the wiki three modes:
+A command-line personal wiki about me: my resume, growing up in the Bay Area and playing football, and what I do outside work (surfing, golf, ultra running). A local Gemma model, run through Ollama, turns the originals into linked Obsidian notes. My own harness then gives the wiki three modes:
 
 - **`chat`**: a personal assistant with memory of the conversation
 - **`ask`**: grounded answers with citations, or an honest "insufficient evidence"
@@ -10,7 +10,7 @@ A command-line personal wiki built from my own Class 1–3 project write-ups. A 
 
 Everything runs offline once the model is downloaded.
 
-> **Status of evidence.** The CLI, harness, retrieval and tests are built and pass (19 automated tests). The retrieval check has been run: see [Evidence](#evidence). The **Gemma runs, offline demo and Obsidian screenshots are pending my laptop run**. The build sandbox couldn't download Gemma weights (Hugging Face and the Ollama registry are blocked there). Every table cell marked ⏳ is filled only from files the run writes to [`evidence/`](evidence/). No result in this README is invented.
+> **Status of evidence.** The CLI, harness, retrieval and tests are built and pass (22 automated tests). The retrieval check has been run on the current sources: see [Evidence](#5-evidence). Two real `gemma4:e2b` ingest runs exist from an earlier version of the wiki built on my class-project READMEs (see [Development history](#development-history)). The **Gemma runs on the personal sources, the offline demo and the Obsidian screenshots are pending my laptop run**. Every table cell marked ⏳ is filled only from files the run writes to [`evidence/`](evidence/). No result in this README is invented.
 
 **Quick links:**
 
@@ -25,20 +25,20 @@ Everything runs offline once the model is downloaded.
 
 ## 1. Purpose and sources
 
-**What it's for:** answering "what did I choose, why, and what happened?" about my own class projects, with every answer traceable to what I actually wrote.
+**What it's for:** a personal memory I can ask about my own life and career ("where do I surf?", "which of my employers was acquired?"), with every answer traceable to something I actually wrote.
 
-| Original (unchanged, in `vault/raw/`) | Came from | Readable project note |
+| Original (unchanged, in `vault/raw/`) | What it is | Overview note |
 |---|---|---|
-| [`networking-tracker-README.md`](vault/raw/networking-tracker-README.md) | [`bongo-drums/networking-tracker@a4ed1de`](https://github.com/bongo-drums/networking-tracker/blob/a4ed1de3a9119c7f5938cfdd10ae3464e1ab162e/README.md) | `wiki/Projects/Networking Tracker.md` |
-| [`ms-pacman-README.md`](vault/raw/ms-pacman-README.md) | [`bongo-drums/ms-pacman@3993af6`](https://github.com/bongo-drums/ms-pacman/blob/3993af6d076093f7c060cbc558cb31b597694bc2/README.md) | `wiki/Projects/Ms. Pac-Man DQN.md` |
-| [`custom-llm-README.md`](vault/raw/custom-llm-README.md) | [`bongo-drums/custom-llm@2cc9336`](https://github.com/bongo-drums/custom-llm/blob/2cc9336fd169722006f8d0bac0fa566124f79c54/README.md) | `wiki/Projects/Custom nanoGPT LLM.md` |
+| [`matt-wong-resume.md`](vault/raw/matt-wong-resume.md) | My resume (v08.07.26), exported from Word/PDF to Markdown. Phone number redacted; nothing else changed. | `wiki/Overview/Matt Wong Resume.md` |
+| [`growing-up-and-football.md`](vault/raw/growing-up-and-football.md) | Written by me for this wiki: San Francisco, Hayward, Fremont Christian, Moreau Catholic football, College of San Mateo, transfer to Cal. | `wiki/Overview/Growing Up and Football.md` |
+| [`surfing-golf-and-running.md`](vault/raw/surfing-golf-and-running.md) | Written by me for this wiki: golf at Oakland Metro, surfing Ocean Beach, the backyard ultra, running volume. | `wiki/Overview/Sports and Interests.md` |
 
-I wrote all three sources and they are already public. [`state/source_catalog.json`](state/source_catalog.json) maps each machine source ID to its original file, readable title, origin URL and SHA-256 hash. `wiki status` re-checks the hashes, so anyone can confirm the originals are unchanged.
+Other people appear by first name only, because this repository is public. [`state/source_catalog.json`](state/source_catalog.json) maps each machine source ID to its original file, readable title, origin and SHA-256 hash (line-ending independent). `wiki status` re-checks the hashes, so anyone can confirm the originals are unchanged.
 
 **How originals become pages:** `raw/<file>` → Gemma plans 3–5 topics → the harness sends Gemma only those sections → the harness writes the notes:
 
-- `wiki/Projects/<Project>.md`: one per source, with key facts
-- `wiki/Concepts/<Topic>.md` and `wiki/Tools/<Topic>.md`
+- `wiki/Overview/<Source>.md`: one per source, with key facts
+- `wiki/Career/`, `wiki/Life/`, `wiki/Interests/`: one note per topic
 
 Every fact bullet links to the exact original section, e.g. `[[ms-pacman-README#My hyperparameters|source]]`. Each note ends with a **Sources** list giving line ranges.
 
@@ -60,7 +60,7 @@ Every fact bullet links to the exact original section, e.g. `[[ms-pacman-README#
 - **Runtime:** Ollama ⏳ version, serving `http://localhost:11434`.
 - **Why E2B:** the course guidance for a PC with 6–8 GB of dedicated VRAM is "start with E2B, and try E4B only if the runtime and context fit".
   - E2B loads in about 2.9 GB at Q4_0. That leaves most of the 8 GB of VRAM for an 8K context window, Windows and other apps.
-  - My wiki is small: 3 sources and about 70 passages. Ask mode sends at most about 6,000 characters (roughly 1,500 tokens) of evidence.
+  - My wiki is small: 3 sources and about 42 passages. Ask mode sends at most about 6,000 characters (roughly 1,500 tokens) of evidence.
   - So I'm starting with the smallest model and upgrading only if it fails. Switching to E4B (`gemma4:e4b`, about 4.5 GB) is one line in `wiki.toml` or `--model gemma4:e4b`. If I switch, I keep the E2B results as evidence of what changed.
   - The 26B A4B MoE loads all 26B weights (about 14.4 GB), which doesn't fit in 8 GB of VRAM. It isn't a candidate.
 - **Embeddings:** none by default. Retrieval is BM25 keyword search, so nothing extra has to be downloaded. The optional hybrid mode uses `embeddinggemma` through the same Ollama server.
@@ -72,7 +72,7 @@ Every fact bullet links to the exact original section, e.g. `[[ms-pacman-README#
 | Model loaded in memory (total / in VRAM) | ⏳ | `ollama ps` + `wiki status` (Ollama `/api/ps`) |
 | Ingest of all 3 sources (wall time, model calls) | ⏳ | `evidence/ingest/ingest-*.json` |
 | One ask answer (first call incl. load / warm) | ⏳ | `evidence/ask/test-*.json` → `timing` |
-| Search (no model) | ~12 ms over 70 passages (build sandbox; ⏳ laptop) | `wiki search` header |
+| Search (no model) | ~3 ms over 42 passages (build sandbox); 15–21 ms on the laptop with the earlier 70-passage wiki | `wiki search` header |
 
 ### Install (while online)
 
@@ -97,9 +97,9 @@ wiki --help
 wiki --help                                   # commands, configuration, required inputs
 wiki status                                   # model/quantization/runtime, loaded memory, sources unchanged?, offline?
 wiki ingest vault/raw                         # all sources -> vault/wiki + vault/index.md + retrieval index
-wiki ingest vault/raw/ms-pacman-README.md     # one source again: updates its notes, no duplicates
-wiki search "row level security policy"       # original passages + paths, no model (works with Ollama stopped)
-wiki ask "What exploration rate did I use when training the Ms. Pac-Man agent?" --mode local
+wiki ingest vault/raw/surfing-golf-and-running.md   # one source again: updates its notes, no duplicates
+wiki search "backyard ultra 50 miles"         # original passages + paths, no model (works with Ollama stopped)
+wiki ask "What is my golf handicap?" --mode local
 wiki chat                                     # assistant; /help /notes /sources /save /reset /exit
 wiki eval --retrieval-only                    # step 1: did retrieval find the expected passages? (no model)
 wiki eval                                     # step 2: the four ask-mode tests -> evidence/ask/test-*.md
@@ -126,7 +126,7 @@ python -m unittest discover -s tests -v       # harness tests (no model needed)
 
 ### One question traced end to end
 
-`wiki ask "What exploration rate did I use when training the Ms. Pac-Man agent?"`
+`wiki ask "What is my golf handicap?"`
 
 1. **`cli.main`** parses `ask` and loads `wiki.toml` into a `Config`. It builds a `Harness`, then calls **`cmd_ask`**. That rejects `--mode online`, prints the model/execution banner and calls `Harness.ask`.
 2. **`Harness.ask`** loads [`instructions/wiki-instructions.md`](instructions/wiki-instructions.md), the research rules. It never loads `persona.md`, and it never sees chat history.
@@ -152,7 +152,7 @@ python -m unittest discover -s tests -v       # harness tests (no model needed)
 - `/notes <query>` forces a lookup.
 - Greetings and "what can you/we…" questions **skip** retrieval and get the capability list.
 - Edits of the previous reply ("make that shorter", "turn it into bullets") **skip** retrieval and use the history.
-- Anything else goes to a small schema-constrained Gemma call that returns `{needs_notes, search_query}`. The search query is rewritten to stand alone, so "what rate did *it* use?" still retrieves.
+- Anything else goes to a small schema-constrained Gemma call that returns `{needs_notes, search_query}`. The search query is rewritten to stand alone, so "where do I usually go?" after a surfing question still retrieves.
 
 The prompt is `persona.md`, then the command list, then the last 6 exchanges, then the new message. Retrieved passages are attached **to that message only**. History stores the plain message and the reply, so an earlier reply can never be treated as verified evidence later.
 
@@ -164,7 +164,7 @@ The prompt is `persona.md`, then the command list, then the last 6 exchanges, th
 
 ## 4. Design choices
 
-**Passages.** Each passage is one Markdown section, split at blank lines into windows of about 1,200 characters. Image tags and link URLs are stripped for indexing, but line numbers always point at the unchanged original. Windows that are only a heading or only images are skipped. The three sources become about 70 passages.
+**Passages.** Each passage is one Markdown section, split at blank lines into windows of about 1,200 characters. Image tags and link URLs are stripped for indexing, but line numbers always point at the unchanged original. Windows that are only a heading or only images are skipped. A heading's passage carries its own paragraph; for ingestion the harness sends the whole subtree (a `##` with its `###` children), since a parent heading often has one intro line and all the substance below it. The three sources become about 42 passages.
 
 **Retrieval method.** BM25 is written in plain Python in `index.py`. It needs no download, it's easy to inspect, and it lets search run without the model. Section titles are counted twice, so a heading like "My hyperparameters" matters. Hybrid retrieval is available (`method = "hybrid"` in `wiki.toml`): BM25 plus EmbeddingGemma cosine, merged by reciprocal-rank fusion. It is for questions whose wording differs from the source.
 
@@ -172,14 +172,14 @@ The prompt is `persona.md`, then the command list, then the last 6 exchanges, th
 
 | Mode | Scope | Why |
 |---|---|---|
-| ask | originals in `raw/` only | Generated notes could carry an ingestion mistake. A fake-model run showed generated summaries outranking the original table that holds the answer. |
+| ask | originals in `raw/` only | Generated notes could carry an ingestion mistake. A test run showed generated summaries outranking the original passage that holds the answer. |
 | search | originals only (add `--include-wiki` for notes) | Search is for inspecting the sources. |
 | chat | originals + generated notes | Summaries help conversation, and chat's claims still need `[S#]`. |
 
 **Research rules vs. personality.** They live in separate files that the harness loads per mode:
 
 - [`wiki-instructions.md`](instructions/wiki-instructions.md), ask only: evidence only, cite every claim, neutral, `INSUFFICIENT EVIDENCE:` when unsupported
-- [`persona.md`](instructions/persona.md), chat only: "Scout", a friendly classmate-style assistant. It lists what it really can and can't do, labels its own ideas "Suggestion:", and never invents personal facts.
+- [`persona.md`](instructions/persona.md), chat only: "Scout", a friendly, direct assistant. It lists what it really can and can't do, labels its own ideas "Suggestion:", and never invents personal facts.
 - [`ingest-instructions.md`](instructions/ingest-instructions.md), ingest only
 
 **Context limits.** `num_ctx = 8192` is set explicitly, because Ollama's default context is smaller.
@@ -193,25 +193,26 @@ The prompt is `persona.md`, then the command list, then the last 6 exchanges, th
 
 **Structured ingestion.** Gemma plans topics and writes notes as JSON, using Ollama's schema-constrained output. The harness, not the model, decides filenames, folders, links and frontmatter. Before writing, it:
 
-- **sanitizes titles:** 2–6 words; no hashes, dates, questions or sentences; no README scaffolding like "Screenshots" or "Table of Contents"; drops "My …" and dangling parentheticals
+- **sanitizes titles:** 2–6 words; no hashes, dates, questions or sentences; no document scaffolding like "Education", "Screenshots" or "…Results"/"…Guide"; drops "My …" and dangling parentheticals
 - **checks section names:** every section name Gemma returns must exist in the source outline
-- **drops unsupported bullets:** any bullet with a number not found in its cited section, or sharing under 25% of its words with it, is dropped and logged in the ingest report
-- **validates links:** each related-note link must point to an existing note. Otherwise it is dropped, so a link can never break.
+- **drops unsupported bullets:** any bullet with a number not found in its cited section, sharing under 25% of its words with it, ending mid-sentence, or consisting only of the heading, is dropped and logged in the ingest report
+- **validates links:** each related-note link must point to an existing note, and a note from a different source is only a candidate if its title words appear in this page. Otherwise it is dropped, so a link can never break and the graph isn't padded.
 
-**Naming and folders.** Notes are named for their subject (`Row Level Security.md`), and the H1 matches the filename.
+**Naming and folders.** Notes are named for their subject (`Backyard Ultra.md`), and the H1 matches the filename.
 
-- `wiki/Projects/`: one per source, titled from the catalog, not by the model
-- `wiki/Concepts/`, `wiki/Tools/`
+- `wiki/Overview/`: one per source, titled from the catalog, not by the model
+- `wiki/Career/`, `wiki/Life/`, `wiki/Interests/`
 
-Machine IDs (`src-ms-pacman`) and original filenames live only in frontmatter and the catalog. `vault/index.md` is a human landing page, grouped by folder with one-line descriptions. Code, the retrieval index (`.wiki_cache/`), evidence, tests and drafts all live **outside** `vault/`. The Obsidian graph settings are committed ([`vault/.obsidian/graph.json`](vault/.obsidian/graph.json)): the filter is `path:wiki/`, attachments are hidden, and Projects, Concepts and Tools have color groups.
+Machine IDs (`src-resume`) and original filenames live only in frontmatter and the catalog. `vault/index.md` is a human landing page, grouped by folder with one-line descriptions. Code, the retrieval index (`.wiki_cache/`), evidence, tests and drafts all live **outside** `vault/`. The Obsidian graph settings are committed ([`vault/.obsidian/graph.json`](vault/.obsidian/graph.json)): the filter is `path:wiki/`, attachments are hidden, and each folder has a color group.
 
 **Re-ingestion without duplicates.** `state/pages.json` (created by the first ingest) records each page's content **per source ID**. Re-ingesting a source:
 
 1. removes that source's previous contributions
-2. matches new topic titles to existing ones, exactly or fuzzily (≥ 67% word overlap, so "Postgres Row Level Security" merges into "Row Level Security")
+2. matches new topic titles to existing ones, exactly or fuzzily (≥ 67% word overlap, so "Ocean Beach Surf Sessions" merges into "Ocean Beach Surfing")
 3. rewrites the affected pages
+4. retires any source whose file is gone from `raw/`, together with pages only it supported
 
-It also tells Gemma which note titles already exist so it reuses them. Once I set `reviewed: true` on a corrected note, ingest never overwrites it. A test covers both rules: re-ingesting yields the same file set, and a hand-corrected reviewed note stays byte-identical.
+It also tells Gemma which note titles already exist so it reuses them. Once I set `reviewed: true` on a corrected note, ingest never overwrites it. Tests cover all of this: re-ingesting yields the same file set, a hand-corrected reviewed note stays byte-identical, and removing a source removes its pages and leaves no broken link.
 
 **Model settings.**
 
@@ -227,8 +228,9 @@ It also tells Gemma which note titles already exist so it reuses them. Once I se
 |---|---|---|
 | Plan and test questions written before building | [`PLAN.md`](PLAN.md), [`evals/questions.json`](evals/questions.json) | ✅ |
 | Retrieval check: expected passage retrieved for tests 1–3 | [`evidence/retrieval/retrieval-check.md`](evidence/retrieval/retrieval-check.md) | ✅ build sandbox (deterministic; re-run offline ⏳) |
-| Harness tests (19, incl. no-duplicate re-ingest, ask ignores chat, chat skips lookup for capability questions) | [`tests/test_wiki.py`](tests/test_wiki.py) | ✅ `python -m unittest discover -s tests` |
-| Ingestion runs | `evidence/ingest/` | ⏳ |
+| Harness tests (22, incl. no-duplicate re-ingest, source retirement, ask ignores chat, chat skips lookup for capability questions) | [`tests/test_wiki.py`](tests/test_wiki.py) | ✅ `python -m unittest discover -s tests` |
+| Ingestion runs on the earlier class-project sources (real `gemma4:e2b`, online) | [`evidence/ingest/`](evidence/ingest/) | ✅ two runs, see [Development history](#development-history) |
+| Ingestion run on the personal sources | `evidence/ingest/` | ⏳ |
 | Four ask-mode evidence cards | `evidence/ask/test-1.md` … `test-4.md` | ⏳ |
 | Chat/search mode checks | `evidence/chat/*.md`, `evidence/search/`, `evidence/offline/transcript-*.txt` | ⏳ |
 | Offline recording / transcript | `evidence/offline/` + screenshots | ⏳ |
@@ -239,10 +241,10 @@ It also tells Gemma which note titles already exist so it reuses them. Once I se
 
 | Test | Question | Expected source › section | Rank in top 6 |
 |---|---|---|---|
-| 1 | What exploration rate did I use when training the Ms. Pac-Man agent? | ms-pacman › My hyperparameters | **3** (ranks 1–2 are the intro and "How the agent learns") |
-| 2 | How does my contacts app stop one user from seeing someone else's people? *(paraphrase)* | networking-tracker › The ownership rule | **1** |
-| 3 | Which of my projects trained on a GPU and which trained only on a CPU? | ms-pacman › Training budget **and** custom-llm › intro | **1** and **3** |
-| 4 | What grade did I receive on the Ms. Pac-Man assignment? | none should answer | Retrieves Pac-Man passages, none of which mention a grade |
+| 1 | What is my golf handicap? | surfing-golf-and-running › Golf | **1** |
+| 2 | Which company I worked for got bought, who bought it, and for how much? *(paraphrase: the source says "acquired by Uber for $2.0Bn")* | resume › Postmates | **4** |
+| 3 | Where did I go to community college, and what did I do there besides study? | resume › Education **and** growing-up › Football | **3** and **1** |
+| 4 | Who was my head football coach at Moreau Catholic? | none should answer | Retrieves football passages; none names a coach. The true answer is recorded only in `evals/questions.json`, outside the vault. |
 
 ### Four ask-mode tests ⏳ (offline, local Gemma)
 
@@ -263,34 +265,46 @@ Script: [`evals/chat_script.txt`](evals/chat_script.txt).
 |---|---|
 | "what can we do?" and "what can you help me with?" | capabilities, `no notes lookup`, no refusal |
 | draft a plan, then "make that shorter" | shorter version of *that* plan |
-| "What exploration rate did my Ms. Pac-Man agent use?" | notes retrieved, reply cites [S#] |
-| chat claim "I got an A+", then `wiki ask` the grade question in a fresh process | `INSUFFICIENT EVIDENCE` |
-| `wiki search "row level security policy"` | passages and paths only |
+| "Where do I usually surf?" | notes retrieved, reply cites [S#] |
+| chat claim "my coach was Andrew Cotter", then `wiki ask` the coach question in a fresh process | `INSUFFICIENT EVIDENCE` |
+| `wiki search "backyard ultra 50 miles"` | passages and paths only |
 
 ### Obsidian ⏳
 
 The screenshots go in `evidence/obsidian/`:
 
-1. `Row Level Security.md` (or similar) open, showing its source links and related notes
+1. a topic note (e.g. `Backyard Ultra.md`) open, showing its source links and related notes
 2. `index.md` or the file list
 3. the graph with filter `path:wiki/` and attachments off
 
-Then trace one note → a related note → `[[networking-tracker-README#The ownership rule]]` in `raw/`.
+Then trace one note → a related note → a `[[growing-up-and-football#Football]]`-style link back into `raw/`.
 
 ## 6. Reflection
 
-**A limitation already observed (retrieval, before any Gemma run).** For test 1, BM25 ranks the Ms. Pac-Man **intro** and **"How the agent learns"** above the **hyperparameter table** that actually holds `0.10`.
+**Limitation 1, observed in the real ingest runs: a 2B model's topic choice isn't stable.** Ingesting the same three sources twice with `gemma4:e2b` (same seed, temperature 0) produced overlapping but different topic lists: the second run kept 7 of 11 pages, created 4 and removed 4. Two of the removed pages (`Integration Testing`, `Database Constraints`) were good. Since a re-ingest replaces a source's contributions with what the *current* run proposes, a good page can vanish when the model changes its mind.
 
-- **Cause:** the question's rare words ("Ms.", "Pac-Man", "agent", "training") are spread through the prose sections. The answer sits in a table cell whose only matching word is "Exploration".
-- **Why it still works:** the table is at rank 3, inside the 6 passages Gemma sees.
-- **Where it breaks:** with `top_k = 2`, or a bigger wiki, it would fall out.
-- **Improvement to try:** hybrid retrieval (`method = "hybrid"`, EmbeddingGemma + BM25). Or index Markdown tables row by row with their header, so `Exploration | 0.10` becomes its own short passage. Then re-run `wiki eval --retrieval-only` and compare the ranks.
+- **Cause:** the plan prompt changed between runs (I edited the instructions), and small models are sensitive to that; but the design also has no memory of "topics that were good last time".
+- **What already helps:** `reviewed: true` pins a page. Once I've checked a note, no ingest can remove or overwrite it.
+- **Improvement to try:** show Gemma the existing topics *for this source* in the plan prompt and ask it to keep or explicitly drop each one with a reason, so removals are deliberate rather than accidental.
 
-**Gemma-side limitation** ⏳: filled after the offline run, from what the cards actually show, whether it passes or fails.
+**Limitation 2, retrieval (no model involved).** For test 2 the resume's Postmates section ranks only **4th**: "company", "bought", "worked" match many resume sections, while the source says "acquired", not "bought". It's still inside the 6 passages Gemma sees, but with `top_k = 3` it would drop out. Hybrid retrieval (`method = "hybrid"`, EmbeddingGemma + BM25) is the fix to try.
+
+**Gemma-side limitation on the personal wiki** ⏳: filled after the offline run, from what the cards actually show, whether it passes or fails.
 
 ## 7. Online mode
 
 Not implemented. `--mode online` exits with a clear message. Every command in this README runs locally and offline.
+
+## Development history
+
+The wiki was first built on my three class-project READMEs (Assignments 1–3), because they were the only text of mine available in the cloud sandbox where the code was written. Two real `gemma4:e2b` ingest runs on those sources are kept as evidence:
+
+| Run | What happened | Report |
+|---|---|---|
+| `ingest-20260926-213950` | First real run: 11 pages in 314 s, 19 model calls. Review against the originals found an empty page (`Training Results`), a note written from a parent heading's intro instead of its subsections (`Row Level Security`), and unrelated cross-project links. | [json](evidence/ingest/ingest-20260926-213950.json) |
+| `ingest-20260926-215257` | Re-ingest after fixing the harness: 11 → 11 pages, no duplicates; 4 created, 4 removed, 7 updated; the two bad pages gone, three previously-lost topics recovered. | [json](evidence/ingest/ingest-20260926-215257.json) |
+
+I then replaced the sources with personal ones, since a personal memory is what the assignment describes, and rewrote the four test questions. The harness code didn't change for the swap: only the category names, the persona's description of what the wiki contains, and the sources themselves.
 
 ## Repository layout
 
@@ -309,8 +323,8 @@ personal-wiki/
 │   └── config.py        wiki.toml loader
 ├── instructions/        persona.md (chat) · wiki-instructions.md (ask) · ingest-instructions.md
 ├── vault/               ← open THIS folder in Obsidian
-│   ├── raw/             unchanged originals
-│   ├── wiki/            generated, reviewed notes (Projects/ Concepts/ Tools/)
+│   ├── raw/             unchanged originals (resume, two notes I wrote)
+│   ├── wiki/            generated, reviewed notes (Overview/ Career/ Life/ Interests/)
 │   ├── attachments/
 │   └── index.md
 ├── state/               source_catalog.json, pages.json (page registry for no-duplicate re-ingest)

@@ -29,8 +29,8 @@ from .llm import OllamaClient
 from .prompts import load_instruction
 from .sources import SourceCatalog, Section, parse_sections, read_text
 
-CATEGORIES = ("Concepts", "Tools")
-PROJECT_FOLDER = "Projects"
+CATEGORIES = ("Career", "Life", "Interests")   # topic folders (edit here and in the ingest instructions)
+PROJECT_FOLDER = "Overview"                      # one note per original source
 MAX_TOPICS = 5
 SECTION_TEXT_BUDGET = 5000   # chars of original text sent to Gemma per note
 OUTLINE_PREVIEW = 160        # chars of each section shown in the planning outline
@@ -149,8 +149,8 @@ def similar(a: str, b: str) -> bool:
 @dataclass
 class Page:
     title: str
-    category: str                    # Projects | Concepts | Tools
-    kind: str                        # project | topic
+    category: str                    # Overview | one of CATEGORIES
+    kind: str                        # project (one per source) | topic
     contributions: dict = field(default_factory=dict)   # source_id -> {summary, details, sections}
     related: dict = field(default_factory=dict)         # title -> reason (Gemma-proposed, validated)
     summary: str = ""
@@ -351,7 +351,7 @@ class Ingestor:
             seen_keys.add(key)
             page = self.store.pages.get(key)
             if page is None:
-                category = topic.get("category") if topic.get("category") in CATEGORIES else "Concepts"
+                category = topic.get("category") if topic.get("category") in CATEGORIES else CATEGORIES[0]
                 page = Page(title, category, "topic")
                 self.store.pages[key] = page
 
@@ -401,6 +401,18 @@ class Ingestor:
 
     # ---- after all sources ----
     def finalize(self, link_titles: set[str] | None = None) -> None:
+        # Sources whose original file was removed from raw/ are retired: their contributions go,
+        # and so does any page that only they supported.
+        gone = {sid for sid, e in self.catalog.entries.items() if not (self.cfg.paths.vault / e.file).exists()}
+        gone |= {sid for page in self.store.pages.values() for sid in page.contributions
+                 if sid not in self.catalog.entries}
+        for sid in sorted(gone):
+            self.report.setdefault("retired_sources", []).append(sid)
+            self.catalog.entries.pop(sid, None)
+            for page in self.store.pages.values():
+                page.contributions.pop(sid, None)
+                if sid in page.source_ids:
+                    page.source_ids.remove(sid)
         # Pages whose every contribution disappeared (a source was re-ingested and dropped the topic).
         for key in [k for k, p in self.store.pages.items() if not p.contributions]:
             self.report["removed_pages"].append(self.store.pages[key].title)
@@ -526,7 +538,7 @@ class Ingestor:
                              if p.kind == "topic" and any(s in p.contributions for s in page.source_ids)),
                             key=lambda p: p.title)
             if topics:
-                body += ["## Topics in this project", ""]
+                body += ["## Topics from this source", ""]
                 body += [f"- [[{t.title}]] — {_first_sentence(t.summary)}" for t in topics]
                 body.append("")
         else:
@@ -534,13 +546,13 @@ class Ingestor:
             multi = len(sources) > 1
             for sid, entry, contrib in sources:
                 if multi:
-                    body += [f"### In [[{entry.title}]]", ""]
+                    body += [f"### From [[{entry.title}]]", ""]
                 body += [f"- {d['text']} ({_src_link(entry, d)})" for d in contrib["details"]]
                 body.append("")
             body += ["## Related notes", ""]
             for sid, entry, _ in sources:
                 if entry.title in by_title:
-                    body.append(f"- [[{entry.title}]] — the project where this topic comes up.")
+                    body.append(f"- [[{entry.title}]] — the source this topic comes from.")
             for title, reason in sorted(page.related.items()):
                 body.append(f"- [[{title}]] — {reason or 'related topic.'}")
             body.append("")
@@ -584,24 +596,25 @@ def _is_generated(path: Path) -> bool:
 
 
 def write_index(cfg: Config, store: PageStore, catalog: SourceCatalog) -> None:
-    groups = {PROJECT_FOLDER: [], "Concepts": [], "Tools": []}
+    groups = {PROJECT_FOLDER: [], **{c: [] for c in CATEGORIES}}
     for p in store.pages.values():
         groups.setdefault(p.category, []).append(p)
     blurbs = {
-        PROJECT_FOLDER: "One note per original source: what the project was and its key facts.",
-        "Concepts": "Ideas and techniques that came up across the projects.",
-        "Tools": "Named software, libraries and services the projects used.",
+        PROJECT_FOLDER: "One note per original source: what it is and its key facts.",
+        "Career": "Jobs, schools, deals and results from my professional life.",
+        "Life": "Where I grew up, family, school and football.",
+        "Interests": "Surfing, golf, running and what I do with my time.",
     }
     lines = [
-        "# Personal Wiki: My Class Projects", "",
-        "My notes on the projects I built in class. Start with a project, then follow its topic links. "
-        "Every generated note links back to the exact section of the original write-up in `raw/`.", "",
+        "# Matt's Personal Wiki", "",
+        "Notes about me: where I come from, my career, and what I do outside work. Start with an overview note, "
+        "then follow its topic links. Every generated note links back to the exact section of the original in `raw/`.", "",
     ]
-    for group in (PROJECT_FOLDER, "Concepts", "Tools"):
+    for group in (PROJECT_FOLDER, *CATEGORIES):
         pages = sorted(groups.get(group, []), key=lambda p: p.title.lower())
         if not pages:
             continue
-        lines += [f"## {group}", "", f"_{blurbs[group]}_", ""]
+        lines += [f"## {group}", "", f"_{blurbs.get(group, '')}_", ""]
         lines += [f"- [[{p.title}]] — {_first_sentence(p.summary)}" for p in pages]
         lines.append("")
     lines += ["## Original sources", "", "Unchanged originals. IDs and hashes are in `state/source_catalog.json` "

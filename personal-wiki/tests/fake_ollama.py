@@ -127,7 +127,7 @@ def reply(payload: dict) -> str:
             sentence = _first_line(body)
             if sentence:
                 details.append({"text": sentence, "section": label})
-        details.append({"text": "The agent scored 987654 points in a secret run.", "section": blocks[0][0] if blocks else ""})
+        details.append({"text": "Matt shot a course record of 987654 at Oakland Metro.", "section": blocks[0][0] if blocks else ""})
         return json.dumps({"summary": "A topic from the project. It appears in the source.", "details": details})
     if "links" in props:                       # ingest linking
         cands = re.findall(r"^- (.+?): ", user, re.M)
@@ -136,7 +136,7 @@ def reply(payload: dict) -> str:
         return json.dumps({"links": links})
     if "needs_notes" in props:                 # chat router
         msg = user.split("New message:", 1)[-1].lower()
-        needs = any(k in msg for k in ("pac-man", "exploration", "contacts", "nanogpt", "my project"))
+        needs = any(k in msg for k in ("surf", "golf", "coach", "handicap", "postmates", "my resume"))
         return json.dumps({"needs_notes": needs, "search_query": msg.strip() if needs else ""})
     if props.get("summary") and len(props) == 1:
         return json.dumps({"summary": "Merged summary of the topic."})
@@ -144,17 +144,17 @@ def reply(payload: dict) -> str:
     if "Research rules" in system:              # ask mode
         question = user.split("QUESTION\n========\n", 1)[-1].split("\n")[0].lower()
         evidence = user.split("QUESTION", 1)[0].lower()
-        if "grade" in question and "grade" not in evidence.replace("grader", ""):
-            return "INSUFFICIENT EVIDENCE: the wiki does not say what grade was received."
-        if "exploration" in question:
-            return "The exploration rate was 0.10 [S1]."
+        if "coach" in question and "coach" not in evidence:
+            return "INSUFFICIENT EVIDENCE: the wiki does not name a football coach."
+        if "handicap" in question:
+            return "Matt's golf handicap is about a 17 [S1]."
         return "The notes answer this [S1]."
     # chat mode
     last_assistant = next((m["content"] for m in reversed(msgs) if m["role"] == "assistant"), "")
     if "shorter" in user.lower() and last_assistant:
         return "Shorter: " + last_assistant[:40]
     if "NOTES FROM THE WIKI" in user:
-        return "From your notes: exploration was 0.10 [S1]."
+        return "From your notes: you surf at Ocean Beach [S1]."
     return "I can help you brainstorm, draft, and look things up in your notes. Suggestion: start with /notes."
 
 

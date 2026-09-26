@@ -19,14 +19,14 @@ Step "0b. Device"               "Get-CimInstance Win32_Processor | Select-Object
 Step "1. Help"                  "wiki --help"
 Step "2. Status (model, quantization, runtime)" "wiki status"
 Step "3. Ingest all sources"    "wiki ingest vault/raw"
-Step "4. Re-ingest one source (must not create duplicates)" "wiki ingest vault/raw/ms-pacman-README.md"
+Step "4. Re-ingest one source (must not create duplicates)" "wiki ingest vault/raw/surfing-golf-and-running.md"
 Step "5. Wiki page list"        "Get-ChildItem -Recurse vault/wiki -Filter *.md | Select-Object -ExpandProperty FullName"
-Step "6. Search (no model)"     "wiki search 'row level security policy' --save"
+Step "6. Search (no model)"     "wiki search 'backyard ultra 50 miles' --save"
 Step "7. Retrieval check"       "wiki eval --retrieval-only"
 Step "8. Four ask-mode tests"   "wiki eval"
 Step "9. Status after (loaded memory)" "wiki status"
 Step "10. Chat mode checks"     "wiki chat --script evals/chat_script.txt"
-Step "11. Ask after the chat claim (fresh process, must be insufficient)" "wiki ask 'What grade did I receive on the Ms. Pac-Man assignment?'"
+Step "11. Ask after the chat claim (fresh process, must be insufficient)" "wiki ask 'Who was my head football coach at Moreau Catholic?'"
 Step "12. Ollama memory"        "ollama ps"
 
 Stop-Transcript

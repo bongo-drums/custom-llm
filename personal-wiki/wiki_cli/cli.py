@@ -138,6 +138,8 @@ def cmd_ingest(h: Harness, args) -> int:
     out(f"created: {', '.join(report['created']) or '-'}")
     out(f"updated: {', '.join(report['updated']) or '-'}")
     out(f"removed: {', '.join(report['removed']) or '-'}")
+    if report.get("retired_sources"):
+        out(f"retired sources (file no longer in raw/): {', '.join(report['retired_sources'])}")
     if report["skipped_reviewed"]:
         out(f"left alone (reviewed: true): {', '.join(report['skipped_reviewed'])}")
     if report["dropped_topics"] or report["dropped_bullets"] or report["dropped_links"]:

@@ -85,8 +85,8 @@ ROUTER_SCHEMA = {
 def build_router(history: list[dict], message: str) -> list[dict]:
     recent = "\n".join(f"{m['role']}: {m['content'][:300]}" for m in history[-4:]) or "(start of conversation)"
     system = (
-        "You decide whether a chat message needs a lookup in the user's personal wiki of class project notes "
-        "(a networking tracker web app, a Ms. Pac-Man DQN agent, a small nanoGPT model). "
+        "You decide whether a chat message needs a lookup in the user's personal wiki "
+        "(his resume and career, growing up in the Bay Area and football, surfing, golf and running). "
         "needs_notes=true only when answering requires specific facts from those notes. "
         "Greetings, questions about the assistant, general brainstorming, and edits to a previous reply need no notes. "
         "If needs_notes is true, write a short keyword search_query that stands on its own; otherwise use an empty string."

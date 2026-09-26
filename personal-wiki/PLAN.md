@@ -88,3 +88,14 @@ The sandbox cannot download Gemma weights: Hugging Face, Ollama and Kaggle are b
 4. Review the generated pages against the originals, and fix any invented statements.
 5. Take the Obsidian screenshots: an open note, the index or page list, and the graph filtered with `path:wiki/`.
 6. Fill in the README's measured memory, timing and assessment sections from `evidence/`.
+
+## 6. Change of data (added 26 September, after the first two real ingest runs)
+
+The three README sources above were a stand-in: they were the only text of mine reachable from the cloud sandbox. Once the pipeline worked on them (two real `gemma4:e2b` runs, kept in `evidence/ingest/`), I replaced them with the personal sources the assignment actually describes: my resume, a note about growing up in the Bay Area and playing football, and a note about surfing, golf and running. Categories became `Career`, `Life`, `Interests`, and the four tests were rewritten before ingesting the new sources:
+
+| # | Question | Expected | Evidence |
+|---|---|---|---|
+| 1 | What is my golf handicap? | about a 17 | interests › Golf |
+| 2 | Which company I worked for got bought, who bought it, and for how much? *(source says "acquired")* | Postmates, Uber, $2.0Bn | resume › Postmates |
+| 3 | Where did I go to community college, and what did I do there besides study? | College of San Mateo 2012–2014, student athlete / wanted to keep playing football | resume › Education + growing-up › Football |
+| 4 | Who was my head football coach at Moreau Catholic? | insufficient evidence (the real answer is kept out of every source on purpose) | none |

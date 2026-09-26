@@ -1,0 +1,5 @@
+# Keep sources and generated notes byte-identical on every OS (the catalog hashes them).
+* text=auto eol=lf
+*.png binary
+*.webp binary
+*.jpg binary

@@ -42,7 +42,12 @@ class SourceEntry:
 
 
 def sha256_of(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    """Hash of the file's text with line endings normalised to LF.
+
+    Git on Windows checks files out with CRLF, so a raw byte hash would report every
+    source as "changed" on a different OS even though not a character of text differs.
+    """
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def read_text(path: Path) -> str:

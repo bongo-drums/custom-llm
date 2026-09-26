@@ -1,0 +1,200 @@
+{
+  "sources": [
+    {
+      "id": "src-resume",
+      "file": "raw/matt-wong-resume.md",
+      "sha256": "a4a062de03ad10d783b361081c0684d0c5e4c725f9638a3b80b537f4bbd90375",
+      "sections": 12,
+      "changed": false
+    }
+  ],
+  "dropped_bullets": [
+    {
+      "note": "Matt Wong Resume",
+      "text": "Education",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Work Experience",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Haas MBA Honors",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Postmates Acquisition",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Investment Banking Path",
+      "text": "Investment Banking Path",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Investment Banking Path",
+      "text": "Corazon Capital",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Investment Banking Path",
+      "text": "SkyDeck",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Investment Banking Path",
+      "text": "Citigroup",
+      "reason": "fragment or too short"
+    }
+  ],
+  "dropped_topics": [
+    {
+      "source": "src-resume",
+      "proposed": "Investment Banking Path",
+      "reason": "no bullet survived grounding checks"
+    }
+  ],
+  "dropped_links": [],
+  "calls": [
+    {
+      "purpose": "plan src-resume",
+      "model": "gemma4:e2b",
+      "wall_seconds": 16.15,
+      "prompt_tokens": 1326,
+      "output_tokens": 859,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.35,
+      "generation_seconds": 13.59
+    },
+    {
+      "purpose": "write 'Haas MBA Education'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.34,
+      "prompt_tokens": 852,
+      "output_tokens": 613,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.09,
+      "generation_seconds": 10.09
+    },
+    {
+      "purpose": "write 'Venture Investing Experience'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 15.18,
+      "prompt_tokens": 1507,
+      "output_tokens": 702,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.53,
+      "generation_seconds": 12.46
+    },
+    {
+      "purpose": "write 'Postmates Exit'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.84,
+      "prompt_tokens": 1507,
+      "output_tokens": 626,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.11,
+      "generation_seconds": 10.51
+    },
+    {
+      "purpose": "write 'Investment Banking Path'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 14.8,
+      "prompt_tokens": 1507,
+      "output_tokens": 711,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.13,
+      "generation_seconds": 12.42
+    },
+    {
+      "purpose": "link 'Haas MBA Education'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.87,
+      "prompt_tokens": 776,
+      "output_tokens": 569,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.22,
+      "generation_seconds": 9.45
+    },
+    {
+      "purpose": "link 'Venture Investing Experience'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 14.58,
+      "prompt_tokens": 839,
+      "output_tokens": 731,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.25,
+      "generation_seconds": 12.15
+    },
+    {
+      "purpose": "link 'Postmates Exit'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.0,
+      "prompt_tokens": 782,
+      "output_tokens": 498,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.26,
+      "generation_seconds": 8.54
+    }
+  ],
+  "skipped_reviewed": [
+    "Football Career",
+    "Growing Up and Football",
+    "Haas MBA Education",
+    "Matt Wong Resume"
+  ],
+  "removed_pages": [],
+  "pages_before": 10,
+  "pages_after": 12,
+  "created": [
+    "Postmates Exit",
+    "Venture Investing Experience"
+  ],
+  "removed": [],
+  "updated": [
+    "Haas MBA Education",
+    "Matt Wong Resume"
+  ],
+  "seconds": 108.9,
+  "environment": {
+    "timestamp_utc": "2026-09-26T22:20:16+00:00",
+    "execution": "local",
+    "internet_reachable": true,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  }
+}

@@ -6,16 +6,18 @@ Notes about me: where I come from, my career, and what I do outside work. Start 
 
 _One note per original source: what it is and its key facts._
 
-- [[Growing Up and Football]] — Matt's upbringing in the East Bay and his involvement in football.
-- [[Matt Wong Resume]] — Matt Wong's educational background and professional experience across finance, venture capital, and market-leading technology platforms.
+- [[Growing Up and Football]] — This project documents Matt's upbringing in the East Bay and his involvement in football.
+- [[Matt Wong Resume]] — Matt Wong's educational background, professional experience, and advisory activities.
 - [[Sports and Interests]] — Matt's personal interests in sports and his social life.
 
 ## Career
 
 _Jobs, schools, deals and results from my professional life._
 
-- [[Haas MBA Education]] — Matt Wong is pursuing an MBA at the Haas School of Business and holds a Bachelor of Science in Business Administration from the same school.
+- [[Haas MBA Education]] — Matt Wong's education details cover his time at the University of California, Berkeley's Haas School of Business.
 - [[Investment Banking Path]] — Matt started his career in investment banking before moving into startups to pursue a more visible impact.
+- [[Postmates Exit]] — Postmates Exit details Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace.
+- [[Venture Investing Experience]] — Venture Investing Experience details Matt's involvement in early-stage fund operations and deal sourcing across various technology sectors.
 
 ## Life
 
@@ -40,4 +42,4 @@ Unchanged originals. IDs and hashes are in `state/source_catalog.json` (outside 
 - [[matt-wong-resume]] — Matt Wong Resume (`src-resume`). Education, work history from Citigroup to Corazon Capital, honors and activities.
 - [[surfing-golf-and-running]] — Sports and Interests (`src-interests`). Golf at Oakland Metro, surfing Ocean Beach, ultra running and the backyard ultra win, and everything else.
 
-_Index generated 2026-09-26 22:15 UTC by `wiki ingest`._
+_Index generated 2026-09-26 22:20 UTC by `wiki ingest`._

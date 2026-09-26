@@ -51,7 +51,7 @@
         }
       },
       "related": {},
-      "summary": "Matt started playing football in the sixth grade and was a team captain during his high school years. After high school he started at College of San Mateo, chose to put his studies first, and transferred to UC Berkeley to study business.",
+      "summary": "Matt started playing football in the sixth grade and was a team captain during his high school years. After high school, he prioritized academics by transferring to college to pursue a business degree.",
       "file": "wiki/Life/Football Career.md",
       "source_ids": []
     },
@@ -107,7 +107,7 @@
         }
       },
       "related": {},
-      "summary": "Matt's upbringing in the East Bay and his involvement in football. It also traces his transition from sports into a career in investment banking and startups.",
+      "summary": "This project documents Matt's upbringing in the East Bay and his involvement in football. It also traces his transition from sports into a career in investment banking and startups.",
       "file": "wiki/Overview/Growing Up and Football.md",
       "source_ids": [
         "src-growing-up"
@@ -119,7 +119,7 @@
       "kind": "topic",
       "contributions": {
         "src-resume": {
-          "summary": "Matt Wong is pursuing an MBA at the Haas School of Business and holds a Bachelor of Science in Business Administration from the same school. His academic record includes several honors, internships, and extracurricular leadership roles.",
+          "summary": "Matt Wong's education details cover his time at the University of California, Berkeley's Haas School of Business. This includes his Bachelor of Science and his planned Master of Business Administration degree.",
           "details": [
             {
               "text": "Master of Business Administration (MBA). Graduation Date: Spring 2027",
@@ -158,7 +158,16 @@
               ]
             },
             {
-              "text": "Honors: Cum Laude, Edgar J.",
+              "text": "Honors: Cum Laude, Edgar J. Kaiser Scholar",
+              "section": "Education",
+              "heading": "Education",
+              "lines": [
+                7,
+                21
+              ]
+            },
+            {
+              "text": "Internships: Citigroup, Dimensional Funds",
               "section": "Education",
               "heading": "Education",
               "lines": [
@@ -173,9 +182,10 @@
         }
       },
       "related": {
-        "Investment Banking Path": "Details Matt's career progression from investment banking to startups."
+        "Venture Investing Experience": "Details Matt's involvement in deal sourcing and fund operations relevant to business studies.",
+        "Postmates Exit": "Highlights Matt's work in financial restructuring and acquisition, applying business principles."
       },
-      "summary": "Matt Wong is pursuing an MBA at the Haas School of Business and holds a Bachelor of Science in Business Administration from the same school. His academic record includes several honors, internships, and extracurricular leadership roles.",
+      "summary": "Matt Wong's education details cover his time at the University of California, Berkeley's Haas School of Business. This includes his Bachelor of Science and his planned Master of Business Administration degree.",
       "file": "wiki/Career/Haas MBA Education.md",
       "source_ids": []
     },
@@ -209,59 +219,6 @@
           "sections": [
             "After football"
           ]
-        },
-        "src-resume": {
-          "summary": "Investment Banking Path",
-          "details": [
-            {
-              "text": "Matt worked as a Summer Investment Associate at Corazon Capital, where he sourced, diligenced, and closed a pre-seed investment, and led diligence on prospective deals across AI companions, consumer hardware, and EdTech.",
-              "section": "Work Experience",
-              "heading": "Work Experience",
-              "lines": [
-                22,
-                69
-              ]
-            },
-            {
-              "text": "Matt was a Pre-MBA Associate and Venture Fellow at SkyDeck, where he sourced three companies across AI infrastructure, agent control, BaaS, and semiconductor startups, and established university relationships.",
-              "section": "Work Experience",
-              "heading": "Work Experience",
-              "lines": [
-                22,
-                69
-              ]
-            },
-            {
-              "text": "Matt managed financial planning and goaling for Gametime, leading to the company's first-ever profitable quarter, and oversaw marketing budgets resulting in incremental revenue.",
-              "section": "Work Experience",
-              "heading": "Work Experience",
-              "lines": [
-                22,
-                69
-              ]
-            },
-            {
-              "text": "Matt oversaw financial due diligence on capital fundraising for Wonolo, restructuring customer profitability analyses, and led a 'Living Wage' initiative for workers.",
-              "section": "Work Experience",
-              "heading": "Work Experience",
-              "lines": [
-                22,
-                69
-              ]
-            },
-            {
-              "text": "Matt served as a Sr. Finance & Strategy Analyst at Postmates, where he was the primary analyst on fundraising and exit efforts leading to the $2.0Bn sale to Uber.",
-              "section": "Work Experience",
-              "heading": "Work Experience",
-              "lines": [
-                22,
-                69
-              ]
-            }
-          ],
-          "sections": [
-            "Work Experience"
-          ]
         }
       },
       "related": {},
@@ -275,53 +232,13 @@
       "kind": "project",
       "contributions": {
         "src-resume": {
-          "summary": "This project summarizes Matt Wong's educational background and professional experience across finance, venture capital, and market-leading technology platforms. It details his roles in high-growth startups and major financial institutions.",
-          "details": [
-            {
-              "text": "Matt Wong earned a Master of Business Administration (MBA) from the University of California, Berkeley – Haas School of Business, graduating in Spring 2027.",
-              "section": "Education",
-              "heading": "Education",
-              "lines": [
-                7,
-                21
-              ]
-            },
-            {
-              "text": "Matt Wong worked as a Sr. Finance & Strategy Manager at Postmates, where he was the primary analyst on fundraising and exit efforts leading to a $2Bn sale to Uber.",
-              "section": "Work Experience",
-              "heading": "Work Experience",
-              "lines": [
-                22,
-                69
-              ]
-            },
-            {
-              "text": "Matt Wong was an Investment Associate at Corazon Capital, where he sourced, diligenced, and closed a pre-seed investment in Upriver AI.",
-              "section": "Work Experience",
-              "heading": "Work Experience",
-              "lines": [
-                22,
-                69
-              ]
-            },
-            {
-              "text": "Matt Wong worked as a Corporate Banking Analyst at Citigroup, focusing on capital raising and corporate strategy for clients like Apple.",
-              "section": "Work Experience",
-              "heading": "Work Experience",
-              "lines": [
-                22,
-                69
-              ]
-            }
-          ],
-          "sections": [
-            "Education",
-            "Work Experience"
-          ]
+          "summary": "Matt Wong's educational background, professional experience, and advisory activities. It details a career trajectory focused on finance, venture capital, and strategic management across various high-profile companies.",
+          "details": [],
+          "sections": []
         }
       },
       "related": {},
-      "summary": "Matt Wong's educational background and professional experience across finance, venture capital, and market-leading technology platforms. It details his roles in high-growth startups and major financial institutions.",
+      "summary": "Matt Wong's educational background, professional experience, and advisory activities. It details a career trajectory focused on finance, venture capital, and strategic management across various high-profile companies.",
       "file": "wiki/Overview/Matt Wong Resume.md",
       "source_ids": [
         "src-resume"
@@ -410,6 +327,55 @@
       "file": "wiki/Life/Personal Life.md",
       "source_ids": []
     },
+    "postmat-exit": {
+      "title": "Postmates Exit",
+      "category": "Career",
+      "kind": "topic",
+      "contributions": {
+        "src-resume": {
+          "summary": "Postmates Exit details Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace. This experience highlights his work in finance, strategy, and fundraising related to a major corporate exit.",
+          "details": [
+            {
+              "text": "Primary analyst on fundraising and exit efforts that led to a S-1 publication and $2Bn sale to Uber Technologies",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Partnered with Growth Marketing on a $150M+ budget resulting in >5M new customer across >10 acquisition channels",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Oversaw Postmates' consolidated financial restructuring that resulted in 10% gross margin improvement over 2 years",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            }
+          ],
+          "sections": [
+            "Work Experience"
+          ]
+        }
+      },
+      "related": {
+        "Haas MBA Education": "Details Matt Wong's educational background relevant to his finance and strategy work.",
+        "Venture Investing Experience": "Relates to Matt's experience in deal sourcing and fund operations during the exit."
+      },
+      "summary": "Postmates Exit details Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace. This experience highlights his work in finance, strategy, and fundraising related to a major corporate exit.",
+      "file": "wiki/Career/Postmates Exit.md",
+      "source_ids": []
+    },
     "sport-interest": {
       "title": "Sports and Interests",
       "category": "Overview",
@@ -427,6 +393,83 @@
       "source_ids": [
         "src-interests"
       ]
+    },
+    "venture-invest-experience": {
+      "title": "Venture Investing Experience",
+      "category": "Career",
+      "kind": "topic",
+      "contributions": {
+        "src-resume": {
+          "summary": "Venture Investing Experience details Matt's involvement in early-stage fund operations and deal sourcing across various technology sectors.",
+          "details": [
+            {
+              "text": "Sourced, diligenced and closed pre-seed investment (Upriver AI) – fastest sourced-to-close intern deal in firm history",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Led diligence on 8+ prospective deals across AI companions, consumer hardware and EdTech (Ollie AI, Freckle, Arrowster) – authored investment memos, market sizings and competitive landscapes for the partnership",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Built internal workflows (weekly relationship CRM), firm-wide newsletter and building deeper accelerator relationships",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Sourced three companies: two AI infrastructure (agent control, BaaS), one semiconductor (in-memory compute) startups",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Owned U.S university deal flow partner relationships resulting in 7 new university relationships",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "1st intern to develop and lead roadshow in Boston – established partnerships at Boston University, MIT & Harvard",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            }
+          ],
+          "sections": [
+            "Work Experience"
+          ]
+        }
+      },
+      "related": {
+        "Investment Banking Path": "Details Matt's career progression from banking into startups.",
+        "Postmates Exit": "Highlights Matt's experience in financial restructuring and acquisitions.",
+        "Haas MBA Education": "Covers Matt's educational background and time at UC Berkeley Haas."
+      },
+      "summary": "Venture Investing Experience details Matt's involvement in early-stage fund operations and deal sourcing across various technology sectors.",
+      "file": "wiki/Career/Venture Investing Experience.md",
+      "source_ids": []
     },
     "weekly-runn": {
       "title": "Weekly Running",

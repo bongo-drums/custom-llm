@@ -103,6 +103,8 @@ GENERIC_TITLES = {
     "what i observed", "what i expected", "what i would do next", "repository layout", "repository map",
     "reflection", "evidence", "conclusion", "notes", "details", "background", "project", "readme",
 }
+# "Training Results", "Local Setup Guide": a README section name, not a subject a reader looks up.
+GENERIC_LAST_WORDS = {"guide", "overview", "notes", "section", "summary", "results", "details", "readme"}
 SMALL_WORDS = {"a", "an", "and", "as", "at", "by", "for", "in", "of", "on", "or", "the", "to", "vs", "with"}
 
 
@@ -114,7 +116,7 @@ def sanitize_title(raw: str) -> str | None:
     t = re.sub(r"\([^)]*\)?|\)", " ", t)          # drop parentheticals, including a dangling "(all"
     t = re.sub(r"^(my|our|the)\s+", "", t.strip(), flags=re.I)
     t = re.sub(r"\s+", " ", t).strip(" .,-_'")
-    if t.lower() in GENERIC_TITLES:
+    if t.lower() in GENERIC_TITLES or t.split()[-1].lower() in GENERIC_LAST_WORDS:
         return None
     if not t or HASHLIKE.search(t) or DATELIKE.search(t):
         return None
@@ -204,21 +206,44 @@ def _match_section(name: str, sections: list[Section]) -> Section | None:
     return best if best_score >= 0.5 else None
 
 
+META_OPENER = re.compile(r"^(this|the) (note|section|page|document|entry) (details|covers|describes|summarizes|"
+                         r"summarises|compares|explains|discusses|outlines|presents)\s+", re.I)
+
+
 def _clean_text(text: str) -> str:
     text = re.sub(r"\[\[|\]\]", "", text or "")
     text = re.sub(r"\s+", " ", text).strip()
     return text
 
 
+def _clean_summary(text: str) -> str:
+    text = META_OPENER.sub("", _clean_text(text))
+    return text[:1].upper() + text[1:] if text else text
+
+
+def _complete(text: str) -> str | None:
+    """Trim a bullet to its last full sentence; None if it is a fragment or too short to be a fact."""
+    if len(text) < 25:
+        return None
+    if not text.endswith((".", "!", "?", ")", "`", "'", '"')) and not re.search(r"\d$", text):
+        cut = max(text.rfind(". "), text.rfind("! "), text.rfind("? "))
+        if cut < len(text) * 0.5:
+            return None
+        text = text[:cut + 1]
+    return text
+
+
 def _grounded(text: str, section: Section) -> tuple[bool, str]:
     """Drop bullets whose numbers do not appear in the cited section (a common small-model invention)."""
-    src = section.text.replace(",", "")
+    if text.strip().lower().rstrip(".") == section.heading.lower():
+        return False, "bullet is just the section heading"
+    src = section.full_text.replace(",", "")
     for n in NUM.findall(text):
         if n.replace(",", "") not in src:
             return False, f"number {n} not found in section '{section.label}'"
     words = {w for w in tokenize(text) if len(w) > 3}
     if words:
-        overlap = len(words & set(tokenize(section.text))) / len(words)
+        overlap = len(words & set(tokenize(section.full_text))) / len(words)
         if overlap < 0.25:
             return False, f"only {overlap:.0%} of its words appear in section '{section.label}'"
     return True, ""
@@ -236,7 +261,7 @@ def _outline(sections: list[Section]) -> str:
 def _section_text(chosen: list[Section]) -> str:
     parts, used = [], 0
     for s in chosen:
-        body = display_clean(s.text).strip()
+        body = display_clean(s.full_text).strip()
         room = SECTION_TEXT_BUDGET - used
         if room <= 200:
             break
@@ -294,7 +319,7 @@ class Ingestor:
         project.source_ids = [entry.id]
         facts = self._validated_details(plan.get("key_facts", []), sections, entry.title)
         project.contributions[entry.id] = {
-            "summary": _clean_text(plan.get("project_summary", "")),
+            "summary": _clean_summary(plan.get("project_summary", "")),
             "details": facts,
             "sections": sorted({d["section"] for d in facts}),
         }
@@ -343,7 +368,7 @@ class Ingestor:
                                                       "reason": "no bullet survived grounding checks"})
                 continue
             page.contributions[entry.id] = {
-                "summary": _clean_text(note.get("summary", "")),
+                "summary": _clean_summary(note.get("summary", "")),
                 "details": details,
                 "sections": sorted({d["section"] for d in details}),
             }
@@ -361,12 +386,17 @@ class Ingestor:
             if sec is None:
                 # fall back to the section that actually contains most of the bullet's words
                 sec = max(sections, key=lambda s: len(set(tokenize(text)) & set(tokenize(s.text))))
+            whole = _complete(text)
+            if whole is None:
+                self.report["dropped_bullets"].append({"note": note, "text": text, "reason": "fragment or too short"})
+                continue
+            text = whole
             ok, why = _grounded(text, sec)
             if not ok:
                 self.report["dropped_bullets"].append({"note": note, "text": text, "reason": why})
                 continue
             out.append({"text": text, "section": sec.label, "heading": sec.heading,
-                        "lines": [sec.start_line, sec.end_line]})
+                        "lines": [sec.start_line, sec.full_end_line]})
         return out
 
     # ---- after all sources ----
@@ -383,7 +413,7 @@ class Ingestor:
                     f"merge summary '{page.title}'",
                     f"Combine these summaries of the note '{page.title}' into 1-2 sentences, keeping only what they say:\n- "
                     + "\n- ".join(summaries), MERGE_SCHEMA)
-                page.summary = _clean_text(merged.get("summary", "")) or summaries[0]
+                page.summary = _clean_summary(merged.get("summary", "")) or summaries[0]
             elif len(summaries) == 1 or not page.summary:
                 page.summary = summaries[0] if summaries else ""
 
@@ -391,7 +421,17 @@ class Ingestor:
         for page in topics:
             if link_titles is not None and page.title not in link_titles:
                 continue
-            candidates = [p for p in topics if p is not page]
+            own_sources = set(page.contributions)
+            page_words = set(tokenize(page.summary + " " + " ".join(
+                d["text"] for c in page.contributions.values() for d in c["details"])))
+            candidates = []
+            for p in topics:
+                if p is page:
+                    continue
+                shares_project = bool(own_sources & set(p.contributions))
+                title_words = {w for w in tokenize(p.title) if len(w) > 3}
+                if shares_project or (title_words and title_words & page_words):
+                    candidates.append(p)
             if not candidates:
                 page.related = {}
                 continue
@@ -399,7 +439,9 @@ class Ingestor:
             data = self._call(
                 f"link '{page.title}'",
                 f"NOTE: {page.title}\nSUMMARY: {page.summary}\n\nCANDIDATE NOTES:\n{listing}\n\n"
-                "Pick at most 3 genuinely related candidate notes (exact titles) with a short reason each.",
+                "Pick at most 3 genuinely related candidate notes (exact titles) with a short reason each. "
+                "Only link a note from a different project if the same idea or technique appears in both; "
+                "otherwise return fewer links or none.",
                 LINK_SCHEMA,
             )
             valid = {p.title.lower(): p.title for p in candidates}
@@ -519,9 +561,16 @@ def _src_link(entry, detail: dict) -> str:
     return f"[[{Path(entry.file).stem}#{detail['heading']}|source]]"
 
 
+ABBREV = re.compile(r"\b(Ms|Mr|Mrs|Dr|vs|e\.g|i\.e|No|St|Jr)\.$", re.I)
+
+
 def _first_sentence(text: str) -> str:
-    m = re.match(r"(.+?[.!?])(\s|$)", text or "")
-    return (m.group(1) if m else text or "").strip()
+    text = (text or "").strip()
+    for m in re.finditer(r"[.!?](?=\s|$)", text):
+        head = text[:m.end()]
+        if not ABBREV.search(head):
+            return head
+    return text
 
 
 def _is_reviewed(path: Path) -> bool:

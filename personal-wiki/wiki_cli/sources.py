@@ -24,7 +24,9 @@ class Section:
     level: int
     start_line: int         # 1-based, inclusive (the heading line itself)
     end_line: int           # 1-based, inclusive
-    text: str               # original lines, unchanged
+    text: str               # original lines, unchanged (this heading's own body only)
+    full_text: str = ""     # own body plus every subsection: what a reader means by "the Testing section"
+    full_end_line: int = 0
 
     @property
     def label(self) -> str:
@@ -91,6 +93,20 @@ def parse_sections(text: str, fallback_title: str) -> list[Section]:
             end_line=end,
             text="\n".join(lines[i:end]),
         ))
+    # A parent heading such as "## Testing" often has one intro line and all the substance in
+    # its "### ..." children, so give every section the text of its whole subtree too.
+    for n, (i, level, _) in enumerate(heads):
+        end = len(lines)
+        for j, lv, _ in heads[n + 1:]:
+            if lv <= level:
+                end = j
+                break
+        sec = sections[-len(heads) + n]
+        sec.full_text = "\n".join(lines[i:end])
+        sec.full_end_line = end
+    for sec in sections:
+        if not sec.full_text:
+            sec.full_text, sec.full_end_line = sec.text, sec.end_line
     return sections
 
 

@@ -77,6 +77,21 @@ class SourcesAndRetrieval(unittest.TestCase):
         heads = [s.heading for s in parse_sections(text, "x")]
         self.assertEqual(heads, ["Title", "Real"])
 
+    def test_parent_section_full_text_includes_children(self):
+        text = "## Testing\nintro\n### Unit\nunit body\n### RLS\nrls body\n## Deploy\nother"
+        secs = {s.heading: s for s in parse_sections(text, "x")}
+        self.assertEqual(secs["Testing"].text, "## Testing\nintro")
+        self.assertIn("rls body", secs["Testing"].full_text)
+        self.assertNotIn("other", secs["Testing"].full_text)
+        self.assertEqual(secs["Unit"].full_text, "### Unit\nunit body")
+
+    def test_first_sentence_handles_abbreviations(self):
+        from wiki_cli.ingest import _first_sentence, _complete
+        self.assertEqual(_first_sentence("Trains an agent to play Ms. Pac-Man. It uses a DQN."),
+                         "Trains an agent to play Ms. Pac-Man.")
+        self.assertEqual(_complete("Exploration was 0.10. It trains in cond"), "Exploration was 0.10.")
+        self.assertIsNone(_complete("It trains in cond"))
+
     def test_split_section_keeps_ranges(self):
         text = "\n\n".join(f"paragraph {i} " + "word " * 60 for i in range(6))
         parts = split_section(text, 10, 400)
@@ -107,6 +122,8 @@ class Titles(unittest.TestCase):
         self.assertEqual(sanitize_title("My Hyperparameters"), "Hyperparameters")
         self.assertIsNone(sanitize_title("Table of Contents"))
         self.assertIsNone(sanitize_title("Screenshots"))
+        self.assertIsNone(sanitize_title("Training Results"))
+        self.assertIsNone(sanitize_title("Local Setup Guide"))
 
     def test_similar_titles_merge(self):
         self.assertTrue(similar("Row Level Security", "Postgres Row Level Security"))

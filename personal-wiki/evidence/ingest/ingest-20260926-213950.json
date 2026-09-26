@@ -1,0 +1,320 @@
+{
+  "sources": [
+    {
+      "id": "src-custom-llm",
+      "file": "raw/custom-llm-README.md",
+      "sha256": "0f343ee30249ce80455fc393d853b145b488a2ca8df1e0b61be56e8efbff7933",
+      "sections": 15,
+      "changed": false
+    },
+    {
+      "id": "src-ms-pacman",
+      "file": "raw/ms-pacman-README.md",
+      "sha256": "7e0a6c2b31a0e1df4b3378670754b35eb32b95284614d0dba510ff6e7af637ac",
+      "sections": 16,
+      "changed": false
+    },
+    {
+      "id": "src-networking-tracker",
+      "file": "raw/networking-tracker-README.md",
+      "sha256": "5333e46fb4953f5716342d37258d4b0f80a0ff439f375e70c3db7478f629552c",
+      "sections": 32,
+      "changed": false
+    }
+  ],
+  "dropped_bullets": [
+    {
+      "note": "Evaluation Comparison",
+      "text": "The comparison is presented in the four-row evaluation comparison (all 48 fixed cases) by group (correct / scorable / total).",
+      "reason": "number 48 not found in section '1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)'"
+    },
+    {
+      "note": "Networking Tracker",
+      "text": "Row Level Security is enabled on the contacts table to enforce ownership rules.",
+      "reason": "only 12% of its words appear in section 'Authentication and ownership'"
+    },
+    {
+      "note": "Networking Tracker",
+      "text": "Integration tests verify two-user privacy by signing in two separate users against the live database.",
+      "reason": "only 10% of its words appear in section 'Testing'"
+    },
+    {
+      "note": "Integration Testing",
+      "text": "The test included a precondition stage based on lessons learned, ensuring that policy checks only pass if the request was accepted and matched zero rows.",
+      "reason": "only 6% of its words appear in section 'Testing'"
+    }
+  ],
+  "dropped_topics": [
+    {
+      "source": "src-custom-llm",
+      "proposed": "NanoGPT Setup",
+      "reason": "none of its section names exist in the source"
+    },
+    {
+      "source": "src-custom-llm",
+      "proposed": "Corpus and Leakage",
+      "reason": "none of its section names exist in the source"
+    },
+    {
+      "source": "src-custom-llm",
+      "proposed": "Learning Mechanism",
+      "reason": "none of its section names exist in the source"
+    },
+    {
+      "source": "src-ms-pacman",
+      "proposed": "Agent Observations",
+      "reason": "none of its section names exist in the source"
+    }
+  ],
+  "dropped_links": [],
+  "calls": [
+    {
+      "purpose": "plan src-custom-llm",
+      "model": "gemma4:e2b",
+      "wall_seconds": 38.26,
+      "prompt_tokens": 1496,
+      "output_tokens": 1342,
+      "load_seconds": 10.32,
+      "prompt_eval_seconds": 0.72,
+      "generation_seconds": 25.07
+    },
+    {
+      "purpose": "write 'Evaluation Comparison'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 18.11,
+      "prompt_tokens": 765,
+      "output_tokens": 818,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.46,
+      "generation_seconds": 15.46
+    },
+    {
+      "purpose": "plan src-ms-pacman",
+      "model": "gemma4:e2b",
+      "wall_seconds": 21.61,
+      "prompt_tokens": 1303,
+      "output_tokens": 1005,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.61,
+      "generation_seconds": 18.81
+    },
+    {
+      "purpose": "write 'DQN Hyperparameters'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 18.78,
+      "prompt_tokens": 976,
+      "output_tokens": 836,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.41,
+      "generation_seconds": 16.18
+    },
+    {
+      "purpose": "write 'Training Results'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 14.45,
+      "prompt_tokens": 560,
+      "output_tokens": 618,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.19,
+      "generation_seconds": 11.95
+    },
+    {
+      "purpose": "write 'Learning Limitations'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 17.86,
+      "prompt_tokens": 925,
+      "output_tokens": 787,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.44,
+      "generation_seconds": 15.25
+    },
+    {
+      "purpose": "plan src-networking-tracker",
+      "model": "gemma4:e2b",
+      "wall_seconds": 21.54,
+      "prompt_tokens": 1901,
+      "output_tokens": 966,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.68,
+      "generation_seconds": 18.6
+    },
+    {
+      "purpose": "write 'Row Level Security'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 15.37,
+      "prompt_tokens": 635,
+      "output_tokens": 694,
+      "load_seconds": 0.02,
+      "prompt_eval_seconds": 0.24,
+      "generation_seconds": 12.91
+    },
+    {
+      "purpose": "write 'Database Constraints'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.42,
+      "prompt_tokens": 659,
+      "output_tokens": 577,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.23,
+      "generation_seconds": 11.0
+    },
+    {
+      "purpose": "write 'Local Setup Guide'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 16.93,
+      "prompt_tokens": 849,
+      "output_tokens": 781,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.37,
+      "generation_seconds": 14.38
+    },
+    {
+      "purpose": "write 'Integration Testing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 16.8,
+      "prompt_tokens": 1170,
+      "output_tokens": 741,
+      "load_seconds": 0.02,
+      "prompt_eval_seconds": 0.47,
+      "generation_seconds": 14.12
+    },
+    {
+      "purpose": "link 'Evaluation Comparison'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.18,
+      "prompt_tokens": 807,
+      "output_tokens": 607,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.32,
+      "generation_seconds": 10.65
+    },
+    {
+      "purpose": "link 'DQN Hyperparameters'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.56,
+      "prompt_tokens": 796,
+      "output_tokens": 519,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.27,
+      "generation_seconds": 9.13
+    },
+    {
+      "purpose": "link 'Training Results'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.93,
+      "prompt_tokens": 791,
+      "output_tokens": 581,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.26,
+      "generation_seconds": 10.48
+    },
+    {
+      "purpose": "link 'Learning Limitations'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.37,
+      "prompt_tokens": 807,
+      "output_tokens": 623,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.34,
+      "generation_seconds": 10.85
+    },
+    {
+      "purpose": "link 'Row Level Security'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.78,
+      "prompt_tokens": 799,
+      "output_tokens": 631,
+      "load_seconds": 0.02,
+      "prompt_eval_seconds": 0.32,
+      "generation_seconds": 11.21
+    },
+    {
+      "purpose": "link 'Database Constraints'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.61,
+      "prompt_tokens": 792,
+      "output_tokens": 572,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.33,
+      "generation_seconds": 9.13
+    },
+    {
+      "purpose": "link 'Local Setup Guide'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.43,
+      "prompt_tokens": 791,
+      "output_tokens": 619,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.32,
+      "generation_seconds": 9.98
+    },
+    {
+      "purpose": "link 'Integration Testing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.27,
+      "prompt_tokens": 801,
+      "output_tokens": 602,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.31,
+      "generation_seconds": 9.79
+    }
+  ],
+  "skipped_reviewed": [],
+  "removed_pages": [],
+  "pages_before": 0,
+  "pages_after": 11,
+  "created": [
+    "Custom nanoGPT LLM",
+    "DQN Hyperparameters",
+    "Database Constraints",
+    "Evaluation Comparison",
+    "Integration Testing",
+    "Learning Limitations",
+    "Local Setup Guide",
+    "Ms. Pac-Man DQN",
+    "Networking Tracker",
+    "Row Level Security",
+    "Training Results"
+  ],
+  "removed": [],
+  "updated": [],
+  "seconds": 314.5,
+  "environment": {
+    "timestamp_utc": "2026-09-26T21:39:42+00:00",
+    "execution": "local",
+    "internet_reachable": true,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  }
+}

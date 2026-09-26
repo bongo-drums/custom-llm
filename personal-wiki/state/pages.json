@@ -1,0 +1,621 @@
+{
+  "pages": {
+    "custom-nanogpt-llm": {
+      "title": "Custom nanoGPT LLM",
+      "category": "Projects",
+      "kind": "project",
+      "contributions": {
+        "src-custom-llm": {
+          "summary": "The project involved training a custom nanoGPT Large Language Model from scratch using a small set of word tokens. The experiment compared the performance of a starter model against an expanded model trained on different data sources.",
+          "details": [
+            {
+              "text": "The model was trained using nanoGPT with 2 blocks, 4 heads, 64-number embeddings, 48-token context, and word tokens.",
+              "section": "My Custom LLM: a tiny nanoGPT trained from scratch",
+              "heading": "My Custom LLM: a tiny nanoGPT trained from scratch",
+              "lines": [
+                1,
+                14
+              ]
+            },
+            {
+              "text": "The expanded model achieved 16/16/16 performance across the group comparison metrics.",
+              "section": "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
+              "heading": "By group (correct / scorable / total)",
+              "lines": [
+                39,
+                46
+              ]
+            },
+            {
+              "text": "Vocabulary coverage explains the jump from 24 to 32 scorable cases.",
+              "section": "1. Four-row eval comparison (all 48 fixed cases) > What changed, and why (vocabulary vs. learned patterns)",
+              "heading": "What changed, and why (vocabulary vs. learned patterns)",
+              "lines": [
+                73,
+                82
+              ]
+            },
+            {
+              "text": "The experiment used two fixed panels of 20 training and 20 validation passages.",
+              "section": "4. Loss and samples",
+              "heading": "4. Loss and samples",
+              "lines": [
+                149,
+                181
+              ]
+            }
+          ],
+          "sections": [
+            "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
+            "1. Four-row eval comparison (all 48 fixed cases) > What changed, and why (vocabulary vs. learned patterns)",
+            "4. Loss and samples",
+            "My Custom LLM: a tiny nanoGPT trained from scratch"
+          ]
+        }
+      },
+      "related": {},
+      "summary": "The project involved training a custom nanoGPT Large Language Model from scratch using a small set of word tokens. The experiment compared the performance of a starter model against an expanded model trained on different data sources.",
+      "file": "wiki/Projects/Custom nanoGPT LLM.md",
+      "source_ids": [
+        "src-custom-llm"
+      ]
+    },
+    "database-constraint": {
+      "title": "Database Constraints",
+      "category": "Concepts",
+      "kind": "topic",
+      "contributions": {
+        "src-networking-tracker": {
+          "summary": "The project uses specific database constraints to ensure data validity. These constraints define rules that make invalid data impossible within the database schema.",
+          "details": [
+            {
+              "text": "The full definition of the database schema is located in `db/schema.sql`.",
+              "section": "Database schema",
+              "heading": "Database schema",
+              "lines": [
+                141,
+                144
+              ]
+            },
+            {
+              "text": "The constraints listed are the authoritative validation rules for the data.",
+              "section": "Database schema > Constraints that make invalid data impossible",
+              "heading": "Constraints that make invalid data impossible",
+              "lines": [
+                163,
+                173
+              ]
+            },
+            {
+              "text": "A constraint ensures that the contact name is not blank.",
+              "section": "Database schema > Constraints that make invalid data impossible",
+              "heading": "Constraints that make invalid data impossible",
+              "lines": [
+                163,
+                173
+              ]
+            },
+            {
+              "text": "A constraint ensures that the priority value is one of 'high', 'medium', or 'low'.",
+              "section": "Database schema > Constraints that make invalid data impossible",
+              "heading": "Constraints that make invalid data impossible",
+              "lines": [
+                163,
+                173
+              ]
+            }
+          ],
+          "sections": [
+            "Database schema",
+            "Database schema > Constraints that make invalid data impossible"
+          ]
+        }
+      },
+      "related": {
+        "Row Level Security": "Details how Row Level Security was tested during integration testing.",
+        "Integration Testing": "Shows the automated verification process for Row Level Security.",
+        "Learning Limitations": "Explains why the agent failed to learn ghost avoidance."
+      },
+      "summary": "The project uses specific database constraints to ensure data validity. These constraints define rules that make invalid data impossible within the database schema.",
+      "file": "wiki/Concepts/Database Constraints.md",
+      "source_ids": []
+    },
+    "dqn-hyperparameter": {
+      "title": "DQN Hyperparameters",
+      "category": "Concepts",
+      "kind": "topic",
+      "contributions": {
+        "src-ms-pacman": {
+          "summary": "This note details the specific hyperparameters chosen for the Ms. Pac-Man DQN project. These settings were selected to optimize training time and ensure the agent experienced sufficient environmental interaction.",
+          "details": [
+            {
+              "text": "Exploration was set to 0.10, which is half the notebook's 0.20 and closer to the 5% used at evaluation. This setting ensures the agent trains in conditions similar to those scored during evaluation, allowing for fewer random moves and longer game durations.",
+              "section": "My hyperparameters",
+              "heading": "My hyperparameters",
+              "lines": [
+                47,
+                62
+              ]
+            },
+            {
+              "text": "The number of episodes was set to 1,000. This number allows the agent to complete training within an hour, fitting approximately 0.6–1.0 million decisions, which is about 15–20 times the budget of the setup check.",
+              "section": "My hyperparameters",
+              "heading": "My hyperparameters",
+              "lines": [
+                47,
+                62
+              ]
+            },
+            {
+              "text": "The learning rate was set to 0.0001, which is the standard Adam learning rate for DQN and the notebook's reference value. This rate was chosen because it resulted in stable, finite loss during the setup check.",
+              "section": "My hyperparameters",
+              "heading": "My hyperparameters",
+              "lines": [
+                47,
+                62
+              ]
+            }
+          ],
+          "sections": [
+            "My hyperparameters"
+          ]
+        }
+      },
+      "related": {
+        "Training Results": "Details the findings of the training process related to the DQN agent.",
+        "Evaluation Comparison": "Compares the evaluation results across different experimental groups.",
+        "Learning Limitations": "Explains why the agent failed to learn ghost avoidance and stalled."
+      },
+      "summary": "This note details the specific hyperparameters chosen for the Ms. Pac-Man DQN project. These settings were selected to optimize training time and ensure the agent experienced sufficient environmental interaction.",
+      "file": "wiki/Concepts/DQN Hyperparameters.md",
+      "source_ids": []
+    },
+    "evaluation-comparison": {
+      "title": "Evaluation Comparison",
+      "category": "Concepts",
+      "kind": "topic",
+      "contributions": {
+        "src-custom-llm": {
+          "summary": "This section compares the evaluation results across four experimental groups based on correctness, scorable, and total scores. The comparison highlights performance differences depending on whether the starter patterns, transfer wording, or corpus were expanded.",
+          "details": [
+            {
+              "text": "The comparison is also presented by group (correct / scorable / total).",
+              "section": "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
+              "heading": "By group (correct / scorable / total)",
+              "lines": [
+                39,
+                46
+              ]
+            },
+            {
+              "text": "For the starter_patterns group, the Starter trained condition achieved 16 / 16 / 16, while the Expanded trained condition achieved 16 / 16 / 16.",
+              "section": "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
+              "heading": "By group (correct / scorable / total)",
+              "lines": [
+                39,
+                46
+              ]
+            },
+            {
+              "text": "For the starter_transfer group, the Expanded trained condition achieved 8 / 8 / 8.",
+              "section": "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
+              "heading": "By group (correct / scorable / total)",
+              "lines": [
+                39,
+                46
+              ]
+            },
+            {
+              "text": "For the extend_corpus group, the Expanded trained condition achieved 5 / 8 / 24.",
+              "section": "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
+              "heading": "By group (correct / scorable / total)",
+              "lines": [
+                39,
+                46
+              ]
+            }
+          ],
+          "sections": [
+            "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)"
+          ]
+        }
+      },
+      "related": {
+        "Training Results": "Shows the overall findings of the training process, which is part of the evaluation.",
+        "Learning Limitations": "Details specific failures and limitations encountered during the agent's learning process.",
+        "Integration Testing": "Verifies the functionality of Row Level Security, which is a key feature tested."
+      },
+      "summary": "This section compares the evaluation results across four experimental groups based on correctness, scorable, and total scores. The comparison highlights performance differences depending on whether the starter patterns, transfer wording, or corpus were expanded.",
+      "file": "wiki/Concepts/Evaluation Comparison.md",
+      "source_ids": []
+    },
+    "integration-test": {
+      "title": "Integration Testing",
+      "category": "Concepts",
+      "kind": "topic",
+      "contributions": {
+        "src-networking-tracker": {
+          "summary": "The project performed an automated integration test to verify Row Level Security (RLS) for two-user privacy. This test ensured that one user could only access their own data and that unauthenticated requests were refused.",
+          "details": [
+            {
+              "text": "The test automated the creation of two throwaway accounts via the public Auth API, signing both in, and then checked data isolation without database credentials or special privileges.",
+              "section": "Testing > Integration test — two-user privacy",
+              "heading": "Integration test — two-user privacy",
+              "lines": [
+                309,
+                360
+              ]
+            },
+            {
+              "text": "The test verified that User A could create a contact stamped with A's `user_id` and that User B could not read, update, delete, or create contacts owned by User A.",
+              "section": "Testing > Integration test — two-user privacy",
+              "heading": "Integration test — two-user privacy",
+              "lines": [
+                309,
+                360
+              ]
+            },
+            {
+              "text": "The test confirmed that an unauthenticated request was refused outright, ensuring that contacts could not be read without a bearer token.",
+              "section": "Testing > Integration test — two-user privacy",
+              "heading": "Integration test — two-user privacy",
+              "lines": [
+                309,
+                360
+              ]
+            }
+          ],
+          "sections": [
+            "Testing > Integration test — two-user privacy"
+          ]
+        }
+      },
+      "related": {
+        "Row Level Security": "This note details the specific security feature that the integration test was designed to verify.",
+        "Database Constraints": "These constraints define the rules that ensure data validity, which is crucial for Row Level Security.",
+        "Local Setup Guide": "This guide outlines the prerequisites needed to set up the database environment for the project."
+      },
+      "summary": "The project performed an automated integration test to verify Row Level Security (RLS) for two-user privacy. This test ensured that one user could only access their own data and that unauthenticated requests were refused.",
+      "file": "wiki/Concepts/Integration Testing.md",
+      "source_ids": []
+    },
+    "learn-limitation": {
+      "title": "Learning Limitations",
+      "category": "Concepts",
+      "kind": "topic",
+      "contributions": {
+        "src-ms-pacman": {
+          "summary": "The agent failed to learn ghost avoidance and learning stalled due to three primary limitations: short memory, clipped rewards, and the lack of a penalty for dying. A next experiment was proposed to test if increasing exploration could overcome these bottlenecks.",
+          "details": [
+            {
+              "text": "The agent never learned to avoid ghosts, and its learning stalled after about 150 games.",
+              "section": "Limitation and next experiment",
+              "heading": "Limitation and next experiment",
+              "lines": [
+                239,
+                258
+              ]
+            },
+            {
+              "text": "The replay memory holds only 5,000 decisions, about eight games. The agent mostly learns from its last few games and keeps relearning the same early-maze situations.",
+              "section": "Limitation and next experiment",
+              "heading": "Limitation and next experiment",
+              "lines": [
+                239,
+                258
+              ]
+            },
+            {
+              "text": "Rewards are clipped to ±1 for learning, so eating a ghost (200–1,600 points) teaches no more than a 10-point pellet.",
+              "section": "Limitation and next experiment",
+              "heading": "Limitation and next experiment",
+              "lines": [
+                239,
+                258
+              ]
+            },
+            {
+              "text": "Losing a life only costs the pellets the agent would have eaten later, a weak and delayed signal.",
+              "section": "Limitation and next experiment",
+              "heading": "Limitation and next experiment",
+              "lines": [
+                239,
+                258
+              ]
+            },
+            {
+              "text": "The next experiment proposed changing exploration from 0.10 to 0.20.",
+              "section": "Limitation and next experiment",
+              "heading": "Limitation and next experiment",
+              "lines": [
+                239,
+                258
+              ]
+            }
+          ],
+          "sections": [
+            "Limitation and next experiment"
+          ]
+        }
+      },
+      "related": {
+        "Training Results": "Details the findings of the training process that faced limitations.",
+        "DQN Hyperparameters": "Details the specific settings chosen for the DQN project.",
+        "Evaluation Comparison": "Compares the evaluation results across different experimental groups."
+      },
+      "summary": "The agent failed to learn ghost avoidance and learning stalled due to three primary limitations: short memory, clipped rewards, and the lack of a penalty for dying. A next experiment was proposed to test if increasing exploration could overcome these bottlenecks.",
+      "file": "wiki/Concepts/Learning Limitations.md",
+      "source_ids": []
+    },
+    "local-setup-guide": {
+      "title": "Local Setup Guide",
+      "category": "Tools",
+      "kind": "topic",
+      "contributions": {
+        "src-networking-tracker": {
+          "summary": "The project requires specific prerequisites and a multi-step process to set up the Neon database and apply initial schema migrations.",
+          "details": [
+            {
+              "text": "Requirements: Node.js 20.9 or newer, and a Neon account.",
+              "section": "Local setup",
+              "heading": "Local setup",
+              "lines": [
+                222,
+                231
+              ]
+            },
+            {
+              "text": "The setup involves cloning the repository and installing dependencies.",
+              "section": "Local setup",
+              "heading": "Local setup",
+              "lines": [
+                222,
+                231
+              ]
+            },
+            {
+              "text": "The Neon project setup requires enabling Managed Better Auth and enabling the Data API with Managed Better Auth for JWT authentication.",
+              "section": "Local setup > 1. Create the Neon project",
+              "heading": "1. Create the Neon project",
+              "lines": [
+                232,
+                240
+              ]
+            },
+            {
+              "text": "The Data API is enabled per branch and is unavailable if IP Allow or Private Networking is on.",
+              "section": "Local setup > 1. Create the Neon project",
+              "heading": "1. Create the Neon project",
+              "lines": [
+                232,
+                240
+              ]
+            },
+            {
+              "text": "The database migration command applies `db/schema.sql` and reports whether RLS is enabled and how many policies exist.",
+              "section": "Local setup > 3. Create the table and policies",
+              "heading": "3. Create the table and policies",
+              "lines": [
+                249,
+                258
+              ]
+            },
+            {
+              "text": "The migration process is idempotent, meaning it is safe to re-run after editing the schema.",
+              "section": "Local setup > 3. Create the table and policies",
+              "heading": "3. Create the table and policies",
+              "lines": [
+                249,
+                258
+              ]
+            }
+          ],
+          "sections": [
+            "Local setup",
+            "Local setup > 1. Create the Neon project",
+            "Local setup > 3. Create the table and policies"
+          ]
+        }
+      },
+      "related": {
+        "DQN Hyperparameters": "Details the specific settings used to optimize the Ms. Pac-Man DQN training.",
+        "Training Results": "Shows the findings and outcomes of the Ms. Pac-Man DQN training process.",
+        "Integration Testing": "Verifies the automated test ensuring Row Level Security for two-user privacy."
+      },
+      "summary": "The project requires specific prerequisites and a multi-step process to set up the Neon database and apply initial schema migrations.",
+      "file": "wiki/Tools/Local Setup Guide.md",
+      "source_ids": []
+    },
+    "ms-pac-man-dqn": {
+      "title": "Ms. Pac-Man DQN",
+      "category": "Projects",
+      "kind": "project",
+      "contributions": {
+        "src-ms-pacman": {
+          "summary": "This project details the training of a Deep Q-Network (DQN) agent to play Ms. Pac-Man. The agent was trained using specific hyperparameters and demonstrated performance improvements over an untrained baseline.",
+          "details": [
+            {
+              "text": "Exploration was set to 0.10, which was half the notebook's 0.20 and closer to the 5% used at evaluation, so the agent trains in cond",
+              "section": "My hyperparameters",
+              "heading": "My hyperparameters",
+              "lines": [
+                47,
+                62
+              ]
+            },
+            {
+              "text": "The trained agent averaged 808 against the untrained network's 492 (+316).",
+              "section": "What I observed",
+              "heading": "What I observed",
+              "lines": [
+                187,
+                224
+              ]
+            },
+            {
+              "text": "The agent never learned to avoid ghosts, and its learning stalled after about 150 games.",
+              "section": "Limitation and next experiment",
+              "heading": "Limitation and next experiment",
+              "lines": [
+                239,
+                258
+              ]
+            },
+            {
+              "text": "Four consecutive game screens, each shrunk to 84 × 84 grayscale pixels.",
+              "section": "How the agent learns",
+              "heading": "How the agent learns",
+              "lines": [
+                225,
+                238
+              ]
+            }
+          ],
+          "sections": [
+            "How the agent learns",
+            "Limitation and next experiment",
+            "My hyperparameters",
+            "What I observed"
+          ]
+        }
+      },
+      "related": {},
+      "summary": "This project details the training of a Deep Q-Network (DQN) agent to play Ms. Pac-Man. The agent was trained using specific hyperparameters and demonstrated performance improvements over an untrained baseline.",
+      "file": "wiki/Projects/Ms. Pac-Man DQN.md",
+      "source_ids": [
+        "src-ms-pacman"
+      ]
+    },
+    "network-tracker": {
+      "title": "Networking Tracker",
+      "category": "Projects",
+      "kind": "project",
+      "contributions": {
+        "src-networking-tracker": {
+          "summary": "Networking Tracker is a private networking application designed for users to track professional contacts. The project utilizes Next.js and a PostgreSQL database secured by Row Level Security to ensure user privacy over contact data.",
+          "details": [
+            {
+              "text": "The application uses Neon Managed Better Auth for handling user sign-up, sign-in, and session management.",
+              "section": "Features",
+              "heading": "Features",
+              "lines": [
+                28,
+                39
+              ]
+            },
+            {
+              "text": "The application is built using Next.js 16 (App Router) and React 19.",
+              "section": "Technology stack",
+              "heading": "Technology stack",
+              "lines": [
+                80,
+                95
+              ]
+            }
+          ],
+          "sections": [
+            "Features",
+            "Technology stack"
+          ]
+        }
+      },
+      "related": {},
+      "summary": "Networking Tracker is a private networking application designed for users to track professional contacts. The project utilizes Next.js and a PostgreSQL database secured by Row Level Security to ensure user privacy over contact data.",
+      "file": "wiki/Projects/Networking Tracker.md",
+      "source_ids": [
+        "src-networking-tracker"
+      ]
+    },
+    "row-level-security": {
+      "title": "Row Level Security",
+      "category": "Concepts",
+      "kind": "topic",
+      "contributions": {
+        "src-networking-tracker": {
+          "summary": "Neon Managed Better Auth handles user sign-up, sign-in, sessions, and password storage. This process involves issuing a JWT and verifying claims to load user information into the Postgres session for policy checks.",
+          "details": [
+            {
+              "text": "Neon Managed Better Auth handles sign up, sign in, sessions, and password storage.",
+              "section": "Authentication and ownership",
+              "heading": "Authentication and ownership",
+              "lines": [
+                174,
+                177
+              ]
+            },
+            {
+              "text": "On sign-in, the system issues a JWT.",
+              "section": "Authentication and ownership",
+              "heading": "Authentication and ownership",
+              "lines": [
+                174,
+                177
+              ]
+            },
+            {
+              "text": "The Neon Data API verifies the JWT against the project's JWKS and loads its claims into the Postgres session.",
+              "section": "Authentication and ownership",
+              "heading": "Authentication and ownership",
+              "lines": [
+                174,
+                177
+              ]
+            },
+            {
+              "text": "`auth.user_id()` returns the signed-in user's id inside a policy.",
+              "section": "Authentication and ownership",
+              "heading": "Authentication and ownership",
+              "lines": [
+                174,
+                177
+              ]
+            }
+          ],
+          "sections": [
+            "Authentication and ownership"
+          ]
+        }
+      },
+      "related": {
+        "Integration Testing": "This note details the automated test performed specifically to verify Row Level Security.",
+        "Database Constraints": "RLS relies on database constraints to enforce the data access policies.",
+        "Local Setup Guide": "This guide covers the necessary steps to set up the Neon database for the project."
+      },
+      "summary": "Neon Managed Better Auth handles user sign-up, sign-in, sessions, and password storage. This process involves issuing a JWT and verifying claims to load user information into the Postgres session for policy checks.",
+      "file": "wiki/Concepts/Row Level Security.md",
+      "source_ids": []
+    },
+    "train-result": {
+      "title": "Training Results",
+      "category": "Concepts",
+      "kind": "topic",
+      "contributions": {
+        "src-ms-pacman": {
+          "summary": "This note covers the results section of the Ms. Pac-Man DQN project. It details the findings of the training process.",
+          "details": [
+            {
+              "text": "Results",
+              "section": "Results",
+              "heading": "Results",
+              "lines": [
+                77,
+                78
+              ]
+            }
+          ],
+          "sections": [
+            "Results"
+          ]
+        }
+      },
+      "related": {
+        "Evaluation Comparison": "Compares the performance results across different experimental groups.",
+        "DQN Hyperparameters": "Details the specific settings chosen to optimize the training process.",
+        "Learning Limitations": "Explains why the agent failed to learn ghost avoidance and stalled."
+      },
+      "summary": "This note covers the results section of the Ms. Pac-Man DQN project. It details the findings of the training process.",
+      "file": "wiki/Concepts/Training Results.md",
+      "source_ids": []
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "pages": {
     "football-career": {
       "title": "Football Career",
-      "category": "Interests",
+      "category": "Life",
       "kind": "topic",
       "contributions": {
         "src-growing-up": {
@@ -51,8 +51,8 @@
         }
       },
       "related": {},
-      "summary": "Matt started playing football in the sixth grade and was a team captain during his high school years. After high school, he prioritized academics by transferring to college to pursue a business degree.",
-      "file": "wiki/Interests/Football Career.md",
+      "summary": "Matt started playing football in the sixth grade and was a team captain during his high school years. After high school he started at College of San Mateo, chose to put his studies first, and transferred to UC Berkeley to study business.",
+      "file": "wiki/Life/Football Career.md",
       "source_ids": []
     },
     "golf-habit": {
@@ -107,7 +107,7 @@
         }
       },
       "related": {},
-      "summary": "This project documents Matt's upbringing in the East Bay and his involvement in football. It also traces his transition from sports into a career in investment banking and startups.",
+      "summary": "Matt's upbringing in the East Bay and his involvement in football. It also traces his transition from sports into a career in investment banking and startups.",
       "file": "wiki/Overview/Growing Up and Football.md",
       "source_ids": [
         "src-growing-up"
@@ -321,7 +321,7 @@
         }
       },
       "related": {},
-      "summary": "This project summarizes Matt Wong's educational background and professional experience across finance, venture capital, and market-leading technology platforms. It details his roles in high-growth startups and major financial institutions.",
+      "summary": "Matt Wong's educational background and professional experience across finance, venture capital, and market-leading technology platforms. It details his roles in high-growth startups and major financial institutions.",
       "file": "wiki/Overview/Matt Wong Resume.md",
       "source_ids": [
         "src-resume"

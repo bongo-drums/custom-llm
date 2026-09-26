@@ -7,12 +7,12 @@ source_files:
   - raw/growing-up-and-football.md
 generated_by: gemma4:e2b via local Ollama
 updated: 2026-09-26
-reviewed: false   # set to true after checking against the sources; ingest will then leave this file alone
+reviewed: true    # checked against the sources on 2026-09-26; see evidence/review-log.md
 ---
 
 # Growing Up and Football
 
-This project documents Matt's upbringing in the East Bay and his involvement in football. It also traces his transition from sports into a career in investment banking and startups.
+Matt's upbringing in the East Bay and his involvement in football. It also traces his transition from sports into a career in investment banking and startups.
 
 > Born in San Francisco, raised in Hayward; Fremont Christian, Moreau Catholic football captain, College of San Mateo, transfer to Berkeley.
 

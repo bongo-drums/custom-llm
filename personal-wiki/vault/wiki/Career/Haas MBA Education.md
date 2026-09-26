@@ -7,7 +7,7 @@ source_files:
   - raw/matt-wong-resume.md
 generated_by: gemma4:e2b via local Ollama
 updated: 2026-09-26
-reviewed: false   # set to true after checking against the sources; ingest will then leave this file alone
+reviewed: true    # checked against the sources on 2026-09-26; see evidence/review-log.md
 ---
 
 # Haas MBA Education
@@ -20,7 +20,7 @@ Matt Wong is pursuing an MBA at the Haas School of Business and holds a Bachelor
 - Honors: Haas Entrepreneurial Finance Fellow (VC Scholarship) ([[matt-wong-resume#Education|source]])
 - Extracurriculars: VC Club (President), Fall Line Scout, SkyDeck Fellows Lead, Cal Athletics Cameron Institute Mentor, Bear & Axe Run Club (Backyard Ultra Champion) ([[matt-wong-resume#Education|source]])
 - Bachelor of Science in Business Administration. Graduation Date: Fall 2016 ([[matt-wong-resume#Education|source]])
-- Honors: Cum Laude, Edgar J. ([[matt-wong-resume#Education|source]])
+- Honors: Cum Laude, Edgar J. Kaiser Scholar ([[matt-wong-resume#Education|source]])
 
 ## Related notes
 

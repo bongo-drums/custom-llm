@@ -6,8 +6,8 @@ Notes about me: where I come from, my career, and what I do outside work. Start 
 
 _One note per original source: what it is and its key facts._
 
-- [[Growing Up and Football]] — This project documents Matt's upbringing in the East Bay and his involvement in football.
-- [[Matt Wong Resume]] — This project summarizes Matt Wong's educational background and professional experience across finance, venture capital, and market-leading technology platforms.
+- [[Growing Up and Football]] — Matt's upbringing in the East Bay and his involvement in football.
+- [[Matt Wong Resume]] — Matt Wong's educational background and professional experience across finance, venture capital, and market-leading technology platforms.
 - [[Sports and Interests]] — Matt's personal interests in sports and his social life.
 
 ## Career
@@ -21,13 +21,13 @@ _Jobs, schools, deals and results from my professional life._
 
 _Where I grew up, family, school and football._
 
+- [[Football Career]] — Matt started playing football in the sixth grade and was a team captain during his high school years.
 - [[Personal Life]] — Matt spends a significant amount of time with his girlfriend, Tina, whom he met this year.
 
 ## Interests
 
 _Surfing, golf, running and what I do with my time._
 
-- [[Football Career]] — Matt started playing football in the sixth grade and was a team captain during his high school years.
 - [[Golf Habits]] — Matt plays golf approximately once a week.
 - [[Ocean Surfing]] — Ocean Surfing details Matt's locations and volunteer activities related to surfing.
 - [[Weekly Running]] — Running involves Matt running approximately 35 miles per week and has included achieving a backyard ultra win.
@@ -40,4 +40,4 @@ Unchanged originals. IDs and hashes are in `state/source_catalog.json` (outside 
 - [[matt-wong-resume]] — Matt Wong Resume (`src-resume`). Education, work history from Citigroup to Corazon Capital, honors and activities.
 - [[surfing-golf-and-running]] — Sports and Interests (`src-interests`). Golf at Oakland Metro, surfing Ocean Beach, ultra running and the backyard ultra win, and everything else.
 
-_Index generated 2026-09-26 22:13 UTC by `wiki ingest`._
+_Index generated 2026-09-26 22:15 UTC by `wiki ingest`._

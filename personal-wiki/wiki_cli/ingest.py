@@ -206,7 +206,7 @@ def _match_section(name: str, sections: list[Section]) -> Section | None:
     return best if best_score >= 0.5 else None
 
 
-META_OPENER = re.compile(r"^(this|the) (note|section|page|document|entry) (details|covers|describes|summarizes|"
+META_OPENER = re.compile(r"^(this|the) (note|section|page|document|entry|project|overview|source) (details|covers|describes|summarizes|"
                          r"summarises|compares|explains|discusses|outlines|presents)\s+", re.I)
 
 
@@ -386,7 +386,8 @@ class Ingestor:
             if sec is None:
                 # fall back to the section that actually contains most of the bullet's words
                 sec = max(sections, key=lambda s: len(set(tokenize(text)) & set(tokenize(s.text))))
-            whole = _complete(text)
+            verbatim = _clean_text(text) in re.sub(r"\s+", " ", sec.full_text)
+            whole = text if (verbatim and len(text) >= 25) else _complete(text)
             if whole is None:
                 self.report["dropped_bullets"].append({"note": note, "text": text, "reason": "fragment or too short"})
                 continue

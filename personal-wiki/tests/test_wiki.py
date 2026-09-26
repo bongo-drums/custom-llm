@@ -92,6 +92,21 @@ class SourcesAndRetrieval(unittest.TestCase):
         self.assertEqual(_complete("Exploration was 0.10. It trains in cond"), "Exploration was 0.10.")
         self.assertIsNone(_complete("It trains in cond"))
 
+    def test_verbatim_source_bullet_is_kept_without_final_period(self):
+        from wiki_cli.ingest import Ingestor
+        from wiki_cli.sources import Section
+        text = "## Work\n- Sourced, diligenced and closed pre-seed investment (Upriver AI) – fastest deal in firm history\n- Honors: Cum Laude, Edgar J. Kaiser Scholar"
+        sec = parse_sections(text, "x")[0]
+        fake = type("I", (), {"report": {"dropped_bullets": []}})()
+        out = Ingestor._validated_details(fake, [
+            {"text": "Sourced, diligenced and closed pre-seed investment (Upriver AI) – fastest deal in firm history", "section": "Work"},
+            {"text": "Honors: Cum Laude, Edgar J. Kaiser Scholar", "section": "Work"},
+            {"text": "Matt closed a deal at Corazon and", "section": "Work"},
+        ], [sec], "note")
+        self.assertEqual([d["text"] for d in out], [
+            "Sourced, diligenced and closed pre-seed investment (Upriver AI) – fastest deal in firm history",
+            "Honors: Cum Laude, Edgar J. Kaiser Scholar"])
+
     def test_split_section_keeps_ranges(self):
         text = "\n\n".join(f"paragraph {i} " + "word " * 60 for i in range(6))
         parts = split_section(text, 10, 400)

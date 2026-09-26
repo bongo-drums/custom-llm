@@ -1,620 +1,490 @@
 {
   "pages": {
-    "custom-nanogpt-llm": {
-      "title": "Custom nanoGPT LLM",
-      "category": "Projects",
-      "kind": "project",
+    "football-career": {
+      "title": "Football Career",
+      "category": "Interests",
+      "kind": "topic",
       "contributions": {
-        "src-custom-llm": {
-          "summary": "The project involved training a custom nanoGPT Large Language Model from scratch using a small set of word tokens. The experiment compared the performance of a starter model against an expanded model trained on different data sources.",
+        "src-growing-up": {
+          "summary": "Matt started playing football in the sixth grade and was a team captain during his high school years. After high school, he prioritized academics by transferring to college to pursue a business degree.",
           "details": [
             {
-              "text": "The model was trained using nanoGPT with 2 blocks, 4 heads, 64-number embeddings, 48-token context, and word tokens.",
-              "section": "My Custom LLM: a tiny nanoGPT trained from scratch",
-              "heading": "My Custom LLM: a tiny nanoGPT trained from scratch",
+              "text": "Matt started playing football in the sixth grade at Moreau Catholic, where he played through senior year and was team captain.",
+              "section": "Football",
+              "heading": "Football",
               "lines": [
-                1,
-                14
+                15,
+                20
               ]
             },
             {
-              "text": "The expanded model achieved 16/16/16 performance across the group comparison metrics.",
-              "section": "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
-              "heading": "By group (correct / scorable / total)",
+              "text": "After high school, Matt attended the College of San Mateo, where he wanted to continue playing football.",
+              "section": "Football",
+              "heading": "Football",
               "lines": [
-                39,
-                46
+                15,
+                20
               ]
             },
             {
-              "text": "Vocabulary coverage explains the jump from 24 to 32 scorable cases.",
-              "section": "1. Four-row eval comparison (all 48 fixed cases) > What changed, and why (vocabulary vs. learned patterns)",
-              "heading": "What changed, and why (vocabulary vs. learned patterns)",
+              "text": "Matt realized he needed to focus on his studies and decided to put school first.",
+              "section": "Football",
+              "heading": "Football",
               "lines": [
-                73,
-                82
+                15,
+                20
               ]
             },
             {
-              "text": "The experiment used two fixed panels of 20 training and 20 validation passages.",
-              "section": "4. Loss and samples",
-              "heading": "4. Loss and samples",
+              "text": "He transferred to UC Berkeley to study business with the goal of getting into finance.",
+              "section": "Football",
+              "heading": "Football",
               "lines": [
-                149,
-                181
+                15,
+                20
               ]
             }
           ],
           "sections": [
-            "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
-            "1. Four-row eval comparison (all 48 fixed cases) > What changed, and why (vocabulary vs. learned patterns)",
-            "4. Loss and samples",
-            "My Custom LLM: a tiny nanoGPT trained from scratch"
+            "Football"
           ]
         }
       },
       "related": {},
-      "summary": "The project involved training a custom nanoGPT Large Language Model from scratch using a small set of word tokens. The experiment compared the performance of a starter model against an expanded model trained on different data sources.",
-      "file": "wiki/Projects/Custom nanoGPT LLM.md",
-      "source_ids": [
-        "src-custom-llm"
-      ]
+      "summary": "Matt started playing football in the sixth grade and was a team captain during his high school years. After high school, he prioritized academics by transferring to college to pursue a business degree.",
+      "file": "wiki/Interests/Football Career.md",
+      "source_ids": []
     },
-    "database-constraint": {
-      "title": "Database Constraints",
-      "category": "Concepts",
+    "golf-habit": {
+      "title": "Golf Habits",
+      "category": "Interests",
       "kind": "topic",
       "contributions": {
-        "src-networking-tracker": {
-          "summary": "The project uses specific database constraints to ensure data validity. These constraints define rules that make invalid data impossible within the database schema.",
+        "src-interests": {
+          "summary": "Matt plays golf approximately once a week. He typically plays at Oakland Metro and has a handicap of about 17.",
           "details": [
             {
-              "text": "The full definition of the database schema is located in `db/schema.sql`.",
-              "section": "Database schema",
-              "heading": "Database schema",
+              "text": "Matt plays golf about once a week, usually at Oakland Metro (Metropolitan Golf Links, next to the Oakland airport).",
+              "section": "Golf",
+              "heading": "Golf",
               "lines": [
-                141,
-                144
+                5,
+                8
               ]
             },
             {
-              "text": "The constraints listed are the authoritative validation rules for the data.",
-              "section": "Database schema > Constraints that make invalid data impossible",
-              "heading": "Constraints that make invalid data impossible",
+              "text": "Matt's handicap is about a 17.",
+              "section": "Golf",
+              "heading": "Golf",
               "lines": [
-                163,
-                173
-              ]
-            },
-            {
-              "text": "A constraint ensures that the contact name is not blank.",
-              "section": "Database schema > Constraints that make invalid data impossible",
-              "heading": "Constraints that make invalid data impossible",
-              "lines": [
-                163,
-                173
-              ]
-            },
-            {
-              "text": "A constraint ensures that the priority value is one of 'high', 'medium', or 'low'.",
-              "section": "Database schema > Constraints that make invalid data impossible",
-              "heading": "Constraints that make invalid data impossible",
-              "lines": [
-                163,
-                173
+                5,
+                8
               ]
             }
           ],
           "sections": [
-            "Database schema",
-            "Database schema > Constraints that make invalid data impossible"
+            "Golf"
           ]
         }
       },
       "related": {
-        "Row Level Security": "Details how Row Level Security was tested during integration testing.",
-        "Integration Testing": "Shows the automated verification process for Row Level Security.",
-        "Learning Limitations": "Explains why the agent failed to learn ghost avoidance."
+        "Weekly Running": "Both notes detail Matt's regular physical activities and goals.",
+        "Personal Life": "Both notes cover how Matt allocates his time for personal interests and relationships."
       },
-      "summary": "The project uses specific database constraints to ensure data validity. These constraints define rules that make invalid data impossible within the database schema.",
-      "file": "wiki/Concepts/Database Constraints.md",
+      "summary": "Matt plays golf approximately once a week. He typically plays at Oakland Metro and has a handicap of about 17.",
+      "file": "wiki/Interests/Golf Habits.md",
       "source_ids": []
     },
-    "dqn-hyperparameter": {
-      "title": "DQN Hyperparameters",
-      "category": "Concepts",
-      "kind": "topic",
-      "contributions": {
-        "src-ms-pacman": {
-          "summary": "This note details the specific hyperparameters chosen for the Ms. Pac-Man DQN project. These settings were selected to optimize training time and ensure the agent experienced sufficient environmental interaction.",
-          "details": [
-            {
-              "text": "Exploration was set to 0.10, which is half the notebook's 0.20 and closer to the 5% used at evaluation. This setting ensures the agent trains in conditions similar to those scored during evaluation, allowing for fewer random moves and longer game durations.",
-              "section": "My hyperparameters",
-              "heading": "My hyperparameters",
-              "lines": [
-                47,
-                62
-              ]
-            },
-            {
-              "text": "The number of episodes was set to 1,000. This number allows the agent to complete training within an hour, fitting approximately 0.6–1.0 million decisions, which is about 15–20 times the budget of the setup check.",
-              "section": "My hyperparameters",
-              "heading": "My hyperparameters",
-              "lines": [
-                47,
-                62
-              ]
-            },
-            {
-              "text": "The learning rate was set to 0.0001, which is the standard Adam learning rate for DQN and the notebook's reference value. This rate was chosen because it resulted in stable, finite loss during the setup check.",
-              "section": "My hyperparameters",
-              "heading": "My hyperparameters",
-              "lines": [
-                47,
-                62
-              ]
-            }
-          ],
-          "sections": [
-            "My hyperparameters"
-          ]
-        }
-      },
-      "related": {
-        "Training Results": "Details the findings of the training process related to the DQN agent.",
-        "Evaluation Comparison": "Compares the evaluation results across different experimental groups.",
-        "Learning Limitations": "Explains why the agent failed to learn ghost avoidance and stalled."
-      },
-      "summary": "This note details the specific hyperparameters chosen for the Ms. Pac-Man DQN project. These settings were selected to optimize training time and ensure the agent experienced sufficient environmental interaction.",
-      "file": "wiki/Concepts/DQN Hyperparameters.md",
-      "source_ids": []
-    },
-    "evaluation-comparison": {
-      "title": "Evaluation Comparison",
-      "category": "Concepts",
-      "kind": "topic",
-      "contributions": {
-        "src-custom-llm": {
-          "summary": "This section compares the evaluation results across four experimental groups based on correctness, scorable, and total scores. The comparison highlights performance differences depending on whether the starter patterns, transfer wording, or corpus were expanded.",
-          "details": [
-            {
-              "text": "The comparison is also presented by group (correct / scorable / total).",
-              "section": "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
-              "heading": "By group (correct / scorable / total)",
-              "lines": [
-                39,
-                46
-              ]
-            },
-            {
-              "text": "For the starter_patterns group, the Starter trained condition achieved 16 / 16 / 16, while the Expanded trained condition achieved 16 / 16 / 16.",
-              "section": "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
-              "heading": "By group (correct / scorable / total)",
-              "lines": [
-                39,
-                46
-              ]
-            },
-            {
-              "text": "For the starter_transfer group, the Expanded trained condition achieved 8 / 8 / 8.",
-              "section": "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
-              "heading": "By group (correct / scorable / total)",
-              "lines": [
-                39,
-                46
-              ]
-            },
-            {
-              "text": "For the extend_corpus group, the Expanded trained condition achieved 5 / 8 / 24.",
-              "section": "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)",
-              "heading": "By group (correct / scorable / total)",
-              "lines": [
-                39,
-                46
-              ]
-            }
-          ],
-          "sections": [
-            "1. Four-row eval comparison (all 48 fixed cases) > By group (correct / scorable / total)"
-          ]
-        }
-      },
-      "related": {
-        "Training Results": "Shows the overall findings of the training process, which is part of the evaluation.",
-        "Learning Limitations": "Details specific failures and limitations encountered during the agent's learning process.",
-        "Integration Testing": "Verifies the functionality of Row Level Security, which is a key feature tested."
-      },
-      "summary": "This section compares the evaluation results across four experimental groups based on correctness, scorable, and total scores. The comparison highlights performance differences depending on whether the starter patterns, transfer wording, or corpus were expanded.",
-      "file": "wiki/Concepts/Evaluation Comparison.md",
-      "source_ids": []
-    },
-    "integration-test": {
-      "title": "Integration Testing",
-      "category": "Concepts",
-      "kind": "topic",
-      "contributions": {
-        "src-networking-tracker": {
-          "summary": "The project performed an automated integration test to verify Row Level Security (RLS) for two-user privacy. This test ensured that one user could only access their own data and that unauthenticated requests were refused.",
-          "details": [
-            {
-              "text": "The test automated the creation of two throwaway accounts via the public Auth API, signing both in, and then checked data isolation without database credentials or special privileges.",
-              "section": "Testing > Integration test — two-user privacy",
-              "heading": "Integration test — two-user privacy",
-              "lines": [
-                309,
-                360
-              ]
-            },
-            {
-              "text": "The test verified that User A could create a contact stamped with A's `user_id` and that User B could not read, update, delete, or create contacts owned by User A.",
-              "section": "Testing > Integration test — two-user privacy",
-              "heading": "Integration test — two-user privacy",
-              "lines": [
-                309,
-                360
-              ]
-            },
-            {
-              "text": "The test confirmed that an unauthenticated request was refused outright, ensuring that contacts could not be read without a bearer token.",
-              "section": "Testing > Integration test — two-user privacy",
-              "heading": "Integration test — two-user privacy",
-              "lines": [
-                309,
-                360
-              ]
-            }
-          ],
-          "sections": [
-            "Testing > Integration test — two-user privacy"
-          ]
-        }
-      },
-      "related": {
-        "Row Level Security": "This note details the specific security feature that the integration test was designed to verify.",
-        "Database Constraints": "These constraints define the rules that ensure data validity, which is crucial for Row Level Security.",
-        "Local Setup Guide": "This guide outlines the prerequisites needed to set up the database environment for the project."
-      },
-      "summary": "The project performed an automated integration test to verify Row Level Security (RLS) for two-user privacy. This test ensured that one user could only access their own data and that unauthenticated requests were refused.",
-      "file": "wiki/Concepts/Integration Testing.md",
-      "source_ids": []
-    },
-    "learn-limitation": {
-      "title": "Learning Limitations",
-      "category": "Concepts",
-      "kind": "topic",
-      "contributions": {
-        "src-ms-pacman": {
-          "summary": "The agent failed to learn ghost avoidance and learning stalled due to three primary limitations: short memory, clipped rewards, and the lack of a penalty for dying. A next experiment was proposed to test if increasing exploration could overcome these bottlenecks.",
-          "details": [
-            {
-              "text": "The agent never learned to avoid ghosts, and its learning stalled after about 150 games.",
-              "section": "Limitation and next experiment",
-              "heading": "Limitation and next experiment",
-              "lines": [
-                239,
-                258
-              ]
-            },
-            {
-              "text": "The replay memory holds only 5,000 decisions, about eight games. The agent mostly learns from its last few games and keeps relearning the same early-maze situations.",
-              "section": "Limitation and next experiment",
-              "heading": "Limitation and next experiment",
-              "lines": [
-                239,
-                258
-              ]
-            },
-            {
-              "text": "Rewards are clipped to ±1 for learning, so eating a ghost (200–1,600 points) teaches no more than a 10-point pellet.",
-              "section": "Limitation and next experiment",
-              "heading": "Limitation and next experiment",
-              "lines": [
-                239,
-                258
-              ]
-            },
-            {
-              "text": "Losing a life only costs the pellets the agent would have eaten later, a weak and delayed signal.",
-              "section": "Limitation and next experiment",
-              "heading": "Limitation and next experiment",
-              "lines": [
-                239,
-                258
-              ]
-            },
-            {
-              "text": "The next experiment proposed changing exploration from 0.10 to 0.20.",
-              "section": "Limitation and next experiment",
-              "heading": "Limitation and next experiment",
-              "lines": [
-                239,
-                258
-              ]
-            }
-          ],
-          "sections": [
-            "Limitation and next experiment"
-          ]
-        }
-      },
-      "related": {
-        "Training Results": "Details the findings of the training process that faced limitations.",
-        "DQN Hyperparameters": "Details the specific settings chosen for the DQN project.",
-        "Evaluation Comparison": "Compares the evaluation results across different experimental groups."
-      },
-      "summary": "The agent failed to learn ghost avoidance and learning stalled due to three primary limitations: short memory, clipped rewards, and the lack of a penalty for dying. A next experiment was proposed to test if increasing exploration could overcome these bottlenecks.",
-      "file": "wiki/Concepts/Learning Limitations.md",
-      "source_ids": []
-    },
-    "local-setup-guide": {
-      "title": "Local Setup Guide",
-      "category": "Tools",
-      "kind": "topic",
-      "contributions": {
-        "src-networking-tracker": {
-          "summary": "The project requires specific prerequisites and a multi-step process to set up the Neon database and apply initial schema migrations.",
-          "details": [
-            {
-              "text": "Requirements: Node.js 20.9 or newer, and a Neon account.",
-              "section": "Local setup",
-              "heading": "Local setup",
-              "lines": [
-                222,
-                231
-              ]
-            },
-            {
-              "text": "The setup involves cloning the repository and installing dependencies.",
-              "section": "Local setup",
-              "heading": "Local setup",
-              "lines": [
-                222,
-                231
-              ]
-            },
-            {
-              "text": "The Neon project setup requires enabling Managed Better Auth and enabling the Data API with Managed Better Auth for JWT authentication.",
-              "section": "Local setup > 1. Create the Neon project",
-              "heading": "1. Create the Neon project",
-              "lines": [
-                232,
-                240
-              ]
-            },
-            {
-              "text": "The Data API is enabled per branch and is unavailable if IP Allow or Private Networking is on.",
-              "section": "Local setup > 1. Create the Neon project",
-              "heading": "1. Create the Neon project",
-              "lines": [
-                232,
-                240
-              ]
-            },
-            {
-              "text": "The database migration command applies `db/schema.sql` and reports whether RLS is enabled and how many policies exist.",
-              "section": "Local setup > 3. Create the table and policies",
-              "heading": "3. Create the table and policies",
-              "lines": [
-                249,
-                258
-              ]
-            },
-            {
-              "text": "The migration process is idempotent, meaning it is safe to re-run after editing the schema.",
-              "section": "Local setup > 3. Create the table and policies",
-              "heading": "3. Create the table and policies",
-              "lines": [
-                249,
-                258
-              ]
-            }
-          ],
-          "sections": [
-            "Local setup",
-            "Local setup > 1. Create the Neon project",
-            "Local setup > 3. Create the table and policies"
-          ]
-        }
-      },
-      "related": {
-        "DQN Hyperparameters": "Details the specific settings used to optimize the Ms. Pac-Man DQN training.",
-        "Training Results": "Shows the findings and outcomes of the Ms. Pac-Man DQN training process.",
-        "Integration Testing": "Verifies the automated test ensuring Row Level Security for two-user privacy."
-      },
-      "summary": "The project requires specific prerequisites and a multi-step process to set up the Neon database and apply initial schema migrations.",
-      "file": "wiki/Tools/Local Setup Guide.md",
-      "source_ids": []
-    },
-    "ms-pac-man-dqn": {
-      "title": "Ms. Pac-Man DQN",
-      "category": "Projects",
+    "grow-football": {
+      "title": "Growing Up and Football",
+      "category": "Overview",
       "kind": "project",
       "contributions": {
-        "src-ms-pacman": {
-          "summary": "This project details the training of a Deep Q-Network (DQN) agent to play Ms. Pac-Man. The agent was trained using specific hyperparameters and demonstrated performance improvements over an untrained baseline.",
+        "src-growing-up": {
+          "summary": "This project documents Matt's upbringing in the East Bay and his involvement in football. It also traces his transition from sports into a career in investment banking and startups.",
+          "details": [],
+          "sections": []
+        }
+      },
+      "related": {},
+      "summary": "This project documents Matt's upbringing in the East Bay and his involvement in football. It also traces his transition from sports into a career in investment banking and startups.",
+      "file": "wiki/Overview/Growing Up and Football.md",
+      "source_ids": [
+        "src-growing-up"
+      ]
+    },
+    "haas-mba-education": {
+      "title": "Haas MBA Education",
+      "category": "Career",
+      "kind": "topic",
+      "contributions": {
+        "src-resume": {
+          "summary": "Matt Wong is pursuing an MBA at the Haas School of Business and holds a Bachelor of Science in Business Administration from the same school. His academic record includes several honors, internships, and extracurricular leadership roles.",
           "details": [
             {
-              "text": "Exploration was set to 0.10, which was half the notebook's 0.20 and closer to the 5% used at evaluation, so the agent trains in cond",
-              "section": "My hyperparameters",
-              "heading": "My hyperparameters",
+              "text": "Master of Business Administration (MBA). Graduation Date: Spring 2027",
+              "section": "Education",
+              "heading": "Education",
               "lines": [
-                47,
-                62
+                7,
+                21
               ]
             },
             {
-              "text": "The trained agent averaged 808 against the untrained network's 492 (+316).",
-              "section": "What I observed",
-              "heading": "What I observed",
+              "text": "Honors: Haas Entrepreneurial Finance Fellow (VC Scholarship)",
+              "section": "Education",
+              "heading": "Education",
               "lines": [
-                187,
-                224
+                7,
+                21
               ]
             },
             {
-              "text": "The agent never learned to avoid ghosts, and its learning stalled after about 150 games.",
-              "section": "Limitation and next experiment",
-              "heading": "Limitation and next experiment",
+              "text": "Extracurriculars: VC Club (President), Fall Line Scout, SkyDeck Fellows Lead, Cal Athletics Cameron Institute Mentor, Bear & Axe Run Club (Backyard Ultra Champion)",
+              "section": "Education",
+              "heading": "Education",
               "lines": [
-                239,
-                258
+                7,
+                21
               ]
             },
             {
-              "text": "Four consecutive game screens, each shrunk to 84 × 84 grayscale pixels.",
-              "section": "How the agent learns",
-              "heading": "How the agent learns",
+              "text": "Bachelor of Science in Business Administration. Graduation Date: Fall 2016",
+              "section": "Education",
+              "heading": "Education",
               "lines": [
-                225,
-                238
+                7,
+                21
+              ]
+            },
+            {
+              "text": "Honors: Cum Laude, Edgar J.",
+              "section": "Education",
+              "heading": "Education",
+              "lines": [
+                7,
+                21
               ]
             }
           ],
           "sections": [
-            "How the agent learns",
-            "Limitation and next experiment",
-            "My hyperparameters",
-            "What I observed"
+            "Education"
+          ]
+        }
+      },
+      "related": {
+        "Investment Banking Path": "Details Matt's career progression from investment banking to startups."
+      },
+      "summary": "Matt Wong is pursuing an MBA at the Haas School of Business and holds a Bachelor of Science in Business Administration from the same school. His academic record includes several honors, internships, and extracurricular leadership roles.",
+      "file": "wiki/Career/Haas MBA Education.md",
+      "source_ids": []
+    },
+    "investment-bank-path": {
+      "title": "Investment Banking Path",
+      "category": "Career",
+      "kind": "topic",
+      "contributions": {
+        "src-growing-up": {
+          "summary": "Matt started his career in investment banking before moving into startups to pursue a more visible impact. The details of this career path, including specific companies, are documented in his resume.",
+          "details": [
+            {
+              "text": "Matt started his career in investment banking, then moved into startups because he wanted to make an impact he could actually see.",
+              "section": "After football",
+              "heading": "After football",
+              "lines": [
+                21,
+                23
+              ]
+            },
+            {
+              "text": "The details of that path, from Citigroup to Postmates, Wonolo, Gametime and venture capital, are in his resume.",
+              "section": "After football",
+              "heading": "After football",
+              "lines": [
+                21,
+                23
+              ]
+            }
+          ],
+          "sections": [
+            "After football"
+          ]
+        },
+        "src-resume": {
+          "summary": "Investment Banking Path",
+          "details": [
+            {
+              "text": "Matt worked as a Summer Investment Associate at Corazon Capital, where he sourced, diligenced, and closed a pre-seed investment, and led diligence on prospective deals across AI companions, consumer hardware, and EdTech.",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Matt was a Pre-MBA Associate and Venture Fellow at SkyDeck, where he sourced three companies across AI infrastructure, agent control, BaaS, and semiconductor startups, and established university relationships.",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Matt managed financial planning and goaling for Gametime, leading to the company's first-ever profitable quarter, and oversaw marketing budgets resulting in incremental revenue.",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Matt oversaw financial due diligence on capital fundraising for Wonolo, restructuring customer profitability analyses, and led a 'Living Wage' initiative for workers.",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Matt served as a Sr. Finance & Strategy Analyst at Postmates, where he was the primary analyst on fundraising and exit efforts leading to the $2.0Bn sale to Uber.",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            }
+          ],
+          "sections": [
+            "Work Experience"
           ]
         }
       },
       "related": {},
-      "summary": "This project details the training of a Deep Q-Network (DQN) agent to play Ms. Pac-Man. The agent was trained using specific hyperparameters and demonstrated performance improvements over an untrained baseline.",
-      "file": "wiki/Projects/Ms. Pac-Man DQN.md",
-      "source_ids": [
-        "src-ms-pacman"
-      ]
+      "summary": "Matt started his career in investment banking before moving into startups to pursue a more visible impact. The details of this career path, including specific companies, are documented in his resume.",
+      "file": "wiki/Career/Investment Banking Path.md",
+      "source_ids": []
     },
-    "network-tracker": {
-      "title": "Networking Tracker",
-      "category": "Projects",
+    "matt-wong-resume": {
+      "title": "Matt Wong Resume",
+      "category": "Overview",
       "kind": "project",
       "contributions": {
-        "src-networking-tracker": {
-          "summary": "Networking Tracker is a private networking application designed for users to track professional contacts. The project utilizes Next.js and a PostgreSQL database secured by Row Level Security to ensure user privacy over contact data.",
+        "src-resume": {
+          "summary": "This project summarizes Matt Wong's educational background and professional experience across finance, venture capital, and market-leading technology platforms. It details his roles in high-growth startups and major financial institutions.",
           "details": [
             {
-              "text": "The application uses Neon Managed Better Auth for handling user sign-up, sign-in, and session management.",
-              "section": "Features",
-              "heading": "Features",
+              "text": "Matt Wong earned a Master of Business Administration (MBA) from the University of California, Berkeley – Haas School of Business, graduating in Spring 2027.",
+              "section": "Education",
+              "heading": "Education",
               "lines": [
-                28,
-                39
+                7,
+                21
               ]
             },
             {
-              "text": "The application is built using Next.js 16 (App Router) and React 19.",
-              "section": "Technology stack",
-              "heading": "Technology stack",
+              "text": "Matt Wong worked as a Sr. Finance & Strategy Manager at Postmates, where he was the primary analyst on fundraising and exit efforts leading to a $2Bn sale to Uber.",
+              "section": "Work Experience",
+              "heading": "Work Experience",
               "lines": [
-                80,
-                95
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Matt Wong was an Investment Associate at Corazon Capital, where he sourced, diligenced, and closed a pre-seed investment in Upriver AI.",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Matt Wong worked as a Corporate Banking Analyst at Citigroup, focusing on capital raising and corporate strategy for clients like Apple.",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
               ]
             }
           ],
           "sections": [
-            "Features",
-            "Technology stack"
+            "Education",
+            "Work Experience"
           ]
         }
       },
       "related": {},
-      "summary": "Networking Tracker is a private networking application designed for users to track professional contacts. The project utilizes Next.js and a PostgreSQL database secured by Row Level Security to ensure user privacy over contact data.",
-      "file": "wiki/Projects/Networking Tracker.md",
+      "summary": "This project summarizes Matt Wong's educational background and professional experience across finance, venture capital, and market-leading technology platforms. It details his roles in high-growth startups and major financial institutions.",
+      "file": "wiki/Overview/Matt Wong Resume.md",
       "source_ids": [
-        "src-networking-tracker"
+        "src-resume"
       ]
     },
-    "row-level-security": {
-      "title": "Row Level Security",
-      "category": "Concepts",
+    "ocean-surf": {
+      "title": "Ocean Surfing",
+      "category": "Interests",
       "kind": "topic",
       "contributions": {
-        "src-networking-tracker": {
-          "summary": "Neon Managed Better Auth handles user sign-up, sign-in, sessions, and password storage. This process involves issuing a JWT and verifying claims to load user information into the Postgres session for policy checks.",
+        "src-interests": {
+          "summary": "Ocean Surfing details Matt's locations and volunteer activities related to surfing. Matt surfs at Ocean Beach and has also surfed in Hawaii.",
           "details": [
             {
-              "text": "Neon Managed Better Auth handles sign up, sign in, sessions, and password storage.",
-              "section": "Authentication and ownership",
-              "heading": "Authentication and ownership",
+              "text": "Matt surfs at Ocean Beach in San Francisco.",
+              "section": "Surfing",
+              "heading": "Surfing",
               "lines": [
-                174,
-                177
+                9,
+                12
               ]
             },
             {
-              "text": "On sign-in, the system issues a JWT.",
-              "section": "Authentication and ownership",
-              "heading": "Authentication and ownership",
+              "text": "Matt has also surfed in Hawaii.",
+              "section": "Surfing",
+              "heading": "Surfing",
               "lines": [
-                174,
-                177
+                9,
+                12
               ]
             },
             {
-              "text": "The Neon Data API verifies the JWT against the project's JWKS and loads its claims into the Postgres session.",
-              "section": "Authentication and ownership",
-              "heading": "Authentication and ownership",
+              "text": "Since 2024, Matt has been a surf volunteer with the MeWater Foundation, which takes kids out on the water.",
+              "section": "Surfing",
+              "heading": "Surfing",
               "lines": [
-                174,
-                177
-              ]
-            },
-            {
-              "text": "`auth.user_id()` returns the signed-in user's id inside a policy.",
-              "section": "Authentication and ownership",
-              "heading": "Authentication and ownership",
-              "lines": [
-                174,
-                177
+                9,
+                12
               ]
             }
           ],
           "sections": [
-            "Authentication and ownership"
+            "Surfing"
           ]
         }
       },
-      "related": {
-        "Integration Testing": "This note details the automated test performed specifically to verify Row Level Security.",
-        "Database Constraints": "RLS relies on database constraints to enforce the data access policies.",
-        "Local Setup Guide": "This guide covers the necessary steps to set up the Neon database for the project."
-      },
-      "summary": "Neon Managed Better Auth handles user sign-up, sign-in, sessions, and password storage. This process involves issuing a JWT and verifying claims to load user information into the Postgres session for policy checks.",
-      "file": "wiki/Concepts/Row Level Security.md",
+      "related": {},
+      "summary": "Ocean Surfing details Matt's locations and volunteer activities related to surfing. Matt surfs at Ocean Beach and has also surfed in Hawaii.",
+      "file": "wiki/Interests/Ocean Surfing.md",
       "source_ids": []
     },
-    "train-result": {
-      "title": "Training Results",
-      "category": "Concepts",
+    "personal-life": {
+      "title": "Personal Life",
+      "category": "Life",
       "kind": "topic",
       "contributions": {
-        "src-ms-pacman": {
-          "summary": "This note covers the results section of the Ms. Pac-Man DQN project. It details the findings of the training process.",
+        "src-interests": {
+          "summary": "Matt spends a significant amount of time with his girlfriend, Tina, whom he met this year. When time is available, he dedicates that time to fantasy football.",
           "details": [
             {
-              "text": "Results",
-              "section": "Results",
-              "heading": "Results",
+              "text": "Matt spends a lot of his time with his girlfriend, Tina, who he met this year.",
+              "section": "Everything else",
+              "heading": "Everything else",
               "lines": [
-                77,
-                78
+                17,
+                19
+              ]
+            },
+            {
+              "text": "When there's time left over, it goes to fantasy football.",
+              "section": "Everything else",
+              "heading": "Everything else",
+              "lines": [
+                17,
+                19
               ]
             }
           ],
           "sections": [
-            "Results"
+            "Everything else"
+          ]
+        }
+      },
+      "related": {},
+      "summary": "Matt spends a significant amount of time with his girlfriend, Tina, whom he met this year. When time is available, he dedicates that time to fantasy football.",
+      "file": "wiki/Life/Personal Life.md",
+      "source_ids": []
+    },
+    "sport-interest": {
+      "title": "Sports and Interests",
+      "category": "Overview",
+      "kind": "project",
+      "contributions": {
+        "src-interests": {
+          "summary": "Matt's personal interests in sports and his social life. It details his activities related to golf, surfing, running, and personal relationships.",
+          "details": [],
+          "sections": []
+        }
+      },
+      "related": {},
+      "summary": "Matt's personal interests in sports and his social life. It details his activities related to golf, surfing, running, and personal relationships.",
+      "file": "wiki/Overview/Sports and Interests.md",
+      "source_ids": [
+        "src-interests"
+      ]
+    },
+    "weekly-runn": {
+      "title": "Weekly Running",
+      "category": "Interests",
+      "kind": "topic",
+      "contributions": {
+        "src-interests": {
+          "summary": "Running involves Matt running approximately 35 miles per week and has included achieving a backyard ultra win. Matt is also planning future running goals, such as training for a 100-miler.",
+          "details": [
+            {
+              "text": "Matt runs about 35 miles a week.",
+              "section": "Running",
+              "heading": "Running",
+              "lines": [
+                13,
+                16
+              ]
+            },
+            {
+              "text": "Matt won a backyard ultra by running 50 miles with the Bear & Axe Run Club at Haas.",
+              "section": "Running",
+              "heading": "Running",
+              "lines": [
+                13,
+                16
+              ]
+            },
+            {
+              "text": "Matt has run 50k-plus distances.",
+              "section": "Running",
+              "heading": "Running",
+              "lines": [
+                13,
+                16
+              ]
+            },
+            {
+              "text": "Matt is planning his first 100-miler for next year.",
+              "section": "Running",
+              "heading": "Running",
+              "lines": [
+                13,
+                16
+              ]
+            }
+          ],
+          "sections": [
+            "Running"
           ]
         }
       },
       "related": {
-        "Evaluation Comparison": "Compares the performance results across different experimental groups.",
-        "DQN Hyperparameters": "Details the specific settings chosen to optimize the training process.",
-        "Learning Limitations": "Explains why the agent failed to learn ghost avoidance and stalled."
+        "Golf Habits": "Both notes detail Matt's specific hobbies and habits.",
+        "Ocean Surfing": "Both notes detail Matt's various outdoor physical activities.",
+        "Personal Life": "Running goals and personal relationships often intersect with time management."
       },
-      "summary": "This note covers the results section of the Ms. Pac-Man DQN project. It details the findings of the training process.",
-      "file": "wiki/Concepts/Training Results.md",
+      "summary": "Running involves Matt running approximately 35 miles per week and has included achieving a backyard ultra win. Matt is also planning future running goals, such as training for a 100-miler.",
+      "file": "wiki/Interests/Weekly Running.md",
       "source_ids": []
     }
   }

@@ -1,0 +1,402 @@
+{
+  "sources": [
+    {
+      "id": "src-custom-llm",
+      "file": "raw/custom-llm-README.md",
+      "sha256": "0f343ee30249ce80455fc393d853b145b488a2ca8df1e0b61be56e8efbff7933",
+      "sections": 15,
+      "changed": false
+    },
+    {
+      "id": "src-ms-pacman",
+      "file": "raw/ms-pacman-README.md",
+      "sha256": "7e0a6c2b31a0e1df4b3378670754b35eb32b95284614d0dba510ff6e7af637ac",
+      "sections": 16,
+      "changed": false
+    },
+    {
+      "id": "src-networking-tracker",
+      "file": "raw/networking-tracker-README.md",
+      "sha256": "5333e46fb4953f5716342d37258d4b0f80a0ff439f375e70c3db7478f629552c",
+      "sections": 32,
+      "changed": false
+    }
+  ],
+  "dropped_bullets": [
+    {
+      "note": "Custom nanoGPT LLM",
+      "text": "Model Architecture",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Custom nanoGPT LLM",
+      "text": "Evaluation Results",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Custom nanoGPT LLM",
+      "text": "Corpus Source",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Custom nanoGPT LLM",
+      "text": "Learning Mechanism",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Ms. Pac-Man DQN",
+      "text": "Hyperparameters",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Ms. Pac-Man DQN",
+      "text": "Training Results",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Ms. Pac-Man DQN",
+      "text": "Agent Learning",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Ms. Pac-Man DQN",
+      "text": "Limitations",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Agent Learning Process",
+      "text": "Learning.",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Networking Tracker",
+      "text": "Accounts and Privacy",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Networking Tracker",
+      "text": "Row Level Security Implementation",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Networking Tracker",
+      "text": "Local Environment Setup",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Networking Tracker",
+      "text": "Two-Account Privacy Test",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Integration Testing",
+      "text": "Unit tests — validation",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Integration Testing",
+      "text": "Integration test — two-user privacy",
+      "reason": "fragment or too short"
+    }
+  ],
+  "dropped_topics": [
+    {
+      "source": "src-custom-llm",
+      "proposed": "Tokenization Process",
+      "reason": "none of its section names exist in the source"
+    },
+    {
+      "source": "src-ms-pacman",
+      "proposed": "Training Results",
+      "reason": "title is not a short readable subject name"
+    },
+    {
+      "source": "src-networking-tracker",
+      "proposed": "Local Setup Guide",
+      "reason": "title is not a short readable subject name"
+    },
+    {
+      "source": "src-networking-tracker",
+      "proposed": "Integration Testing",
+      "reason": "no bullet survived grounding checks"
+    }
+  ],
+  "dropped_links": [
+    {
+      "from": "Learning Limitations",
+      "to": "Replay Memory",
+      "reason": "no note with that title"
+    }
+  ],
+  "calls": [
+    {
+      "purpose": "plan src-custom-llm",
+      "model": "gemma4:e2b",
+      "wall_seconds": 20.82,
+      "prompt_tokens": 1600,
+      "output_tokens": 1081,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.79,
+      "generation_seconds": 17.24
+    },
+    {
+      "purpose": "write 'NanoGPT Setup'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 19.56,
+      "prompt_tokens": 2135,
+      "output_tokens": 1037,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.86,
+      "generation_seconds": 16.47
+    },
+    {
+      "purpose": "write 'Evaluation Comparison'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 20.8,
+      "prompt_tokens": 1881,
+      "output_tokens": 1092,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.73,
+      "generation_seconds": 17.9
+    },
+    {
+      "purpose": "write 'Corpus Leakage'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 17.8,
+      "prompt_tokens": 2010,
+      "output_tokens": 886,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.81,
+      "generation_seconds": 14.76
+    },
+    {
+      "purpose": "plan src-ms-pacman",
+      "model": "gemma4:e2b",
+      "wall_seconds": 17.3,
+      "prompt_tokens": 1417,
+      "output_tokens": 871,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.62,
+      "generation_seconds": 14.5
+    },
+    {
+      "purpose": "write 'DQN Hyperparameters'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.18,
+      "prompt_tokens": 1058,
+      "output_tokens": 647,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.49,
+      "generation_seconds": 10.5
+    },
+    {
+      "purpose": "write 'Agent Learning Process'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 14.29,
+      "prompt_tokens": 947,
+      "output_tokens": 707,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.33,
+      "generation_seconds": 11.79
+    },
+    {
+      "purpose": "write 'Learning Limitations'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 17.56,
+      "prompt_tokens": 1007,
+      "output_tokens": 936,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.38,
+      "generation_seconds": 15.02
+    },
+    {
+      "purpose": "plan src-networking-tracker",
+      "model": "gemma4:e2b",
+      "wall_seconds": 19.48,
+      "prompt_tokens": 2009,
+      "output_tokens": 1006,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.65,
+      "generation_seconds": 16.62
+    },
+    {
+      "purpose": "write 'Row Level Security'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 14.91,
+      "prompt_tokens": 1378,
+      "output_tokens": 720,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.45,
+      "generation_seconds": 12.24
+    },
+    {
+      "purpose": "write 'Database Schema'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 15.37,
+      "prompt_tokens": 1668,
+      "output_tokens": 713,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.57,
+      "generation_seconds": 12.6
+    },
+    {
+      "purpose": "write 'Integration Testing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 14.11,
+      "prompt_tokens": 1918,
+      "output_tokens": 674,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.64,
+      "generation_seconds": 11.24
+    },
+    {
+      "purpose": "link 'DQN Hyperparameters'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.79,
+      "prompt_tokens": 774,
+      "output_tokens": 571,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.27,
+      "generation_seconds": 9.38
+    },
+    {
+      "purpose": "link 'Evaluation Comparison'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 14.18,
+      "prompt_tokens": 781,
+      "output_tokens": 716,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.25,
+      "generation_seconds": 11.75
+    },
+    {
+      "purpose": "link 'Learning Limitations'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.57,
+      "prompt_tokens": 777,
+      "output_tokens": 519,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.26,
+      "generation_seconds": 8.16
+    },
+    {
+      "purpose": "link 'Row Level Security'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 7.75,
+      "prompt_tokens": 697,
+      "output_tokens": 327,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.22,
+      "generation_seconds": 5.39
+    },
+    {
+      "purpose": "link 'NanoGPT Setup'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.98,
+      "prompt_tokens": 800,
+      "output_tokens": 607,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.24,
+      "generation_seconds": 9.63
+    },
+    {
+      "purpose": "link 'Corpus Leakage'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.05,
+      "prompt_tokens": 704,
+      "output_tokens": 498,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.18,
+      "generation_seconds": 7.74
+    },
+    {
+      "purpose": "link 'Agent Learning Process'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.32,
+      "prompt_tokens": 738,
+      "output_tokens": 486,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.22,
+      "generation_seconds": 7.95
+    },
+    {
+      "purpose": "link 'Database Schema'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.39,
+      "prompt_tokens": 679,
+      "output_tokens": 472,
+      "load_seconds": 0.0,
+      "prompt_eval_seconds": 0.17,
+      "generation_seconds": 8.06
+    }
+  ],
+  "skipped_reviewed": [],
+  "removed_pages": [
+    "Database Constraints",
+    "Integration Testing",
+    "Local Setup Guide",
+    "Training Results"
+  ],
+  "pages_before": 11,
+  "pages_after": 11,
+  "created": [
+    "Agent Learning Process",
+    "Corpus Leakage",
+    "Database Schema",
+    "NanoGPT Setup"
+  ],
+  "removed": [
+    "Database Constraints",
+    "Integration Testing",
+    "Local Setup Guide",
+    "Training Results"
+  ],
+  "updated": [
+    "Custom nanoGPT LLM",
+    "DQN Hyperparameters",
+    "Evaluation Comparison",
+    "Learning Limitations",
+    "Ms. Pac-Man DQN",
+    "Networking Tracker",
+    "Row Level Security"
+  ],
+  "seconds": 292.4,
+  "environment": {
+    "timestamp_utc": "2026-09-26T21:52:49+00:00",
+    "execution": "local",
+    "internet_reachable": true,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  }
+}

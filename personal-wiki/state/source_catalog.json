@@ -1,14 +1,6 @@
 {
   "sources": [
     {
-      "id": "src-resume",
-      "file": "raw/matt-wong-resume.md",
-      "title": "Matt Wong Resume",
-      "origin": "My resume, version 08.07.26 (Word/PDF), exported to Markdown; phone number redacted",
-      "sha256": "a4a062de03ad10d783b361081c0684d0c5e4c725f9638a3b80b537f4bbd90375",
-      "description": "Education, work history from Citigroup to Corazon Capital, honors and activities."
-    },
-    {
       "id": "src-growing-up",
       "file": "raw/growing-up-and-football.md",
       "title": "Growing Up and Football",
@@ -23,6 +15,14 @@
       "origin": "Written by me for this wiki, September 2026",
       "sha256": "b6445a4103ac00457c6bc9acf1950cecf3b88c544e393068077a24b1bc8cfa88",
       "description": "Golf at Oakland Metro, surfing Ocean Beach, ultra running and the backyard ultra win, and everything else."
+    },
+    {
+      "id": "src-resume",
+      "file": "raw/matt-wong-resume.md",
+      "title": "Matt Wong Resume",
+      "origin": "My resume, version 08.07.26 (Word/PDF), exported to Markdown; phone number redacted",
+      "sha256": "a4a062de03ad10d783b361081c0684d0c5e4c725f9638a3b80b537f4bbd90375",
+      "description": "Education, work history from Citigroup to Corazon Capital, honors and activities."
     }
   ]
 }

@@ -7,12 +7,12 @@ source_files:
   - raw/growing-up-and-football.md
 generated_by: gemma4:e2b via local Ollama
 updated: 2026-09-29
-reviewed: false   # set to true after checking against the sources; ingest will then leave this file alone
+reviewed: true    # checked against the sources on 2026-09-29; see evidence/review-log.md
 ---
 
 # Career Transition
 
-Matt transitioned his career from investment banking into startups to pursue a more visible impact. The details of this career path, including specific companies, are documented in this section.
+Matt transitioned his career from investment banking into startups to pursue a more visible impact. The details of this career path, including specific companies, are in his resume.
 
 ## Details
 

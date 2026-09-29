@@ -140,6 +140,7 @@ def _jsonable(obj):
 
 META = re.compile(r"\b(what can (you|we|i)|help me with|who are you|what are you|how do (you|i) use|your (abilities|capabilities)|commands?)\b", re.I)
 GREETING = re.compile(r"^\s*(hi|hey|hello|yo|thanks|thank you|ok(ay)?|cool|great|bye)\b[\s!.?]*$", re.I)
+PERSONAL_QUESTION = re.compile(r"^(?=.*\b(i|my|me|mine|i'm|i've|did i|do i|am i|where do i|when did i)\b).*\?\s*$", re.I | re.S)
 EDIT = re.compile(r"\b(make (that|it|this)|shorter|longer|shorten|rephrase|reword|rewrite|simplify|summari[sz]e (that|it)|"
                   r"turn (that|it) into|as bullets?|more (formal|casual|concise)|fix the tone|translate (that|it))\b", re.I)
 
@@ -177,6 +178,11 @@ class ChatSession:
         data, _ = self.harness.client.chat_json(prompts.build_router(self.history, message), prompts.ROUTER_SCHEMA)
         if data.get("needs_notes") and str(data.get("search_query", "")).strip():
             return TurnDecision(True, data["search_query"].strip(), "router: the message needs facts from the notes")
+        if PERSONAL_QUESTION.search(message):
+            # Added after the offline run: the 2B router answered "no lookup" to "Where do I usually surf?".
+            # A question about the user's own life is always worth a look in the notes; an empty result costs
+            # a few hundred tokens, a missed fact costs a wrong answer.
+            return TurnDecision(True, message, "harness rule: a question about Matt's own life always checks the notes")
         return TurnDecision(False, "", "router: answerable from the conversation alone")
 
     def send(self, message: str, on_token=None, on_decision=None) -> dict:

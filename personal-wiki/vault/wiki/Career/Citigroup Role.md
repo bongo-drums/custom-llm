@@ -7,12 +7,12 @@ source_files:
   - raw/matt-wong-resume.md
 generated_by: gemma4:e2b via local Ollama
 updated: 2026-09-29
-reviewed: false   # set to true after checking against the sources; ingest will then leave this file alone
+reviewed: true    # checked against the sources on 2026-09-29; see evidence/review-log.md
 ---
 
 # Citigroup Role
 
-Citigroup Role
+Matt's first job after Berkeley: Corporate Banking Analyst at Citigroup in San Francisco, May 2017 – November 2018.
 
 ## Details
 

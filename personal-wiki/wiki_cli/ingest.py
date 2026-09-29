@@ -207,7 +207,8 @@ def _match_section(name: str, sections: list[Section]) -> Section | None:
 
 
 META_OPENER = re.compile(r"^(this|the) (note|section|page|document|entry|project|overview|source) (details|covers|describes|summarizes|"
-                         r"summarises|compares|explains|discusses|outlines|presents)\s+", re.I)
+                         r"summarises|compares|explains|discusses|outlines|presents|documents|introduces|provides|captures|"
+                         r"records|traces|highlights|focuses on)\s+", re.I)
 
 
 def _clean_text(text: str) -> str:
@@ -367,8 +368,14 @@ class Ingestor:
                 self.report["dropped_topics"].append({"source": entry.id, "proposed": page.title,
                                                       "reason": "no bullet survived grounding checks"})
                 continue
+            summary = _clean_summary(note.get("summary", ""))
+            if len(summary) < 20 or similar(summary, page.title):
+                # The model sometimes echoes the title or returns nothing; a first fact beats an empty summary.
+                self.report["dropped_bullets"].append({"note": page.title, "text": summary,
+                                                      "reason": "summary was empty or just the title; used first detail"})
+                summary = details[0]["text"]
             page.contributions[entry.id] = {
-                "summary": _clean_summary(note.get("summary", "")),
+                "summary": summary,
                 "details": details,
                 "sections": sorted({d["section"] for d in details}),
             }
@@ -497,6 +504,14 @@ class Ingestor:
             path.write_text(self.render(page), encoding="utf-8")
             page.file = page.rel_path
 
+        # A reviewed note is never rewritten, so if this run removed a page it links to, the link now dangles.
+        # Report it; the fix is a human one (repoint the link, or un-freeze and re-ingest).
+        titles = {p.title for p in self.store.pages.values()}
+        for p in wiki.rglob("*.md"):
+            if _is_reviewed(p):
+                for target in re.findall(r"\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]", p.read_text(encoding="utf-8")):
+                    if target not in titles and not (self.cfg.paths.raw / f"{target}.md").exists():
+                        self.report.setdefault("dangling_links_in_reviewed", []).append({"page": p.stem, "target": target})
         # Remove generated files that no longer correspond to a page (never touches reviewed notes).
         for p in wiki.rglob("*.md"):
             if p.resolve() not in wanted and _is_generated(p) and not _is_reviewed(p):

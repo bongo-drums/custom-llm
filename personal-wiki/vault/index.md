@@ -8,14 +8,14 @@ _One note per original source: what it is and its key facts._
 
 - [[Growing Up and Football]] — This project documents Matt's upbringing in the Bay Area and his involvement in football.
 - [[Matt Wong Resume]] — Matt Wong's professional background, focusing on his education from UC Berkeley and his extensive experience in venture investing and finance.
-- [[Sports and Interests]] — This project documents Matt's personal interests and activities, focusing on sports like golf, surfing, and running, alongside details about his personal life.
+- [[Sports and Interests]] — Matt's personal interests and activities: sports like golf, surfing, and running, alongside details about his personal life.
 
 ## Career
 
 _Jobs, schools, deals and results from my professional life._
 
 - [[Career Transition]] — Matt transitioned his career from investment banking into startups to pursue a more visible impact.
-- [[Citigroup Role]] — Citigroup Role
+- [[Citigroup Role]] — Matt's first job after Berkeley: Corporate Banking Analyst at Citigroup in San Francisco, May 2017 – November 2018.
 - [[Haas MBA Education]] — Matt Wong pursued higher education at the University of California, Berkeley's Haas School of Business.
 - [[Postmates Exit]] — Postmates Exit details Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace.
 
@@ -23,8 +23,7 @@ _Jobs, schools, deals and results from my professional life._
 
 _Where I grew up, family, school and football._
 
-- [[Growing Up In Bay Area]] — Growing Up In Bay Area details Matt's upbringing in the East Bay and his family's background.
-- [[High School Football]] — Matt started playing football in the sixth grade and played at Moreau Catholic through senior year, where he was team captain.
+- [[Growing Up In Bay Area]] — Matt's upbringing in the East Bay and his family's background: his birthplace, schooling, and the freedom he experienced in choosing his activities.
 - [[Personal Life]] — Matt spends a lot of his time with his girlfriend, Tina, whom he met this year.
 
 ## Interests
@@ -43,4 +42,4 @@ Unchanged originals. IDs and hashes are in `state/source_catalog.json` (outside 
 - [[matt-wong-resume]] — Matt Wong Resume (`src-resume`). Education, work history from Citigroup to Corazon Capital, honors and activities.
 - [[surfing-golf-and-running]] — Sports and Interests (`src-interests`). Golf at Oakland Metro, surfing Ocean Beach, ultra running and the backyard ultra win, and everything else.
 
-_Index generated 2026-09-29 18:05 UTC by `wiki ingest`._
+_Index generated 2026-09-29 18:25 UTC by `wiki ingest`._

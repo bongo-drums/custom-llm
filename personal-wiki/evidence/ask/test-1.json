@@ -142,5 +142,5 @@
     "citation_status": "cited",
     "passes": true
   },
-  "human_assessment": "PENDING: open each cited passage, judge support, and record the verdict in evals/assessments.json"
+  "human_assessment": "PASS. Answer: 'My handicap is about a 17 [S1].' [S1] is raw/surfing-golf-and-running.md lines 5-7 (Golf), which says 'My handicap is about a 17.' The number is copied exactly and the citation points at the right passage. Retrieval ranked it 1st. Minor style point: the model kept the source's first person ('My') instead of answering neutrally."
 }

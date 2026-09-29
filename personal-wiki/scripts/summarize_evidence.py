@@ -66,6 +66,10 @@ def main() -> None:
             lines.append(f"- [{p.stem}](chat/{p.stem}.md): {len(r['turns'])} turns; retrieved notes on "
                          f"{sum(t['decision']['retrieve'] for t in r['turns'])} of them; "
                          f"offline={not r['environment']['internet_reachable']}")
+            for t in r["turns"]:
+                d = t["decision"]
+                lines.append(f"  - “{t['user'][:60]}” → {'lookup: ' + d['query'][:40] if d['retrieve'] else 'no lookup'} "
+                             f"({d['reason'][:70]}); {t['timing']['wall_seconds']} s")
         lines.append("")
 
     out = EVID / "SUMMARY.md"

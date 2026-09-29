@@ -275,6 +275,9 @@ class WithFakeModel(unittest.TestCase):
         self.assertIn("Draft a short training plan", json.dumps(sent), "follow-up must include the conversation")
         t4 = s.send("Where do I usually surf?")
         self.assertTrue(t4["decision"]["retrieve"])
+        t5 = s.send("What did I do at Moreau?")   # the fake router says no; the harness rule must say yes
+        self.assertTrue(t5["decision"]["retrieve"])
+        self.assertIn("harness rule", t5["decision"]["reason"])
         self.assertTrue(t4["passages"])
         path = s.save_transcript("test-transcript")
         self.assertTrue(path.exists() and path.with_suffix(".md").exists())

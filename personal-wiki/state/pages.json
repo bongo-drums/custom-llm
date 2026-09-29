@@ -76,7 +76,7 @@
         "Haas MBA Education": "Details Matt Wong's pursuit of higher education at UC Berkeley's Haas School of Business.",
         "Postmates Exit": "Highlights Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace."
       },
-      "summary": "Citigroup Role",
+      "summary": "Matt's first job after Berkeley: Corporate Banking Analyst at Citigroup in San Francisco, May 2017 – November 2018.",
       "file": "wiki/Career/Citigroup Role.md",
       "source_ids": []
     },
@@ -178,10 +178,10 @@
         }
       },
       "related": {
-        "High School Football": "Details Matt's high school sports experience and leadership role.",
-        "Career Transition": "Outlines Matt's shift from investment banking to pursuing visible impact."
+        "Career Transition": "Outlines Matt's shift from investment banking to pursuing visible impact.",
+        "Football Career": "Details Matt's high school sports experience and leadership role."
       },
-      "summary": "Growing Up In Bay Area details Matt's upbringing in the East Bay and his family's background. This note outlines his birthplace, schooling, and the freedom he experienced in choosing his activities.",
+      "summary": "Matt's upbringing in the East Bay and his family's background: his birthplace, schooling, and the freedom he experienced in choosing his activities.",
       "file": "wiki/Life/Growing Up In Bay Area.md",
       "source_ids": []
     },
@@ -272,52 +272,12 @@
         }
       },
       "related": {
-        "High School Football": "Details Matt Wong's high school sports experience.",
         "Postmates Exit": "Describes Matt Wong's role in a major financial restructuring.",
-        "Citigroup Role": "Details Matt Wong's professional experience at Citigroup."
+        "Citigroup Role": "Details Matt Wong's professional experience at Citigroup.",
+        "Football Career": "Details Matt Wong's high school sports experience."
       },
       "summary": "Matt Wong pursued higher education at the University of California, Berkeley's Haas School of Business. This education includes both a Bachelor of Science and a Master of Business Administration.",
       "file": "wiki/Career/Haas MBA Education.md",
-      "source_ids": []
-    },
-    "high-school-football": {
-      "title": "High School Football",
-      "category": "Life",
-      "kind": "topic",
-      "contributions": {
-        "src-growing-up": {
-          "summary": "Matt started playing football in the sixth grade and played at Moreau Catholic through senior year, where he was team captain. After high school, he decided to prioritize academics and transferred to UC Berkeley to study business.",
-          "details": [
-            {
-              "text": "Matt started playing football in the sixth grade at Moreau Catholic, where he was team captain.",
-              "section": "Football",
-              "heading": "Football",
-              "lines": [
-                15,
-                20
-              ]
-            },
-            {
-              "text": "Matt realized he needed to focus on his studies and transferred to UC Berkeley to study business.",
-              "section": "Football",
-              "heading": "Football",
-              "lines": [
-                15,
-                20
-              ]
-            }
-          ],
-          "sections": [
-            "Football"
-          ]
-        }
-      },
-      "related": {
-        "Growing Up In Bay Area": "Details Matt's upbringing, schooling, and background, which includes his high school experience.",
-        "Career Transition": "Relates to Matt's decision to prioritize academics and pursue a career change after high school."
-      },
-      "summary": "Matt started playing football in the sixth grade and played at Moreau Catholic through senior year, where he was team captain. After high school, he decided to prioritize academics and transferred to UC Berkeley to study business.",
-      "file": "wiki/Life/High School Football.md",
       "source_ids": []
     },
     "matt-wong-resume": {
@@ -524,7 +484,7 @@
         }
       },
       "related": {},
-      "summary": "This project documents Matt's personal interests and activities, focusing on sports like golf, surfing, and running, alongside details about his personal life.",
+      "summary": "Matt's personal interests and activities: sports like golf, surfing, and running, alongside details about his personal life.",
       "file": "wiki/Overview/Sports and Interests.md",
       "source_ids": [
         "src-interests"

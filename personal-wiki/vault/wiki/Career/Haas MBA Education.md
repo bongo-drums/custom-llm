@@ -25,7 +25,7 @@ Matt Wong is pursuing an MBA at the Haas School of Business and holds a Bachelor
 ## Related notes
 
 - [[Matt Wong Resume]] — the source this topic comes from.
-- [[Investment Banking Path]] — Details Matt's career progression from investment banking to startups.
+- [[Career Transition]] — Matt's move from investment banking into startups.
 
 ## Sources
 

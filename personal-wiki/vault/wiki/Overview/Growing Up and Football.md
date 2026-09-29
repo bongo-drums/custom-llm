@@ -19,7 +19,7 @@ Matt's upbringing in the East Bay and his involvement in football. It also trace
 ## Topics from this source
 
 - [[Football Career]] — Matt started playing football in the sixth grade and was a team captain during his high school years.
-- [[Investment Banking Path]] — Matt started his career in investment banking before moving into startups to pursue a more visible impact.
+- [[Career Transition]] — Matt's move from investment banking into startups.
 
 ## Sources
 

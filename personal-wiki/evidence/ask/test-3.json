@@ -167,5 +167,5 @@
     "citation_status": "cited",
     "passes": false
   },
-  "human_assessment": "PENDING: open each cited passage, judge support, and record the verdict in evals/assessments.json"
+  "human_assessment": "FAIL (half right). The first sentence is correct and cited: College of San Mateo [S1] = growing-up-and-football.md lines 15-19 (Football). The second sentence answers 'besides study' with 'served as an Advisor for the Economics department [S2]' = matt-wong-resume.md lines 70-74 (Additional). That passage really does say 'Advisor, College of San Mateo - Keynote speaker for the Economics department (2023 - Present)', so the citation is valid, but it describes what I do there NOW, not what I did there as a student. The expected fact (I went there to keep playing football; 'Student Athlete, GPA 4.0') was in [S1] and [S3], both of which Gemma had. Retrieval succeeded; the model picked the wrong passage for the second half of a two-part question. The automatic citation check could not catch this, because every claim is supported by its citation. This is the clearest example in the run of a fluent, cited answer that is still wrong."
 }

@@ -138,6 +138,9 @@ def cmd_ingest(h: Harness, args) -> int:
     out(f"created: {', '.join(report['created']) or '-'}")
     out(f"updated: {', '.join(report['updated']) or '-'}")
     out(f"removed: {', '.join(report['removed']) or '-'}")
+    if report.get("dangling_links_in_reviewed"):
+        out("WARNING: reviewed notes link to pages this run removed (repoint by hand): "
+            + ", ".join(f"{d['page']} -> [[{d['target']}]]" for d in report["dangling_links_in_reviewed"]))
     if report.get("retired_sources"):
         out(f"retired sources (file no longer in raw/): {', '.join(report['retired_sources'])}")
     if report["skipped_reviewed"]:

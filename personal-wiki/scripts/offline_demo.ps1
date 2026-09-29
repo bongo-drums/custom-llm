@@ -10,7 +10,7 @@ function Step($title, $cmd) {
     Write-Host "`n==================== $title ====================" -ForegroundColor Cyan
     Write-Host "PS> $cmd"
     $sw = [Diagnostics.Stopwatch]::StartNew()
-    Invoke-Expression $cmd
+    Invoke-Expression "$cmd 2>&1" | Out-String -Stream | Write-Host   # piping through Write-Host makes the transcript capture CLI output
     Write-Host ("(exit {0}, {1:N1} s)" -f $LASTEXITCODE, $sw.Elapsed.TotalSeconds)
 }
 

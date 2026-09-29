@@ -107,4 +107,4 @@ The transaction resulted in a $2.0Bn sale to Uber Technologies [S4].
 
 ## Human assessment
 
-PENDING: open each cited passage, judge support, and record the verdict in evals/assessments.json
+PASS. Answer: 'Postmates was acquired by Uber for $2.0Bn [S4]' plus two supporting sentences, all cited to [S4] = raw/matt-wong-resume.md lines 57-62 (Postmates). The passage header says 'acquired by Uber for $2.0Bn' and the bullet says '$2Bn sale to Uber Technologies', so every claim is supported. The question used 'bought' while the source says 'acquired'; BM25 still retrieved the passage, at rank 4 of 6, as the retrieval check predicted. The answer omits that I was the primary analyst on the exit, which was in the expected answer but not asked for.

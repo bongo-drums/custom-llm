@@ -19,3 +19,30 @@ Harness finding from the same review: 13 of the 19 bullets dropped in this run w
 word-for-word that end without a period, rejected as "fragments". They are now accepted when they appear
 verbatim in the source. This cost the `Postmates Exit` and `Venture Fund Experience` topics; the next
 ingest of the resume should recover them.
+
+## Second review, after the offline run (2026-09-29)
+
+The offline demonstration re-ingested all three sources (`ingest-20260929-175058`) and, as in every run, the
+2B model chose a slightly different topic set: `Investment Banking Path` and `Venture Investing Experience`
+were replaced by `Career Transition`, `Citigroup Role`, `Growing Up In Bay Area` and `High School Football`.
+Reviewed notes were left alone, as designed. Reading the new pages against the originals:
+
+| Note | What Gemma wrote | Original says | Fix |
+|---|---|---|---|
+| `Life/High School Football` | A second note on the same subject as the reviewed `Football Career`, again with "started playing football in the sixth grade **at Moreau Catholic**" | one subject, and sixth grade was before Moreau | **Merged**: page removed, its two incoming links redirected to `Football Career`. The title matcher (67% word overlap) did not catch "High School Football" vs "Football Career"; noted as a limitation. |
+| `Life/Growing Up In Bay Area` | "played football from the sixth grade through senior year at Moreau Catholic" | same conflation, third time | Split into two clauses. |
+| `Career/Citigroup Role` | summary was just "Citigroup Role" | n/a | Wrote a one-line summary from the Citigroup entry. The harness now falls back to the first detail when a summary is empty or echoes the title. |
+| `Overview/Sports and Interests` | "This project documents …" | style | Opener removed; "documents" added to the harness's opener list. |
+| `Career/Career Transition` | "are documented in this section" | "are in my resume" | Corrected. |
+
+Checked and found correct: `Postmates Exit`, `Golf Habits`, `Ocean Surfing`, `Weekly Running`, `Personal Life`.
+Every page is now `reviewed: true`, which freezes the wiki: later ingests can add pages but cannot change these.
+
+**Pattern worth naming:** in three separate runs Gemma E2B merged "started playing football in the sixth grade"
+and "at Moreau Catholic … through senior year" into one wrong sentence. The two facts sit one sentence apart in
+the source. A larger model would likely not do this; for E2B the reviewed flag is the safeguard.
+
+Also found: three reviewed notes (`Growing Up and Football`, `Matt Wong Resume`, `Haas MBA Education`) still linked to
+`Investment Banking Path`, which the offline ingest had removed. Reviewed notes are never rewritten, so the links
+dangled. Repointed them to `Career Transition` by hand; the harness now prints a warning when a run leaves a reviewed
+note linking to a removed page.

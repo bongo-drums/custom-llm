@@ -26,7 +26,7 @@ Matt Wong's educational background and professional experience across finance, v
 ## Topics from this source
 
 - [[Haas MBA Education]] — Matt Wong is pursuing an MBA at the Haas School of Business and holds a Bachelor of Science in Business Administration from the same school.
-- [[Investment Banking Path]] — Matt started his career in investment banking before moving into startups to pursue a more visible impact.
+- [[Career Transition]] — Matt's move from investment banking into startups.
 
 ## Sources
 

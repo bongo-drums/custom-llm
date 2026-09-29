@@ -193,5 +193,5 @@
     "citation_status": "insufficient",
     "passes": true
   },
-  "human_assessment": "PENDING: open each cited passage, judge support, and record the verdict in evals/assessments.json"
+  "human_assessment": "PASS. 'INSUFFICIENT EVIDENCE: The wiki does not contain information about the head football coach at Moreau Catholic.' No citation, no guess. The six retrieved passages were the football and upbringing sections plus one resume section; none names a coach. Run twice offline: once in the eval and once in a fresh process after the chat session in which I told Scout the coach's name (Andrew Cotter). Both times the answer was insufficient evidence, so a claim made in chat did not leak into ask mode."
 }

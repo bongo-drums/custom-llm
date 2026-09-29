@@ -7,12 +7,12 @@ source_files:
   - raw/surfing-golf-and-running.md
 generated_by: gemma4:e2b via local Ollama
 updated: 2026-09-29
-reviewed: false   # set to true after checking against the sources; ingest will then leave this file alone
+reviewed: true    # checked against the sources on 2026-09-29; see evidence/review-log.md
 ---
 
 # Sports and Interests
 
-This project documents Matt's personal interests and activities, focusing on sports like golf, surfing, and running, alongside details about his personal life.
+Matt's personal interests and activities: sports like golf, surfing, and running, alongside details about his personal life.
 
 > Golf at Oakland Metro, surfing Ocean Beach, ultra running and the backyard ultra win, and everything else.
 

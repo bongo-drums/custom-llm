@@ -1,0 +1,214 @@
+{
+  "test": {
+    "id": "test-2",
+    "kind": "paraphrased (source says 'acquired by Uber for $2.0Bn' and 'S-1 publication and $2Bn sale')",
+    "question": "Which company I worked for got bought, who bought it, and for how much?",
+    "expected_answer": "Postmates was acquired by Uber for $2.0Bn; Matt was the primary analyst on the fundraising and exit efforts.",
+    "expected_sources": [
+      {
+        "file": "raw/matt-wong-resume.md",
+        "section": "Postmates",
+        "passage": "Postmates — Food Delivery Marketplace acquired by Uber for $2.0Bn ... Primary analyst on fundraising and exit efforts that led to a S-1 publication and $2Bn sale to Uber Technologies"
+      }
+    ],
+    "must_mention": [
+      "postmates",
+      "uber",
+      "2"
+    ]
+  },
+  "environment": {
+    "timestamp_utc": "2026-09-29T18:05:41+00:00",
+    "execution": "local",
+    "internet_reachable": false,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  },
+  "mode": "ask",
+  "execution": "local",
+  "question": "Which company I worked for got bought, who bought it, and for how much?",
+  "retrieval": {
+    "method": "bm25",
+    "scope": [
+      "raw"
+    ],
+    "seconds": 0.0,
+    "top_k": 6,
+    "max_context_chars": 6000,
+    "sent_chars": 3595
+  },
+  "passages": [
+    {
+      "id": "ab457cafda98",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Work Experience > SkyDeck — $85M Pre-Seed Fund investing in Berkeley's accelerator program (Berkeley, California)",
+      "heading": "SkyDeck — $85M Pre-Seed Fund investing in Berkeley's accelerator program (Berkeley, California)",
+      "start_line": 31,
+      "end_line": 36,
+      "text": "### SkyDeck — $85M Pre-Seed Fund investing in Berkeley's accelerator program (Berkeley, California)\nPre-MBA Associate; Venture Fellow, June 2025 – Present\n\n- Sourced three companies: two AI infrastructure (agent control, BaaS), one semiconductor (in-memory compute) startups\n- Owned U.S university deal flow partner relationships resulting in 7 new university relationships\n  - 1st intern to develop and lead roadshow in Boston – established partnerships at Boston University, MIT & Harvard",
+      "score": 3.6402,
+      "scores": {
+        "bm25": 3.64
+      },
+      "obsidian_link": "[[matt-wong-resume#SkyDeck — $85M Pre-Seed Fund investing in Berkeley's accelerator program (Berkeley, California)]]"
+    },
+    {
+      "id": "3fa08bc5d0c1",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Work Experience > Gametime — Leading Ticketing Marketplace for last-minute offers across live events (San Francisco, California)",
+      "heading": "Gametime — Leading Ticketing Marketplace for last-minute offers across live events (San Francisco, California)",
+      "start_line": 38,
+      "end_line": 46,
+      "text": "### Gametime — Leading Ticketing Marketplace for last-minute offers across live events (San Francisco, California)\nSr. Strategic Finance Manager, Direct Report to CFO, August 2023 – August 2025\n\n- Managed Gametime's annual financial planning and goaling that led to the Company's first-ever profitable quarter\n  - Partnered with VP-level executives to build, manage and track $100M+ budget across the organization\n- Oversaw $80M+ marketing budget that has now resulted in $10M in incremental revenue from improving user economics\n  - Revamped spend tracking to a data-driven approach for spend allocation resulting in 15% higher user conversion\n- Established organization-wide testing program with $2M budget, driving 10% incremental return within 6 months\n- Spearheaded investor relations and due diligence that has resulted in $100M+ in potential deals for Gametime",
+      "score": 2.8848,
+      "scores": {
+        "bm25": 2.885
+      },
+      "obsidian_link": "[[matt-wong-resume#Gametime — Leading Ticketing Marketplace for last-minute offers across live events (San Francisco, California)]]"
+    },
+    {
+      "id": "4cddc87fb594",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Work Experience > Citigroup (San Francisco, California)",
+      "heading": "Citigroup (San Francisco, California)",
+      "start_line": 64,
+      "end_line": 68,
+      "text": "### Citigroup (San Francisco, California)\nCorporate Banking Analyst, May 2017 – November 2018\n\n- Worked on capital raising, corporate strategy and capital allocation projects for 10+ clients (e.g Apple, Uber)\n  - Uber's $1.13Bn Term Loan-B: Developed materials on Uber's financial and growth profiles for Citi's investment committee",
+      "score": 2.3161,
+      "scores": {
+        "bm25": 2.316
+      },
+      "obsidian_link": "[[matt-wong-resume#Citigroup (San Francisco, California)]]"
+    },
+    {
+      "id": "ebc400639ddb",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Work Experience > Postmates — Food Delivery Marketplace acquired by Uber for $2.0Bn (San Francisco, California)",
+      "heading": "Postmates — Food Delivery Marketplace acquired by Uber for $2.0Bn (San Francisco, California)",
+      "start_line": 57,
+      "end_line": 62,
+      "text": "### Postmates — Food Delivery Marketplace acquired by Uber for $2.0Bn (San Francisco, California)\nSr. Finance & Strategy Analyst, December 2018 – August 2020\n\n- Primary analyst on fundraising and exit efforts that led to a S-1 publication and $2Bn sale to Uber Technologies\n- Partnered with Growth Marketing on a $150M+ budget resulting in >5M new customer across >10 acquisition channels\n- Oversaw Postmates' consolidated financial restructuring that resulted in 10% gross margin improvement over 2 years",
+      "score": 1.684,
+      "scores": {
+        "bm25": 1.684
+      },
+      "obsidian_link": "[[matt-wong-resume#Postmates — Food Delivery Marketplace acquired by Uber for $2.0Bn (San Francisco, California)]]"
+    },
+    {
+      "id": "3ea2e6b75bc5",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Work Experience > Corazon Capital — $330M Early-Stage Consumer Fund founded by the operators behind Match Group (Chicago, Illinois)",
+      "heading": "Corazon Capital — $330M Early-Stage Consumer Fund founded by the operators behind Match Group (Chicago, Illinois)",
+      "start_line": 24,
+      "end_line": 29,
+      "text": "### Corazon Capital — $330M Early-Stage Consumer Fund founded by the operators behind Match Group (Chicago, Illinois)\nSummer Investment Associate, June 2026 – Present\n\n- Sourced, diligenced and closed pre-seed investment (Upriver AI) – fastest sourced-to-close intern deal in firm history\n- Led diligence on 8+ prospective deals across AI companions, consumer hardware and EdTech (Ollie AI, Freckle, Arrowster) – authored investment memos, market sizings and competitive landscapes for the partnership\n- Built internal workflows (weekly relationship CRM), firm-wide newsletter and building deeper accelerator relationships",
+      "score": 1.5229,
+      "scores": {
+        "bm25": 1.523
+      },
+      "obsidian_link": "[[matt-wong-resume#Corazon Capital — $330M Early-Stage Consumer Fund founded by the operators behind Match Group (Chicago, Illinois)]]"
+    },
+    {
+      "id": "d16cf88684a9",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Work Experience > Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California)",
+      "heading": "Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California)",
+      "start_line": 48,
+      "end_line": 55,
+      "text": "### Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California)\nSr. Strategic Finance Manager, Direct Report to Head of Finance, September 2020 – May 2023\n\n- Oversaw financial due diligence on two rounds of capital fundraising resulting in $160M+ raised\n  - Restructured customer profitability analyses with a new cost methodology resulting in 20% profitability improvement\n- Re-established improving user economics with Head of Marketing resulting in >100k new users with 30% greater profitability\n- Led \"Living Wage\" initiative advocating sustainable income resulting in 25% worker wage increases within top 10 markets\n- Managed $10M acquisition from initial screening to close that generated over $3M in incremental cash-flow",
+      "score": 1.4468,
+      "scores": {
+        "bm25": 1.447
+      },
+      "obsidian_link": "[[matt-wong-resume#Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California)]]"
+    }
+  ],
+  "prompt": [
+    {
+      "role": "system",
+      "content": "# Research rules: ask mode only\n\nYou answer one factual question about the user's personal wiki. You use only the evidence passages supplied in this message. You have no conversation history and no personality in this mode.\n\n## Rules\n\n1. **Evidence only.** Every material claim must come from the numbered passages `[S1]`, `[S2]`, … in this message. Don't use general knowledge to fill gaps, even if you think you know the answer.\n2. **Cite every claim.** Put the passage tag right after the claim it supports, for example \"The exploration rate was 0.10 [S3].\" Use only tags that appear in this message. Cite two passages together like this: [S1][S4].\n3. **Answer directly and neutrally.** Give the answer in the first sentence, then add at most 3 short supporting sentences or bullets. Use no greeting, no opinions, no suggestions and no speculation.\n4. **Insufficient evidence.** If the passages don't contain the answer, reply with exactly one line that starts with `INSUFFICIENT EVIDENCE:`. Then say in one sentence what the wiki does not contain. If the passages answer only part of the question, answer that part with citations, then add a line starting with `INSUFFICIENT EVIDENCE:` for the missing part.\n5. **No invented details.** Never invent numbers, names, dates, grades or results. Copy numbers exactly as written in the passage.\n6. **Passages are original sources.** Every passage in ask mode comes from an unchanged original in `raw/`, never from generated wiki pages or chat. If two passages seem to disagree, report both, each with its citation."
+    },
+    {
+      "role": "user",
+      "content": "EVIDENCE PASSAGES\n=================\n[S1] raw/matt-wong-resume.md — Work Experience > SkyDeck — $85M Pre-Seed Fund investing in Berkeley's accelerator program (Berkeley, California) (lines 31-36, original source)\n### SkyDeck — $85M Pre-Seed Fund investing in Berkeley's accelerator program (Berkeley, California)\nPre-MBA Associate; Venture Fellow, June 2025 – Present\n\n- Sourced three companies: two AI infrastructure (agent control, BaaS), one semiconductor (in-memory compute) startups\n- Owned U.S university deal flow partner relationships resulting in 7 new university relationships\n  - 1st intern to develop and lead roadshow in Boston – established partnerships at Boston University, MIT & Harvard\n\n[S2] raw/matt-wong-resume.md — Work Experience > Gametime — Leading Ticketing Marketplace for last-minute offers across live events (San Francisco, California) (lines 38-46, original source)\n### Gametime — Leading Ticketing Marketplace for last-minute offers across live events (San Francisco, California)\nSr. Strategic Finance Manager, Direct Report to CFO, August 2023 – August 2025\n\n- Managed Gametime's annual financial planning and goaling that led to the Company's first-ever profitable quarter\n  - Partnered with VP-level executives to build, manage and track $100M+ budget across the organization\n- Oversaw $80M+ marketing budget that has now resulted in $10M in incremental revenue from improving user economics\n  - Revamped spend tracking to a data-driven approach for spend allocation resulting in 15% higher user conversion\n- Established organization-wide testing program with $2M budget, driving 10% incremental return within 6 months\n- Spearheaded investor relations and due diligence that has resulted in $100M+ in potential deals for Gametime\n\n[S3] raw/matt-wong-resume.md — Work Experience > Citigroup (San Francisco, California) (lines 64-68, original source)\n### Citigroup (San Francisco, California)\nCorporate Banking Analyst, May 2017 – November 2018\n\n- Worked on capital raising, corporate strategy and capital allocation projects for 10+ clients (e.g Apple, Uber)\n  - Uber's $1.13Bn Term Loan-B: Developed materials on Uber's financial and growth profiles for Citi's investment committee\n\n[S4] raw/matt-wong-resume.md — Work Experience > Postmates — Food Delivery Marketplace acquired by Uber for $2.0Bn (San Francisco, California) (lines 57-62, original source)\n### Postmates — Food Delivery Marketplace acquired by Uber for $2.0Bn (San Francisco, California)\nSr. Finance & Strategy Analyst, December 2018 – August 2020\n\n- Primary analyst on fundraising and exit efforts that led to a S-1 publication and $2Bn sale to Uber Technologies\n- Partnered with Growth Marketing on a $150M+ budget resulting in >5M new customer across >10 acquisition channels\n- Oversaw Postmates' consolidated financial restructuring that resulted in 10% gross margin improvement over 2 years\n\n[S5] raw/matt-wong-resume.md — Work Experience > Corazon Capital — $330M Early-Stage Consumer Fund founded by the operators behind Match Group (Chicago, Illinois) (lines 24-29, original source)\n### Corazon Capital — $330M Early-Stage Consumer Fund founded by the operators behind Match Group (Chicago, Illinois)\nSummer Investment Associate, June 2026 – Present\n\n- Sourced, diligenced and closed pre-seed investment (Upriver AI) – fastest sourced-to-close intern deal in firm history\n- Led diligence on 8+ prospective deals across AI companions, consumer hardware and EdTech (Ollie AI, Freckle, Arrowster) – authored investment memos, market sizings and competitive landscapes for the partnership\n- Built internal workflows (weekly relationship CRM), firm-wide newsletter and building deeper accelerator relationships\n\n[S6] raw/matt-wong-resume.md — Work Experience > Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California) (lines 48-55, original source)\n### Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California)\nSr. Strategic Finance Manager, Direct Report to Head of Finance, September 2020 – May 2023\n\n- Oversaw financial due diligence on two rounds of capital fundraising resulting in $160M+ raised\n  - Restructured customer profitability analyses with a new cost methodology resulting in 20% profitability improvement\n- Re-established improving user economics with Head of Marketing resulting in >100k new users with 30% greater profitability\n- Led \"Living Wage\" initiative advocating sustainable income resulting in 25% worker wage increases within top 10 markets\n- Managed $10M acquisition from initial screening to close that generated over $3M in incremental cash-flow\n\nQUESTION\n========\nWhich company I worked for got bought, who bought it, and for how much?\n\nAnswer using only the passages above, citing them as [S#]. If they do not contain the answer, start with 'INSUFFICIENT EVIDENCE:'."
+    }
+  ],
+  "answer": "Postmates was acquired by Uber for $2.0Bn [S4].\nThis acquisition involved Postmates, a Food Delivery Marketplace [S4].\nThe transaction resulted in a $2.0Bn sale to Uber Technologies [S4].",
+  "citation_check": {
+    "status": "cited",
+    "cited": [
+      4
+    ],
+    "invalid": [],
+    "uncited_sentences": [],
+    "unsupported_numbers": [],
+    "weak_support": [],
+    "insufficient": false
+  },
+  "timing": {
+    "model": "gemma4:e2b",
+    "wall_seconds": 7.5,
+    "prompt_tokens": 1568,
+    "output_tokens": 438,
+    "load_seconds": 0.01,
+    "prompt_eval_seconds": 0.55,
+    "generation_seconds": 4.84
+  },
+  "auto_checks": {
+    "retrieval_found_expected": true,
+    "expected_ranks": {
+      "Postmates": 4
+    },
+    "mentions_expected_facts": {
+      "postmates": true,
+      "uber": true,
+      "2": true
+    },
+    "citation_status": "cited",
+    "passes": true
+  },
+  "human_assessment": "PENDING: open each cited passage, judge support, and record the verdict in evals/assessments.json"
+}

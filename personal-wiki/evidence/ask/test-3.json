@@ -1,0 +1,171 @@
+{
+  "test": {
+    "id": "test-3",
+    "kind": "connects two sources",
+    "question": "Where did I go to community college, and what did I do there besides study?",
+    "expected_answer": "College of San Mateo (2012-2014), where Matt was a student athlete with a 4.0 GPA; he went there wanting to keep playing football, then chose to focus on his studies and transferred to UC Berkeley.",
+    "expected_sources": [
+      {
+        "file": "raw/matt-wong-resume.md",
+        "section": "Bachelor of Science || Education",
+        "passage": "Transferred from: College of San Mateo (2012-2014), San Mateo, California; Student Athlete, GPA 4.0"
+      },
+      {
+        "file": "raw/growing-up-and-football.md",
+        "section": "Football",
+        "passage": "After high school I started at College of San Mateo, a community college, where I wanted to keep playing football."
+      }
+    ],
+    "must_mention": [
+      "san mateo",
+      "football|athlete"
+    ]
+  },
+  "environment": {
+    "timestamp_utc": "2026-09-29T18:05:41+00:00",
+    "execution": "local",
+    "internet_reachable": false,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  },
+  "mode": "ask",
+  "execution": "local",
+  "question": "Where did I go to community college, and what did I do there besides study?",
+  "retrieval": {
+    "method": "bm25",
+    "scope": [
+      "raw"
+    ],
+    "seconds": 0.0,
+    "top_k": 6,
+    "max_context_chars": 6000,
+    "sent_chars": 1300
+  },
+  "passages": [
+    {
+      "id": "54304af63762",
+      "kind": "raw",
+      "file": "raw/growing-up-and-football.md",
+      "source_id": "src-growing-up",
+      "section": "Football",
+      "heading": "Football",
+      "start_line": 15,
+      "end_line": 19,
+      "text": "## Football\n\nI started playing football in the sixth grade. At Moreau Catholic I played all the way through senior year, and I was team captain. My best friends from those years, Arthur and Tim, are still my best friends today.\n\nAfter high school I started at College of San Mateo, a community college, where I wanted to keep playing football. I realized pretty quickly that I needed to focus on my studies instead, and I made the call to put school first. That paid off: I transferred to UC Berkeley to study business, with the goal of getting into finance.",
+      "score": 8.2208,
+      "scores": {
+        "bm25": 8.221
+      },
+      "obsidian_link": "[[growing-up-and-football#Football]]"
+    },
+    {
+      "id": "14f9810b0f6c",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Additional",
+      "heading": "Additional",
+      "start_line": 70,
+      "end_line": 74,
+      "text": "## Additional\n\n- Activities: Advisor, Kenta Ramen – Support family's restaurant (2012 – Present); Advisor, College of San Mateo – Keynote speaker for the Economics department (2023 – Present); Volunteer, MeWater Foundation – Surf volunteer (2024 – Present)\n- Languages: Cantonese (fluent)\n- Interests: Surfing (California, Hawaii), Ultra Running (50k+), Angel Investing (roots.home, etc.)",
+      "score": 1.9399,
+      "scores": {
+        "bm25": 1.94
+      },
+      "obsidian_link": "[[matt-wong-resume#Additional]]"
+    },
+    {
+      "id": "c7dffd5e7f81",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Education > University of California, Berkeley – Haas School of Business (Berkeley, California)",
+      "heading": "University of California, Berkeley – Haas School of Business (Berkeley, California)",
+      "start_line": 15,
+      "end_line": 20,
+      "text": "### University of California, Berkeley – Haas School of Business (Berkeley, California)\nBachelor of Science in Business Administration. Graduation Date: Fall 2016\n\n- Honors: Cum Laude, Edgar J. Kaiser Scholar\n- Internships: Citigroup, Dimensional Funds\n- Transferred from: College of San Mateo (2012-2014), San Mateo, California; Student Athlete, GPA 4.0",
+      "score": 1.7278,
+      "scores": {
+        "bm25": 1.728
+      },
+      "obsidian_link": "[[matt-wong-resume#University of California, Berkeley – Haas School of Business (Berkeley, California)]]"
+    }
+  ],
+  "prompt": [
+    {
+      "role": "system",
+      "content": "# Research rules: ask mode only\n\nYou answer one factual question about the user's personal wiki. You use only the evidence passages supplied in this message. You have no conversation history and no personality in this mode.\n\n## Rules\n\n1. **Evidence only.** Every material claim must come from the numbered passages `[S1]`, `[S2]`, … in this message. Don't use general knowledge to fill gaps, even if you think you know the answer.\n2. **Cite every claim.** Put the passage tag right after the claim it supports, for example \"The exploration rate was 0.10 [S3].\" Use only tags that appear in this message. Cite two passages together like this: [S1][S4].\n3. **Answer directly and neutrally.** Give the answer in the first sentence, then add at most 3 short supporting sentences or bullets. Use no greeting, no opinions, no suggestions and no speculation.\n4. **Insufficient evidence.** If the passages don't contain the answer, reply with exactly one line that starts with `INSUFFICIENT EVIDENCE:`. Then say in one sentence what the wiki does not contain. If the passages answer only part of the question, answer that part with citations, then add a line starting with `INSUFFICIENT EVIDENCE:` for the missing part.\n5. **No invented details.** Never invent numbers, names, dates, grades or results. Copy numbers exactly as written in the passage.\n6. **Passages are original sources.** Every passage in ask mode comes from an unchanged original in `raw/`, never from generated wiki pages or chat. If two passages seem to disagree, report both, each with its citation."
+    },
+    {
+      "role": "user",
+      "content": "EVIDENCE PASSAGES\n=================\n[S1] raw/growing-up-and-football.md — Football (lines 15-19, original source)\n## Football\n\nI started playing football in the sixth grade. At Moreau Catholic I played all the way through senior year, and I was team captain. My best friends from those years, Arthur and Tim, are still my best friends today.\n\nAfter high school I started at College of San Mateo, a community college, where I wanted to keep playing football. I realized pretty quickly that I needed to focus on my studies instead, and I made the call to put school first. That paid off: I transferred to UC Berkeley to study business, with the goal of getting into finance.\n\n[S2] raw/matt-wong-resume.md — Additional (lines 70-74, original source)\n## Additional\n\n- Activities: Advisor, Kenta Ramen – Support family's restaurant (2012 – Present); Advisor, College of San Mateo – Keynote speaker for the Economics department (2023 – Present); Volunteer, MeWater Foundation – Surf volunteer (2024 – Present)\n- Languages: Cantonese (fluent)\n- Interests: Surfing (California, Hawaii), Ultra Running (50k+), Angel Investing (roots.home, etc.)\n\n[S3] raw/matt-wong-resume.md — Education > University of California, Berkeley – Haas School of Business (Berkeley, California) (lines 15-20, original source)\n### University of California, Berkeley – Haas School of Business (Berkeley, California)\nBachelor of Science in Business Administration. Graduation Date: Fall 2016\n\n- Honors: Cum Laude, Edgar J. Kaiser Scholar\n- Internships: Citigroup, Dimensional Funds\n- Transferred from: College of San Mateo (2012-2014), San Mateo, California; Student Athlete, GPA 4.0\n\nQUESTION\n========\nWhere did I go to community college, and what did I do there besides study?\n\nAnswer using only the passages above, citing them as [S#]. If they do not contain the answer, start with 'INSUFFICIENT EVIDENCE:'."
+    }
+  ],
+  "answer": "I attended the College of San Mateo, which is identified as a community college [S1]. Besides studying, the individual served as an Advisor for the Economics department [S2].",
+  "citation_check": {
+    "status": "cited",
+    "cited": [
+      1,
+      2
+    ],
+    "invalid": [],
+    "uncited_sentences": [],
+    "unsupported_numbers": [],
+    "weak_support": [],
+    "insufficient": false
+  },
+  "timing": {
+    "model": "gemma4:e2b",
+    "wall_seconds": 7.38,
+    "prompt_tokens": 846,
+    "output_tokens": 439,
+    "load_seconds": 0.01,
+    "prompt_eval_seconds": 0.44,
+    "generation_seconds": 4.81
+  },
+  "auto_checks": {
+    "retrieval_found_expected": true,
+    "expected_ranks": {
+      "Bachelor of Science || Education": 3,
+      "Football": 1
+    },
+    "mentions_expected_facts": {
+      "san mateo": true,
+      "football|athlete": false
+    },
+    "citation_status": "cited",
+    "passes": false
+  },
+  "human_assessment": "PENDING: open each cited passage, judge support, and record the verdict in evals/assessments.json"
+}

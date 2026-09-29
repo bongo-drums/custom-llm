@@ -6,13 +6,13 @@ source_ids: [src-interests]
 source_files:
   - raw/surfing-golf-and-running.md
 generated_by: gemma4:e2b via local Ollama
-updated: 2026-09-26
+updated: 2026-09-29
 reviewed: false   # set to true after checking against the sources; ingest will then leave this file alone
 ---
 
 # Weekly Running
 
-Running involves Matt running approximately 35 miles per week and has included achieving a backyard ultra win. Matt is also planning future running goals, such as training for a 100-miler.
+Running is a significant interest for Matt, involving weekly mileage, past achievements, and future goals. He has participated in various running activities, including a backyard ultra and planning a 100-miler.
 
 ## Details
 
@@ -24,9 +24,6 @@ Running involves Matt running approximately 35 miles per week and has included a
 ## Related notes
 
 - [[Sports and Interests]] — the source this topic comes from.
-- [[Golf Habits]] — Both notes detail Matt's specific hobbies and habits.
-- [[Ocean Surfing]] — Both notes detail Matt's various outdoor physical activities.
-- [[Personal Life]] — Running goals and personal relationships often intersect with time management.
 
 ## Sources
 

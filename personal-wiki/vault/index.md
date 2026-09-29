@@ -6,25 +6,26 @@ Notes about me: where I come from, my career, and what I do outside work. Start 
 
 _One note per original source: what it is and its key facts._
 
-- [[Growing Up and Football]] — This project documents Matt's upbringing in the East Bay and his involvement in football.
-- [[Matt Wong Resume]] — Matt Wong's educational background, professional experience, and advisory activities.
-- [[Sports and Interests]] — Matt's personal interests in sports and his social life.
+- [[Growing Up and Football]] — This project documents Matt's upbringing in the Bay Area and his involvement in football.
+- [[Matt Wong Resume]] — Matt Wong's professional background, focusing on his education from UC Berkeley and his extensive experience in venture investing and finance.
+- [[Sports and Interests]] — This project documents Matt's personal interests and activities, focusing on sports like golf, surfing, and running, alongside details about his personal life.
 
 ## Career
 
 _Jobs, schools, deals and results from my professional life._
 
-- [[Haas MBA Education]] — Matt Wong's education details cover his time at the University of California, Berkeley's Haas School of Business.
-- [[Investment Banking Path]] — Matt started his career in investment banking before moving into startups to pursue a more visible impact.
+- [[Career Transition]] — Matt transitioned his career from investment banking into startups to pursue a more visible impact.
+- [[Citigroup Role]] — Citigroup Role
+- [[Haas MBA Education]] — Matt Wong pursued higher education at the University of California, Berkeley's Haas School of Business.
 - [[Postmates Exit]] — Postmates Exit details Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace.
-- [[Venture Investing Experience]] — Venture Investing Experience details Matt's involvement in early-stage fund operations and deal sourcing across various technology sectors.
 
 ## Life
 
 _Where I grew up, family, school and football._
 
-- [[Football Career]] — Matt started playing football in the sixth grade and was a team captain during his high school years.
-- [[Personal Life]] — Matt spends a significant amount of time with his girlfriend, Tina, whom he met this year.
+- [[Growing Up In Bay Area]] — Growing Up In Bay Area details Matt's upbringing in the East Bay and his family's background.
+- [[High School Football]] — Matt started playing football in the sixth grade and played at Moreau Catholic through senior year, where he was team captain.
+- [[Personal Life]] — Matt spends a lot of his time with his girlfriend, Tina, whom he met this year.
 
 ## Interests
 
@@ -32,7 +33,7 @@ _Surfing, golf, running and what I do with my time._
 
 - [[Golf Habits]] — Matt plays golf approximately once a week.
 - [[Ocean Surfing]] — Ocean Surfing details Matt's locations and volunteer activities related to surfing.
-- [[Weekly Running]] — Running involves Matt running approximately 35 miles per week and has included achieving a backyard ultra win.
+- [[Weekly Running]] — Running is a significant interest for Matt, involving weekly mileage, past achievements, and future goals.
 
 ## Original sources
 
@@ -42,4 +43,4 @@ Unchanged originals. IDs and hashes are in `state/source_catalog.json` (outside 
 - [[matt-wong-resume]] — Matt Wong Resume (`src-resume`). Education, work history from Citigroup to Corazon Capital, honors and activities.
 - [[surfing-golf-and-running]] — Sports and Interests (`src-interests`). Golf at Oakland Metro, surfing Ocean Beach, ultra running and the backyard ultra win, and everything else.
 
-_Index generated 2026-09-26 22:20 UTC by `wiki ingest`._
+_Index generated 2026-09-29 18:05 UTC by `wiki ingest`._

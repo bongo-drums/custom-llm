@@ -1,0 +1,60 @@
+{
+  "mode": "search",
+  "query": "backyard ultra 50 miles",
+  "method": "bm25",
+  "scope": [
+    "raw"
+  ],
+  "passages": [
+    {
+      "id": "6095e36a2894",
+      "kind": "raw",
+      "file": "raw/surfing-golf-and-running.md",
+      "source_id": "src-interests",
+      "section": "Running",
+      "heading": "Running",
+      "start_line": 13,
+      "end_line": 15,
+      "text": "## Running\n\nI run about 35 miles a week. With the Bear & Axe Run Club at Haas I won a backyard ultra: we ran 50 miles to take the win. I've run 50k-plus distances, and I'm planning my first 100-miler for next year.",
+      "score": 12.2538,
+      "scores": {
+        "bm25": 12.254
+      },
+      "obsidian_link": "[[surfing-golf-and-running#Running]]"
+    },
+    {
+      "id": "2669c5b03495",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Education > University of California, Berkeley – Haas School of Business (Berkeley, California)",
+      "heading": "University of California, Berkeley – Haas School of Business (Berkeley, California)",
+      "start_line": 9,
+      "end_line": 13,
+      "text": "### University of California, Berkeley – Haas School of Business (Berkeley, California)\nMaster of Business Administration (MBA). Graduation Date: Spring 2027\n\n- Honors: Haas Entrepreneurial Finance Fellow (VC Scholarship)\n- Extracurriculars: VC Club (President), Fall Line Scout, SkyDeck Fellows Lead, Cal Athletics Cameron Institute Mentor, Bear & Axe Run Club (Backyard Ultra Champion)",
+      "score": 3.4413,
+      "scores": {
+        "bm25": 3.441
+      },
+      "obsidian_link": "[[matt-wong-resume#University of California, Berkeley – Haas School of Business (Berkeley, California)]]"
+    },
+    {
+      "id": "14f9810b0f6c",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Additional",
+      "heading": "Additional",
+      "start_line": 70,
+      "end_line": 74,
+      "text": "## Additional\n\n- Activities: Advisor, Kenta Ramen – Support family's restaurant (2012 – Present); Advisor, College of San Mateo – Keynote speaker for the Economics department (2023 – Present); Volunteer, MeWater Foundation – Surf volunteer (2024 – Present)\n- Languages: Cantonese (fluent)\n- Interests: Surfing (California, Hawaii), Ultra Running (50k+), Angel Investing (roots.home, etc.)",
+      "score": 1.9399,
+      "scores": {
+        "bm25": 1.94
+      },
+      "obsidian_link": "[[matt-wong-resume#Additional]]"
+    }
+  ],
+  "seconds": 0.003,
+  "passage_count": 49
+}

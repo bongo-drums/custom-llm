@@ -1,58 +1,83 @@
 {
   "pages": {
-    "football-career": {
-      "title": "Football Career",
-      "category": "Life",
+    "career-transition": {
+      "title": "Career Transition",
+      "category": "Career",
       "kind": "topic",
       "contributions": {
         "src-growing-up": {
-          "summary": "Matt started playing football in the sixth grade and was a team captain during his high school years. After high school, he prioritized academics by transferring to college to pursue a business degree.",
+          "summary": "Matt transitioned his career from investment banking into startups to pursue a more visible impact. The details of this career path, including specific companies, are documented in this section.",
           "details": [
             {
-              "text": "Matt started playing football in the sixth grade at Moreau Catholic, where he played through senior year and was team captain.",
-              "section": "Football",
-              "heading": "Football",
+              "text": "Matt started his career in investment banking, then moved into startups because he wanted to make an impact he could actually see.",
+              "section": "After football",
+              "heading": "After football",
               "lines": [
-                15,
-                20
+                21,
+                23
               ]
             },
             {
-              "text": "After high school, Matt attended the College of San Mateo, where he wanted to continue playing football.",
-              "section": "Football",
-              "heading": "Football",
+              "text": "The path included details from Citigroup, Postmates, Wonolo, Gametime, and venture capital.",
+              "section": "After football",
+              "heading": "After football",
               "lines": [
-                15,
-                20
-              ]
-            },
-            {
-              "text": "Matt realized he needed to focus on his studies and decided to put school first.",
-              "section": "Football",
-              "heading": "Football",
-              "lines": [
-                15,
-                20
-              ]
-            },
-            {
-              "text": "He transferred to UC Berkeley to study business with the goal of getting into finance.",
-              "section": "Football",
-              "heading": "Football",
-              "lines": [
-                15,
-                20
+                21,
+                23
               ]
             }
           ],
           "sections": [
-            "Football"
+            "After football"
           ]
         }
       },
-      "related": {},
-      "summary": "Matt started playing football in the sixth grade and was a team captain during his high school years. After high school, he prioritized academics by transferring to college to pursue a business degree.",
-      "file": "wiki/Life/Football Career.md",
+      "related": {
+        "Postmates Exit": "Details Matt's experience in financial restructuring, relevant to his career transition.",
+        "Growing Up In Bay Area": "Provides context on Matt's upbringing and background."
+      },
+      "summary": "Matt transitioned his career from investment banking into startups to pursue a more visible impact. The details of this career path, including specific companies, are documented in this section.",
+      "file": "wiki/Career/Career Transition.md",
+      "source_ids": []
+    },
+    "citigroup-role": {
+      "title": "Citigroup Role",
+      "category": "Career",
+      "kind": "topic",
+      "contributions": {
+        "src-resume": {
+          "summary": "Citigroup Role",
+          "details": [
+            {
+              "text": "Worked on capital raising, corporate strategy and capital allocation projects for 10+ clients (e.g Apple, Uber)",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            },
+            {
+              "text": "Uber's $1.13Bn Term Loan-B: Developed materials on Uber's financial and growth profiles for Citi's investment committee",
+              "section": "Work Experience",
+              "heading": "Work Experience",
+              "lines": [
+                22,
+                69
+              ]
+            }
+          ],
+          "sections": [
+            "Work Experience"
+          ]
+        }
+      },
+      "related": {
+        "Haas MBA Education": "Details Matt Wong's pursuit of higher education at UC Berkeley's Haas School of Business.",
+        "Postmates Exit": "Highlights Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace."
+      },
+      "summary": "Citigroup Role",
+      "file": "wiki/Career/Citigroup Role.md",
       "source_ids": []
     },
     "golf-habit": {
@@ -73,7 +98,7 @@
               ]
             },
             {
-              "text": "Matt's handicap is about a 17.",
+              "text": "His handicap is about a 17.",
               "section": "Golf",
               "heading": "Golf",
               "lines": [
@@ -87,12 +112,77 @@
           ]
         }
       },
-      "related": {
-        "Weekly Running": "Both notes detail Matt's regular physical activities and goals.",
-        "Personal Life": "Both notes cover how Matt allocates his time for personal interests and relationships."
-      },
+      "related": {},
       "summary": "Matt plays golf approximately once a week. He typically plays at Oakland Metro and has a handicap of about 17.",
       "file": "wiki/Interests/Golf Habits.md",
+      "source_ids": []
+    },
+    "grow-bay-area": {
+      "title": "Growing Up In Bay Area",
+      "category": "Life",
+      "kind": "topic",
+      "contributions": {
+        "src-growing-up": {
+          "summary": "Growing Up In Bay Area details Matt's upbringing in the East Bay and his family's background. This note outlines his birthplace, schooling, and the freedom he experienced in choosing his activities.",
+          "details": [
+            {
+              "text": "Matt was born in San Francisco, California. When he was four, his family moved to Hayward in the East Bay, where he grew up.",
+              "section": "Where I'm from",
+              "heading": "Where I'm from",
+              "lines": [
+                5,
+                10
+              ]
+            },
+            {
+              "text": "His family runs a restaurant, Kenta Ramen, and Matt has helped out there since 2012.",
+              "section": "Where I'm from",
+              "heading": "Where I'm from",
+              "lines": [
+                5,
+                10
+              ]
+            },
+            {
+              "text": "Matt attended Fremont Christian through the eighth grade and moved to Moreau Catholic for high school in Hayward.",
+              "section": "Growing Up in the Bay Area and Football",
+              "heading": "Growing Up in the Bay Area and Football",
+              "lines": [
+                1,
+                23
+              ]
+            },
+            {
+              "text": "Matt played football from the sixth grade through senior year at Moreau Catholic, where he was team captain.",
+              "section": "Growing Up in the Bay Area and Football",
+              "heading": "Growing Up in the Bay Area and Football",
+              "lines": [
+                1,
+                23
+              ]
+            },
+            {
+              "text": "After high school, Matt attended the College of San Mateo before transferring to UC Berkeley to study business.",
+              "section": "Growing Up in the Bay Area and Football",
+              "heading": "Growing Up in the Bay Area and Football",
+              "lines": [
+                1,
+                23
+              ]
+            }
+          ],
+          "sections": [
+            "Growing Up in the Bay Area and Football",
+            "Where I'm from"
+          ]
+        }
+      },
+      "related": {
+        "High School Football": "Details Matt's high school sports experience and leadership role.",
+        "Career Transition": "Outlines Matt's shift from investment banking to pursuing visible impact."
+      },
+      "summary": "Growing Up In Bay Area details Matt's upbringing in the East Bay and his family's background. This note outlines his birthplace, schooling, and the freedom he experienced in choosing his activities.",
+      "file": "wiki/Life/Growing Up In Bay Area.md",
       "source_ids": []
     },
     "grow-football": {
@@ -101,13 +191,13 @@
       "kind": "project",
       "contributions": {
         "src-growing-up": {
-          "summary": "This project documents Matt's upbringing in the East Bay and his involvement in football. It also traces his transition from sports into a career in investment banking and startups.",
+          "summary": "This project documents Matt's upbringing in the Bay Area and his involvement in football. It also traces his subsequent career transition from sports into investment banking and startups.",
           "details": [],
           "sections": []
         }
       },
       "related": {},
-      "summary": "This project documents Matt's upbringing in the East Bay and his involvement in football. It also traces his transition from sports into a career in investment banking and startups.",
+      "summary": "This project documents Matt's upbringing in the Bay Area and his involvement in football. It also traces his subsequent career transition from sports into investment banking and startups.",
       "file": "wiki/Overview/Growing Up and Football.md",
       "source_ids": [
         "src-growing-up"
@@ -119,7 +209,7 @@
       "kind": "topic",
       "contributions": {
         "src-resume": {
-          "summary": "Matt Wong's education details cover his time at the University of California, Berkeley's Haas School of Business. This includes his Bachelor of Science and his planned Master of Business Administration degree.",
+          "summary": "Matt Wong pursued higher education at the University of California, Berkeley's Haas School of Business. This education includes both a Bachelor of Science and a Master of Business Administration.",
           "details": [
             {
               "text": "Master of Business Administration (MBA). Graduation Date: Spring 2027",
@@ -182,48 +272,52 @@
         }
       },
       "related": {
-        "Venture Investing Experience": "Details Matt's involvement in deal sourcing and fund operations relevant to business studies.",
-        "Postmates Exit": "Highlights Matt's work in financial restructuring and acquisition, applying business principles."
+        "High School Football": "Details Matt Wong's high school sports experience.",
+        "Postmates Exit": "Describes Matt Wong's role in a major financial restructuring.",
+        "Citigroup Role": "Details Matt Wong's professional experience at Citigroup."
       },
-      "summary": "Matt Wong's education details cover his time at the University of California, Berkeley's Haas School of Business. This includes his Bachelor of Science and his planned Master of Business Administration degree.",
+      "summary": "Matt Wong pursued higher education at the University of California, Berkeley's Haas School of Business. This education includes both a Bachelor of Science and a Master of Business Administration.",
       "file": "wiki/Career/Haas MBA Education.md",
       "source_ids": []
     },
-    "investment-bank-path": {
-      "title": "Investment Banking Path",
-      "category": "Career",
+    "high-school-football": {
+      "title": "High School Football",
+      "category": "Life",
       "kind": "topic",
       "contributions": {
         "src-growing-up": {
-          "summary": "Matt started his career in investment banking before moving into startups to pursue a more visible impact. The details of this career path, including specific companies, are documented in his resume.",
+          "summary": "Matt started playing football in the sixth grade and played at Moreau Catholic through senior year, where he was team captain. After high school, he decided to prioritize academics and transferred to UC Berkeley to study business.",
           "details": [
             {
-              "text": "Matt started his career in investment banking, then moved into startups because he wanted to make an impact he could actually see.",
-              "section": "After football",
-              "heading": "After football",
+              "text": "Matt started playing football in the sixth grade at Moreau Catholic, where he was team captain.",
+              "section": "Football",
+              "heading": "Football",
               "lines": [
-                21,
-                23
+                15,
+                20
               ]
             },
             {
-              "text": "The details of that path, from Citigroup to Postmates, Wonolo, Gametime and venture capital, are in his resume.",
-              "section": "After football",
-              "heading": "After football",
+              "text": "Matt realized he needed to focus on his studies and transferred to UC Berkeley to study business.",
+              "section": "Football",
+              "heading": "Football",
               "lines": [
-                21,
-                23
+                15,
+                20
               ]
             }
           ],
           "sections": [
-            "After football"
+            "Football"
           ]
         }
       },
-      "related": {},
-      "summary": "Matt started his career in investment banking before moving into startups to pursue a more visible impact. The details of this career path, including specific companies, are documented in his resume.",
-      "file": "wiki/Career/Investment Banking Path.md",
+      "related": {
+        "Growing Up In Bay Area": "Details Matt's upbringing, schooling, and background, which includes his high school experience.",
+        "Career Transition": "Relates to Matt's decision to prioritize academics and pursue a career change after high school."
+      },
+      "summary": "Matt started playing football in the sixth grade and played at Moreau Catholic through senior year, where he was team captain. After high school, he decided to prioritize academics and transferred to UC Berkeley to study business.",
+      "file": "wiki/Life/High School Football.md",
       "source_ids": []
     },
     "matt-wong-resume": {
@@ -232,13 +326,13 @@
       "kind": "project",
       "contributions": {
         "src-resume": {
-          "summary": "Matt Wong's educational background, professional experience, and advisory activities. It details a career trajectory focused on finance, venture capital, and strategic management across various high-profile companies.",
+          "summary": "Matt Wong's professional background, focusing on his education from UC Berkeley and his extensive experience in venture investing and finance. It details key roles and achievements across various high-profile companies and financial institutions.",
           "details": [],
           "sections": []
         }
       },
       "related": {},
-      "summary": "Matt Wong's educational background, professional experience, and advisory activities. It details a career trajectory focused on finance, venture capital, and strategic management across various high-profile companies.",
+      "summary": "Matt Wong's professional background, focusing on his education from UC Berkeley and his extensive experience in venture investing and finance. It details key roles and achievements across various high-profile companies and financial institutions.",
       "file": "wiki/Overview/Matt Wong Resume.md",
       "source_ids": [
         "src-resume"
@@ -250,7 +344,7 @@
       "kind": "topic",
       "contributions": {
         "src-interests": {
-          "summary": "Ocean Surfing details Matt's locations and volunteer activities related to surfing. Matt surfs at Ocean Beach and has also surfed in Hawaii.",
+          "summary": "Ocean Surfing details Matt's locations and volunteer activities related to surfing. Matt surfs at Ocean Beach and has also surfed in Hawaii, and he volunteers with the MeWater Foundation.",
           "details": [
             {
               "text": "Matt surfs at Ocean Beach in San Francisco.",
@@ -271,7 +365,7 @@
               ]
             },
             {
-              "text": "Since 2024, Matt has been a surf volunteer with the MeWater Foundation, which takes kids out on the water.",
+              "text": "Since 2024, Matt has been a surf volunteer with the MeWater Foundation.",
               "section": "Surfing",
               "heading": "Surfing",
               "lines": [
@@ -286,7 +380,7 @@
         }
       },
       "related": {},
-      "summary": "Ocean Surfing details Matt's locations and volunteer activities related to surfing. Matt surfs at Ocean Beach and has also surfed in Hawaii.",
+      "summary": "Ocean Surfing details Matt's locations and volunteer activities related to surfing. Matt surfs at Ocean Beach and has also surfed in Hawaii, and he volunteers with the MeWater Foundation.",
       "file": "wiki/Interests/Ocean Surfing.md",
       "source_ids": []
     },
@@ -296,10 +390,10 @@
       "kind": "topic",
       "contributions": {
         "src-interests": {
-          "summary": "Matt spends a significant amount of time with his girlfriend, Tina, whom he met this year. When time is available, he dedicates that time to fantasy football.",
+          "summary": "Matt spends a lot of his time with his girlfriend, Tina, whom he met this year. When time is available, he dedicates that time to fantasy football.",
           "details": [
             {
-              "text": "Matt spends a lot of his time with his girlfriend, Tina, who he met this year.",
+              "text": "I spend a lot of my time with my girlfriend, Tina, who I met this year.",
               "section": "Everything else",
               "heading": "Everything else",
               "lines": [
@@ -323,7 +417,7 @@
         }
       },
       "related": {},
-      "summary": "Matt spends a significant amount of time with his girlfriend, Tina, whom he met this year. When time is available, he dedicates that time to fantasy football.",
+      "summary": "Matt spends a lot of his time with his girlfriend, Tina, whom he met this year. When time is available, he dedicates that time to fantasy football.",
       "file": "wiki/Life/Personal Life.md",
       "source_ids": []
     },
@@ -333,7 +427,7 @@
       "kind": "topic",
       "contributions": {
         "src-resume": {
-          "summary": "Postmates Exit details Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace. This experience highlights his work in finance, strategy, and fundraising related to a major corporate exit.",
+          "summary": "Postmates Exit details Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace. This experience highlights his work on fundraising, strategy, and financial performance during a major corporate exit.",
           "details": [
             {
               "text": "Primary analyst on fundraising and exit efforts that led to a S-1 publication and $2Bn sale to Uber Technologies",
@@ -369,10 +463,10 @@
         }
       },
       "related": {
-        "Haas MBA Education": "Details Matt Wong's educational background relevant to his finance and strategy work.",
-        "Venture Investing Experience": "Relates to Matt's experience in deal sourcing and fund operations during the exit."
+        "Haas MBA Education": "Details Matt Wong's higher education background.",
+        "Citigroup Role": "Shows Matt Wong's professional experience outside of the Postmates Exit."
       },
-      "summary": "Postmates Exit details Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace. This experience highlights his work in finance, strategy, and fundraising related to a major corporate exit.",
+      "summary": "Postmates Exit details Matt Wong's role in the acquisition and financial restructuring of the food delivery marketplace. This experience highlights his work on fundraising, strategy, and financial performance during a major corporate exit.",
       "file": "wiki/Career/Postmates Exit.md",
       "source_ids": []
     },
@@ -382,94 +476,59 @@
       "kind": "project",
       "contributions": {
         "src-interests": {
-          "summary": "Matt's personal interests in sports and his social life. It details his activities related to golf, surfing, running, and personal relationships.",
-          "details": [],
-          "sections": []
-        }
-      },
-      "related": {},
-      "summary": "Matt's personal interests in sports and his social life. It details his activities related to golf, surfing, running, and personal relationships.",
-      "file": "wiki/Overview/Sports and Interests.md",
-      "source_ids": [
-        "src-interests"
-      ]
-    },
-    "venture-invest-experience": {
-      "title": "Venture Investing Experience",
-      "category": "Career",
-      "kind": "topic",
-      "contributions": {
-        "src-resume": {
-          "summary": "Venture Investing Experience details Matt's involvement in early-stage fund operations and deal sourcing across various technology sectors.",
+          "summary": "This project documents Matt's personal interests and activities, focusing on sports like golf, surfing, and running, alongside details about his personal life.",
           "details": [
             {
-              "text": "Sourced, diligenced and closed pre-seed investment (Upriver AI) – fastest sourced-to-close intern deal in firm history",
-              "section": "Work Experience",
-              "heading": "Work Experience",
+              "text": "Golf: Matt plays golf about once a week, usually at Oakland Metro, and has a handicap of about a 17.",
+              "section": "Golf",
+              "heading": "Golf",
               "lines": [
-                22,
-                69
+                5,
+                8
               ]
             },
             {
-              "text": "Led diligence on 8+ prospective deals across AI companions, consumer hardware and EdTech (Ollie AI, Freckle, Arrowster) – authored investment memos, market sizings and competitive landscapes for the partnership",
-              "section": "Work Experience",
-              "heading": "Work Experience",
+              "text": "Running: Matt runs about 35 miles a week and has run 50k-plus distances.",
+              "section": "Running",
+              "heading": "Running",
               "lines": [
-                22,
-                69
+                13,
+                16
               ]
             },
             {
-              "text": "Built internal workflows (weekly relationship CRM), firm-wide newsletter and building deeper accelerator relationships",
-              "section": "Work Experience",
-              "heading": "Work Experience",
+              "text": "Surfing: Matt has surfed in Hawaii and has been a surf volunteer with the MeWater Foundation since 2024.",
+              "section": "Surfing",
+              "heading": "Surfing",
               "lines": [
-                22,
-                69
+                9,
+                12
               ]
             },
             {
-              "text": "Sourced three companies: two AI infrastructure (agent control, BaaS), one semiconductor (in-memory compute) startups",
-              "section": "Work Experience",
-              "heading": "Work Experience",
+              "text": "Everything else: Matt spends time with his girlfriend, Tina, and engages in fantasy football.",
+              "section": "Everything else",
+              "heading": "Everything else",
               "lines": [
-                22,
-                69
-              ]
-            },
-            {
-              "text": "Owned U.S university deal flow partner relationships resulting in 7 new university relationships",
-              "section": "Work Experience",
-              "heading": "Work Experience",
-              "lines": [
-                22,
-                69
-              ]
-            },
-            {
-              "text": "1st intern to develop and lead roadshow in Boston – established partnerships at Boston University, MIT & Harvard",
-              "section": "Work Experience",
-              "heading": "Work Experience",
-              "lines": [
-                22,
-                69
+                17,
+                19
               ]
             }
           ],
           "sections": [
-            "Work Experience"
+            "Everything else",
+            "Golf",
+            "Running",
+            "Surfing"
           ]
         }
       },
-      "related": {
-        "Investment Banking Path": "Details Matt's career progression from banking into startups.",
-        "Postmates Exit": "Highlights Matt's experience in financial restructuring and acquisitions.",
-        "Haas MBA Education": "Covers Matt's educational background and time at UC Berkeley Haas."
-      },
-      "summary": "Venture Investing Experience details Matt's involvement in early-stage fund operations and deal sourcing across various technology sectors.",
-      "file": "wiki/Career/Venture Investing Experience.md",
-      "source_ids": []
+      "related": {},
+      "summary": "This project documents Matt's personal interests and activities, focusing on sports like golf, surfing, and running, alongside details about his personal life.",
+      "file": "wiki/Overview/Sports and Interests.md",
+      "source_ids": [
+        "src-interests"
+      ]
     },
     "weekly-runn": {
       "title": "Weekly Running",
@@ -477,7 +536,7 @@
       "kind": "topic",
       "contributions": {
         "src-interests": {
-          "summary": "Running involves Matt running approximately 35 miles per week and has included achieving a backyard ultra win. Matt is also planning future running goals, such as training for a 100-miler.",
+          "summary": "Running is a significant interest for Matt, involving weekly mileage, past achievements, and future goals. He has participated in various running activities, including a backyard ultra and planning a 100-miler.",
           "details": [
             {
               "text": "Matt runs about 35 miles a week.",
@@ -521,12 +580,8 @@
           ]
         }
       },
-      "related": {
-        "Golf Habits": "Both notes detail Matt's specific hobbies and habits.",
-        "Ocean Surfing": "Both notes detail Matt's various outdoor physical activities.",
-        "Personal Life": "Running goals and personal relationships often intersect with time management."
-      },
-      "summary": "Running involves Matt running approximately 35 miles per week and has included achieving a backyard ultra win. Matt is also planning future running goals, such as training for a 100-miler.",
+      "related": {},
+      "summary": "Running is a significant interest for Matt, involving weekly mileage, past achievements, and future goals. He has participated in various running activities, including a backyard ultra and planning a 100-miler.",
       "file": "wiki/Interests/Weekly Running.md",
       "source_ids": []
     }

@@ -1,0 +1,433 @@
+{
+  "sources": [
+    {
+      "id": "src-growing-up",
+      "file": "raw/growing-up-and-football.md",
+      "sha256": "b5c001c1021516ae82d0a837d62ff644d2c6249c00ae45d02f181e2b9dfba8cd",
+      "sections": 5,
+      "changed": false
+    },
+    {
+      "id": "src-resume",
+      "file": "raw/matt-wong-resume.md",
+      "sha256": "a4a062de03ad10d783b361081c0684d0c5e4c725f9638a3b80b537f4bbd90375",
+      "sections": 12,
+      "changed": false
+    },
+    {
+      "id": "src-interests",
+      "file": "raw/surfing-golf-and-running.md",
+      "sha256": "b6445a4103ac00457c6bc9acf1950cecf3b88c544e393068077a24b1bc8cfa88",
+      "sections": 5,
+      "changed": false
+    }
+  ],
+  "dropped_bullets": [
+    {
+      "note": "Growing Up and Football",
+      "text": "Growing Up in the Bay Area and Football",
+      "reason": "bullet is just the section heading"
+    },
+    {
+      "note": "Growing Up and Football",
+      "text": "Where I'm from",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Growing Up and Football",
+      "text": "Football Experience",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Growing Up and Football",
+      "text": "Career Transition",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "East Bay Upbringing",
+      "text": "Where I'm from",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "East Bay Upbringing",
+      "text": "Growing Up in the Bay Area and Football",
+      "reason": "bullet is just the section heading"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Haas MBA Education",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Venture Investing Experience",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Postmates Exit",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Investment Banking Path",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Investment Banking Path",
+      "text": "Investment Banking Path",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Investment Banking Path",
+      "text": "Corazon Capital",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Investment Banking Path",
+      "text": "SkyDeck",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Investment Banking Path",
+      "text": "Citigroup",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Sports and Interests",
+      "text": "Golf",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Sports and Interests",
+      "text": "Surfing",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Sports and Interests",
+      "text": "Running",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Sports and Interests",
+      "text": "Personal Life",
+      "reason": "fragment or too short"
+    }
+  ],
+  "dropped_topics": [
+    {
+      "source": "src-growing-up",
+      "proposed": "East Bay Upbringing",
+      "reason": "no bullet survived grounding checks"
+    },
+    {
+      "source": "src-resume",
+      "proposed": "Investment Banking Path",
+      "reason": "no bullet survived grounding checks"
+    }
+  ],
+  "dropped_links": [],
+  "calls": [
+    {
+      "purpose": "plan src-growing-up",
+      "model": "gemma4:e2b",
+      "wall_seconds": 16.96,
+      "prompt_tokens": 924,
+      "output_tokens": 901,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.49,
+      "generation_seconds": 13.71
+    },
+    {
+      "purpose": "write 'East Bay Upbringing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.82,
+      "prompt_tokens": 1163,
+      "output_tokens": 550,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.37,
+      "generation_seconds": 8.28
+    },
+    {
+      "purpose": "write 'High School Football'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.52,
+      "prompt_tokens": 792,
+      "output_tokens": 660,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.35,
+      "generation_seconds": 10.01
+    },
+    {
+      "purpose": "write 'Career Path'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.21,
+      "prompt_tokens": 730,
+      "output_tokens": 588,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.29,
+      "generation_seconds": 8.76
+    },
+    {
+      "purpose": "plan src-resume",
+      "model": "gemma4:e2b",
+      "wall_seconds": 17.21,
+      "prompt_tokens": 1346,
+      "output_tokens": 962,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.3,
+      "generation_seconds": 14.71
+    },
+    {
+      "purpose": "write 'Haas MBA Education'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.59,
+      "prompt_tokens": 852,
+      "output_tokens": 613,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.08,
+      "generation_seconds": 9.34
+    },
+    {
+      "purpose": "write 'Venture Investing Experience'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.08,
+      "prompt_tokens": 1507,
+      "output_tokens": 693,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.11,
+      "generation_seconds": 10.8
+    },
+    {
+      "purpose": "write 'Postmates Exit'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.27,
+      "prompt_tokens": 1507,
+      "output_tokens": 626,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.1,
+      "generation_seconds": 9.99
+    },
+    {
+      "purpose": "write 'Investment Banking Path'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 14.3,
+      "prompt_tokens": 1507,
+      "output_tokens": 711,
+      "load_seconds": 0.0,
+      "prompt_eval_seconds": 0.1,
+      "generation_seconds": 11.97
+    },
+    {
+      "purpose": "plan src-interests",
+      "model": "gemma4:e2b",
+      "wall_seconds": 19.18,
+      "prompt_tokens": 955,
+      "output_tokens": 997,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.37,
+      "generation_seconds": 16.64
+    },
+    {
+      "purpose": "write 'Golf Habits'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 9.77,
+      "prompt_tokens": 709,
+      "output_tokens": 462,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.31,
+      "generation_seconds": 7.27
+    },
+    {
+      "purpose": "write 'Ocean Surfing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.19,
+      "prompt_tokens": 724,
+      "output_tokens": 551,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.25,
+      "generation_seconds": 8.8
+    },
+    {
+      "purpose": "write 'Weekly Running'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.69,
+      "prompt_tokens": 742,
+      "output_tokens": 528,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.25,
+      "generation_seconds": 8.32
+    },
+    {
+      "purpose": "write 'Personal Life'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.04,
+      "prompt_tokens": 711,
+      "output_tokens": 484,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.32,
+      "generation_seconds": 7.57
+    },
+    {
+      "purpose": "link 'Golf Habits'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 24.0,
+      "prompt_tokens": 820,
+      "output_tokens": 497,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.32,
+      "generation_seconds": 21.52
+    },
+    {
+      "purpose": "link 'Haas MBA Education'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 748.08,
+      "prompt_tokens": 813,
+      "output_tokens": 478,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 735.19,
+      "generation_seconds": 10.7
+    },
+    {
+      "purpose": "link 'Ocean Surfing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.0,
+      "prompt_tokens": 820,
+      "output_tokens": 496,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.2,
+      "generation_seconds": 8.65
+    },
+    {
+      "purpose": "link 'Personal Life'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.16,
+      "prompt_tokens": 857,
+      "output_tokens": 613,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.21,
+      "generation_seconds": 9.82
+    },
+    {
+      "purpose": "link 'Postmates Exit'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 9.05,
+      "prompt_tokens": 782,
+      "output_tokens": 437,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.09,
+      "generation_seconds": 6.79
+    },
+    {
+      "purpose": "link 'Venture Investing Experience'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.55,
+      "prompt_tokens": 814,
+      "output_tokens": 585,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.25,
+      "generation_seconds": 9.15
+    },
+    {
+      "purpose": "link 'Weekly Running'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.67,
+      "prompt_tokens": 860,
+      "output_tokens": 701,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.24,
+      "generation_seconds": 11.25
+    },
+    {
+      "purpose": "link 'High School Football'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 8.44,
+      "prompt_tokens": 744,
+      "output_tokens": 376,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.18,
+      "generation_seconds": 6.1
+    },
+    {
+      "purpose": "link 'Career Path'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.76,
+      "prompt_tokens": 824,
+      "output_tokens": 633,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.24,
+      "generation_seconds": 10.36
+    }
+  ],
+  "skipped_reviewed": [
+    "Growing Up and Football",
+    "Haas MBA Education",
+    "Matt Wong Resume"
+  ],
+  "removed_pages": [
+    "Football Career",
+    "Investment Banking Path",
+    "East Bay Upbringing"
+  ],
+  "pages_before": 12,
+  "pages_after": 12,
+  "created": [
+    "Career Path",
+    "High School Football"
+  ],
+  "removed": [
+    "Football Career",
+    "Investment Banking Path"
+  ],
+  "updated": [
+    "Golf Habits",
+    "Growing Up and Football",
+    "Haas MBA Education",
+    "Matt Wong Resume",
+    "Ocean Surfing",
+    "Personal Life",
+    "Postmates Exit",
+    "Sports and Interests",
+    "Venture Investing Experience",
+    "Weekly Running"
+  ],
+  "seconds": 1031.7,
+  "environment": {
+    "timestamp_utc": "2026-09-26T22:46:58+00:00",
+    "execution": "local",
+    "internet_reachable": false,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "sources": [
+    {
+      "id": "src-interests",
+      "file": "raw/surfing-golf-and-running.md",
+      "sha256": "b6445a4103ac00457c6bc9acf1950cecf3b88c544e393068077a24b1bc8cfa88",
+      "sections": 5,
+      "changed": false
+    }
+  ],
+  "dropped_bullets": [],
+  "dropped_topics": [],
+  "dropped_links": [],
+  "calls": [
+    {
+      "purpose": "plan src-interests",
+      "model": "gemma4:e2b",
+      "wall_seconds": 18.59,
+      "prompt_tokens": 949,
+      "output_tokens": 996,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.5,
+      "generation_seconds": 15.54
+    },
+    {
+      "purpose": "write 'Golf Habits'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 8.96,
+      "prompt_tokens": 709,
+      "output_tokens": 455,
+      "load_seconds": 0.02,
+      "prompt_eval_seconds": 0.31,
+      "generation_seconds": 6.51
+    },
+    {
+      "purpose": "write 'Ocean Surfing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 789.23,
+      "prompt_tokens": 724,
+      "output_tokens": 554,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.27,
+      "generation_seconds": 786.24
+    },
+    {
+      "purpose": "write 'Weekly Running'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.85,
+      "prompt_tokens": 742,
+      "output_tokens": 619,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.08,
+      "generation_seconds": 11.6
+    },
+    {
+      "purpose": "write 'Personal Life'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 7.28,
+      "prompt_tokens": 711,
+      "output_tokens": 435,
+      "load_seconds": 0.02,
+      "prompt_eval_seconds": 0.35,
+      "generation_seconds": 4.76
+    },
+    {
+      "purpose": "link 'Golf Habits'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 6.95,
+      "prompt_tokens": 809,
+      "output_tokens": 411,
+      "load_seconds": 0.0,
+      "prompt_eval_seconds": 0.34,
+      "generation_seconds": 4.5
+    },
+    {
+      "purpose": "link 'Ocean Surfing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 6.36,
+      "prompt_tokens": 814,
+      "output_tokens": 359,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.33,
+      "generation_seconds": 3.93
+    },
+    {
+      "purpose": "link 'Personal Life'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 7.49,
+      "prompt_tokens": 846,
+      "output_tokens": 458,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.29,
+      "generation_seconds": 5.11
+    },
+    {
+      "purpose": "link 'Weekly Running'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.25,
+      "prompt_tokens": 858,
+      "output_tokens": 796,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.34,
+      "generation_seconds": 8.78
+    }
+  ],
+  "skipped_reviewed": [
+    "Growing Up and Football",
+    "Haas MBA Education",
+    "Matt Wong Resume"
+  ],
+  "removed_pages": [],
+  "pages_before": 13,
+  "pages_after": 13,
+  "created": [],
+  "removed": [],
+  "updated": [
+    "Golf Habits",
+    "Ocean Surfing",
+    "Personal Life",
+    "Sports and Interests",
+    "Weekly Running"
+  ],
+  "seconds": 870.0,
+  "environment": {
+    "timestamp_utc": "2026-09-29T18:05:30+00:00",
+    "execution": "local",
+    "internet_reachable": false,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  }
+}

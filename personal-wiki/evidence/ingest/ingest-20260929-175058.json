@@ -1,0 +1,424 @@
+{
+  "sources": [
+    {
+      "id": "src-growing-up",
+      "file": "raw/growing-up-and-football.md",
+      "sha256": "b5c001c1021516ae82d0a837d62ff644d2c6249c00ae45d02f181e2b9dfba8cd",
+      "sections": 5,
+      "changed": false
+    },
+    {
+      "id": "src-resume",
+      "file": "raw/matt-wong-resume.md",
+      "sha256": "a4a062de03ad10d783b361081c0684d0c5e4c725f9638a3b80b537f4bbd90375",
+      "sections": 12,
+      "changed": false
+    },
+    {
+      "id": "src-interests",
+      "file": "raw/surfing-golf-and-running.md",
+      "sha256": "b6445a4103ac00457c6bc9acf1950cecf3b88c544e393068077a24b1bc8cfa88",
+      "sections": 5,
+      "changed": false
+    }
+  ],
+  "dropped_bullets": [
+    {
+      "note": "Growing Up and Football",
+      "text": "Growing Up in the Bay Area and Football",
+      "reason": "bullet is just the section heading"
+    },
+    {
+      "note": "Growing Up and Football",
+      "text": "Where I'm from",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Growing Up and Football",
+      "text": "Football",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Growing Up and Football",
+      "text": "After football",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Haas MBA Education",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Postmates Exit",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Venture Investing Experience",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Matt Wong Resume",
+      "text": "Citigroup Role",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Venture Investing Experience",
+      "text": "Venture Investing Experience",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Venture Investing Experience",
+      "text": "Venture Investing Experience",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Venture Investing Experience",
+      "text": "Venture Investing Experience",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Venture Investing Experience",
+      "text": "Marketplace Finance & Growth",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Venture Investing Experience",
+      "text": "Marketplace Finance & Growth",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Venture Investing Experience",
+      "text": "Marketplace Finance & Growth",
+      "reason": "fragment or too short"
+    }
+  ],
+  "dropped_topics": [
+    {
+      "source": "src-resume",
+      "proposed": "Venture Investing Experience",
+      "reason": "no bullet survived grounding checks"
+    }
+  ],
+  "dropped_links": [
+    {
+      "from": "Career Transition",
+      "to": "Career Transition",
+      "reason": "no note with that title"
+    }
+  ],
+  "calls": [
+    {
+      "purpose": "plan src-growing-up",
+      "model": "gemma4:e2b",
+      "wall_seconds": 51.86,
+      "prompt_tokens": 924,
+      "output_tokens": 869,
+      "load_seconds": 27.53,
+      "prompt_eval_seconds": 0.81,
+      "generation_seconds": 21.09
+    },
+    {
+      "purpose": "write 'High School Football'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 18.01,
+      "prompt_tokens": 792,
+      "output_tokens": 611,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.35,
+      "generation_seconds": 15.43
+    },
+    {
+      "purpose": "write 'Growing Up In Bay Area'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 23.34,
+      "prompt_tokens": 1164,
+      "output_tokens": 803,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.46,
+      "generation_seconds": 20.58
+    },
+    {
+      "purpose": "write 'Career Transition'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 16.83,
+      "prompt_tokens": 730,
+      "output_tokens": 583,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.31,
+      "generation_seconds": 14.26
+    },
+    {
+      "purpose": "plan src-resume",
+      "model": "gemma4:e2b",
+      "wall_seconds": 23.6,
+      "prompt_tokens": 1343,
+      "output_tokens": 898,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.62,
+      "generation_seconds": 20.68
+    },
+    {
+      "purpose": "write 'Haas MBA Education'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 17.52,
+      "prompt_tokens": 852,
+      "output_tokens": 629,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.34,
+      "generation_seconds": 14.95
+    },
+    {
+      "purpose": "write 'Venture Investing Experience'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 23.21,
+      "prompt_tokens": 1507,
+      "output_tokens": 787,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.66,
+      "generation_seconds": 20.23
+    },
+    {
+      "purpose": "write 'Postmates Exit'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 18.49,
+      "prompt_tokens": 1507,
+      "output_tokens": 626,
+      "load_seconds": 0.0,
+      "prompt_eval_seconds": 0.57,
+      "generation_seconds": 15.67
+    },
+    {
+      "purpose": "write 'Citigroup Role'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 849.6,
+      "prompt_tokens": 1507,
+      "output_tokens": 555,
+      "load_seconds": 0.11,
+      "prompt_eval_seconds": 0.91,
+      "generation_seconds": 265.31
+    },
+    {
+      "purpose": "plan src-interests",
+      "model": "gemma4:e2b",
+      "wall_seconds": 22.1,
+      "prompt_tokens": 956,
+      "output_tokens": 1054,
+      "load_seconds": 0.02,
+      "prompt_eval_seconds": 0.41,
+      "generation_seconds": 19.47
+    },
+    {
+      "purpose": "write 'Golf Habits'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 9.75,
+      "prompt_tokens": 709,
+      "output_tokens": 424,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.28,
+      "generation_seconds": 7.29
+    },
+    {
+      "purpose": "write 'Ocean Surfing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.74,
+      "prompt_tokens": 724,
+      "output_tokens": 539,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.35,
+      "generation_seconds": 9.25
+    },
+    {
+      "purpose": "write 'Weekly Running'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.93,
+      "prompt_tokens": 742,
+      "output_tokens": 631,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.32,
+      "generation_seconds": 11.44
+    },
+    {
+      "purpose": "write 'Personal Life'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.36,
+      "prompt_tokens": 711,
+      "output_tokens": 435,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.26,
+      "generation_seconds": 7.91
+    },
+    {
+      "purpose": "link 'Golf Habits'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 7.32,
+      "prompt_tokens": 811,
+      "output_tokens": 268,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.33,
+      "generation_seconds": 4.87
+    },
+    {
+      "purpose": "link 'Haas MBA Education'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.04,
+      "prompt_tokens": 790,
+      "output_tokens": 613,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.23,
+      "generation_seconds": 10.67
+    },
+    {
+      "purpose": "link 'High School Football'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.84,
+      "prompt_tokens": 791,
+      "output_tokens": 516,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.24,
+      "generation_seconds": 8.44
+    },
+    {
+      "purpose": "link 'Ocean Surfing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 9.49,
+      "prompt_tokens": 811,
+      "output_tokens": 429,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.22,
+      "generation_seconds": 7.13
+    },
+    {
+      "purpose": "link 'Personal Life'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.12,
+      "prompt_tokens": 848,
+      "output_tokens": 573,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.29,
+      "generation_seconds": 9.65
+    },
+    {
+      "purpose": "link 'Postmates Exit'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 8.81,
+      "prompt_tokens": 760,
+      "output_tokens": 366,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.19,
+      "generation_seconds": 6.45
+    },
+    {
+      "purpose": "link 'Weekly Running'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 13.13,
+      "prompt_tokens": 847,
+      "output_tokens": 635,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.25,
+      "generation_seconds": 10.75
+    },
+    {
+      "purpose": "link 'Growing Up In Bay Area'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.65,
+      "prompt_tokens": 786,
+      "output_tokens": 546,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.22,
+      "generation_seconds": 9.27
+    },
+    {
+      "purpose": "link 'Career Transition'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 14.14,
+      "prompt_tokens": 830,
+      "output_tokens": 682,
+      "load_seconds": 0.0,
+      "prompt_eval_seconds": 0.25,
+      "generation_seconds": 11.73
+    },
+    {
+      "purpose": "link 'Citigroup Role'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.77,
+      "prompt_tokens": 748,
+      "output_tokens": 536,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.21,
+      "generation_seconds": 9.38
+    }
+  ],
+  "skipped_reviewed": [
+    "Growing Up and Football",
+    "Haas MBA Education",
+    "Matt Wong Resume"
+  ],
+  "removed_pages": [
+    "Career Path",
+    "Venture Investing Experience"
+  ],
+  "pages_before": 12,
+  "pages_after": 13,
+  "created": [
+    "Career Transition",
+    "Citigroup Role",
+    "Growing Up In Bay Area"
+  ],
+  "removed": [
+    "Career Path",
+    "Venture Investing Experience"
+  ],
+  "updated": [
+    "Golf Habits",
+    "Growing Up and Football",
+    "Haas MBA Education",
+    "High School Football",
+    "Matt Wong Resume",
+    "Ocean Surfing",
+    "Personal Life",
+    "Postmates Exit",
+    "Sports and Interests",
+    "Weekly Running"
+  ],
+  "seconds": 1223.0,
+  "environment": {
+    "timestamp_utc": "2026-09-29T17:50:50+00:00",
+    "execution": "local",
+    "internet_reachable": false,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  }
+}

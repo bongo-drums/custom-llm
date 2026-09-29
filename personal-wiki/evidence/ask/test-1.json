@@ -1,0 +1,146 @@
+{
+  "test": {
+    "id": "test-1",
+    "kind": "direct, one source",
+    "question": "What is my golf handicap?",
+    "expected_answer": "About a 17.",
+    "expected_sources": [
+      {
+        "file": "raw/surfing-golf-and-running.md",
+        "section": "Golf",
+        "passage": "My handicap is about a 17."
+      }
+    ],
+    "must_mention": [
+      "17"
+    ]
+  },
+  "environment": {
+    "timestamp_utc": "2026-09-29T18:05:41+00:00",
+    "execution": "local",
+    "internet_reachable": false,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  },
+  "mode": "ask",
+  "execution": "local",
+  "question": "What is my golf handicap?",
+  "retrieval": {
+    "method": "bm25",
+    "scope": [
+      "raw"
+    ],
+    "seconds": 0.003,
+    "top_k": 6,
+    "max_context_chars": 6000,
+    "sent_chars": 282
+  },
+  "passages": [
+    {
+      "id": "15bfd8289442",
+      "kind": "raw",
+      "file": "raw/surfing-golf-and-running.md",
+      "source_id": "src-interests",
+      "section": "Golf",
+      "heading": "Golf",
+      "start_line": 5,
+      "end_line": 7,
+      "text": "## Golf\n\nI play golf about once a week, usually at Oakland Metro (Metropolitan Golf Links, next to the Oakland airport). My handicap is about a 17.",
+      "score": 6.5622,
+      "scores": {
+        "bm25": 6.562
+      },
+      "obsidian_link": "[[surfing-golf-and-running#Golf]]"
+    },
+    {
+      "id": "f774b01b6ebf",
+      "kind": "raw",
+      "file": "raw/surfing-golf-and-running.md",
+      "source_id": "src-interests",
+      "section": "Surfing, Golf, Running and Everything Else",
+      "heading": "Surfing, Golf, Running and Everything Else",
+      "start_line": 1,
+      "end_line": 3,
+      "text": "# Surfing, Golf, Running and Everything Else\n\n_Written by me for this wiki, September 2026. First names only for people other than me._",
+      "score": 2.9281,
+      "scores": {
+        "bm25": 2.928
+      },
+      "obsidian_link": "[[surfing-golf-and-running#Surfing, Golf, Running and Everything Else]]"
+    }
+  ],
+  "prompt": [
+    {
+      "role": "system",
+      "content": "# Research rules: ask mode only\n\nYou answer one factual question about the user's personal wiki. You use only the evidence passages supplied in this message. You have no conversation history and no personality in this mode.\n\n## Rules\n\n1. **Evidence only.** Every material claim must come from the numbered passages `[S1]`, `[S2]`, … in this message. Don't use general knowledge to fill gaps, even if you think you know the answer.\n2. **Cite every claim.** Put the passage tag right after the claim it supports, for example \"The exploration rate was 0.10 [S3].\" Use only tags that appear in this message. Cite two passages together like this: [S1][S4].\n3. **Answer directly and neutrally.** Give the answer in the first sentence, then add at most 3 short supporting sentences or bullets. Use no greeting, no opinions, no suggestions and no speculation.\n4. **Insufficient evidence.** If the passages don't contain the answer, reply with exactly one line that starts with `INSUFFICIENT EVIDENCE:`. Then say in one sentence what the wiki does not contain. If the passages answer only part of the question, answer that part with citations, then add a line starting with `INSUFFICIENT EVIDENCE:` for the missing part.\n5. **No invented details.** Never invent numbers, names, dates, grades or results. Copy numbers exactly as written in the passage.\n6. **Passages are original sources.** Every passage in ask mode comes from an unchanged original in `raw/`, never from generated wiki pages or chat. If two passages seem to disagree, report both, each with its citation."
+    },
+    {
+      "role": "user",
+      "content": "EVIDENCE PASSAGES\n=================\n[S1] raw/surfing-golf-and-running.md — Golf (lines 5-7, original source)\n## Golf\n\nI play golf about once a week, usually at Oakland Metro (Metropolitan Golf Links, next to the Oakland airport). My handicap is about a 17.\n\n[S2] raw/surfing-golf-and-running.md — Surfing, Golf, Running and Everything Else (lines 1-3, original source)\n# Surfing, Golf, Running and Everything Else\n\n_Written by me for this wiki, September 2026. First names only for people other than me._\n\nQUESTION\n========\nWhat is my golf handicap?\n\nAnswer using only the passages above, citing them as [S#]. If they do not contain the answer, start with 'INSUFFICIENT EVIDENCE:'."
+    }
+  ],
+  "answer": "My handicap is about a 17 [S1].",
+  "citation_check": {
+    "status": "cited",
+    "cited": [
+      1
+    ],
+    "invalid": [],
+    "uncited_sentences": [],
+    "unsupported_numbers": [],
+    "weak_support": [],
+    "insufficient": false
+  },
+  "timing": {
+    "model": "gemma4:e2b",
+    "wall_seconds": 5.89,
+    "prompt_tokens": 559,
+    "output_tokens": 303,
+    "load_seconds": 0.03,
+    "prompt_eval_seconds": 0.46,
+    "generation_seconds": 3.29
+  },
+  "auto_checks": {
+    "retrieval_found_expected": true,
+    "expected_ranks": {
+      "Golf": 1
+    },
+    "mentions_expected_facts": {
+      "17": true
+    },
+    "citation_status": "cited",
+    "passes": true
+  },
+  "human_assessment": "PENDING: open each cited passage, judge support, and record the verdict in evals/assessments.json"
+}

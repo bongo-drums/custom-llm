@@ -1,0 +1,183 @@
+{
+  "sources": [
+    {
+      "id": "src-interests",
+      "file": "raw/surfing-golf-and-running.md",
+      "sha256": "b6445a4103ac00457c6bc9acf1950cecf3b88c544e393068077a24b1bc8cfa88",
+      "sections": 5,
+      "changed": false
+    }
+  ],
+  "dropped_bullets": [
+    {
+      "note": "Sports and Interests",
+      "text": "Golf",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Sports and Interests",
+      "text": "Surfing",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Sports and Interests",
+      "text": "Running",
+      "reason": "fragment or too short"
+    },
+    {
+      "note": "Sports and Interests",
+      "text": "Personal Life",
+      "reason": "fragment or too short"
+    }
+  ],
+  "dropped_topics": [],
+  "dropped_links": [],
+  "calls": [
+    {
+      "purpose": "plan src-interests",
+      "model": "gemma4:e2b",
+      "wall_seconds": 18.99,
+      "prompt_tokens": 943,
+      "output_tokens": 958,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.45,
+      "generation_seconds": 15.96
+    },
+    {
+      "purpose": "write 'Golf Habits'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 9.63,
+      "prompt_tokens": 709,
+      "output_tokens": 460,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.18,
+      "generation_seconds": 7.28
+    },
+    {
+      "purpose": "write 'Ocean Surfing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.82,
+      "prompt_tokens": 724,
+      "output_tokens": 585,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.19,
+      "generation_seconds": 9.49
+    },
+    {
+      "purpose": "write 'Weekly Running'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 11.66,
+      "prompt_tokens": 742,
+      "output_tokens": 560,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.09,
+      "generation_seconds": 9.39
+    },
+    {
+      "purpose": "write 'Personal Life'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.4,
+      "prompt_tokens": 711,
+      "output_tokens": 484,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.28,
+      "generation_seconds": 7.97
+    },
+    {
+      "purpose": "link 'Golf Habits'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 7.16,
+      "prompt_tokens": 815,
+      "output_tokens": 308,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.3,
+      "generation_seconds": 4.73
+    },
+    {
+      "purpose": "link 'Ocean Surfing'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 9.23,
+      "prompt_tokens": 815,
+      "output_tokens": 409,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.32,
+      "generation_seconds": 6.8
+    },
+    {
+      "purpose": "link 'Personal Life'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 10.86,
+      "prompt_tokens": 852,
+      "output_tokens": 539,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.3,
+      "generation_seconds": 8.42
+    },
+    {
+      "purpose": "link 'Weekly Running'",
+      "model": "gemma4:e2b",
+      "wall_seconds": 12.59,
+      "prompt_tokens": 853,
+      "output_tokens": 632,
+      "load_seconds": 0.01,
+      "prompt_eval_seconds": 0.38,
+      "generation_seconds": 10.03
+    }
+  ],
+  "skipped_reviewed": [
+    "Growing Up and Football",
+    "Haas MBA Education",
+    "Matt Wong Resume"
+  ],
+  "removed_pages": [],
+  "pages_before": 12,
+  "pages_after": 12,
+  "created": [],
+  "removed": [],
+  "updated": [
+    "Golf Habits",
+    "Ocean Surfing",
+    "Personal Life",
+    "Sports and Interests",
+    "Weekly Running"
+  ],
+  "seconds": 102.4,
+  "environment": {
+    "timestamp_utc": "2026-09-26T22:48:51+00:00",
+    "execution": "local",
+    "internet_reachable": false,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  }
+}

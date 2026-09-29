@@ -1,0 +1,113 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260929103013
+Username: DESKTOP-7TCEVOE\Matt
+RunAs User: DESKTOP-7TCEVOE\Matt
+Configuration Name: 
+Machine: DESKTOP-7TCEVOE (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File scripts\offline_demo.ps1
+Process ID: 19788
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is evidence\offline\transcript-20260929-103013.txt
+
+==================== 0. Proof of offline ====================
+PS> Test-NetConnection 1.1.1.1 -Port 443 -InformationLevel Quiet
+WARNING: TCP connect to (1.1.1.1 : 443) failed
+False
+(exit , 0.7 s)
+
+==================== 0b. Device ====================
+PS> Get-CimInstance Win32_Processor | Select-Object Name; Get-CimInstance Win32_VideoController | Select-Object Name, AdapterRAM; '{0:N1} GB RAM' -f ((Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory/1GB)
+
+(exit , 1.2 s)
+
+==================== 1. Help ====================
+PS> wiki --help
+
+(exit 0, 0.7 s)
+
+==================== 2. Status (model, quantization, runtime) ====================
+PS> wiki status
+
+(exit 0, 8.6 s)
+
+==================== 3. Ingest all sources ====================
+PS> wiki ingest vault/raw
+
+(exit 0, 1,233.7 s)
+
+==================== 4. Re-ingest one source (must not create duplicates) ====================
+PS> wiki ingest vault/raw/surfing-golf-and-running.md
+
+(exit 0, 880.6 s)
+
+==================== 5. Wiki page list ====================
+PS> Get-ChildItem -Recurse vault/wiki -Filter *.md | Select-Object -ExpandProperty FullName
+Name
+----
+13th Gen Intel(R) Core(TM) i9-13900H
+Intel(R) Iris(R) Xe Graphics
+NVIDIA GeForce RTX 4060 Laptop GPU
+31.7 GB RAM
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Career\Career Transition.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Career\Citigroup Role.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Career\Haas MBA Education.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Career\Postmates Exit.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Interests\Golf Habits.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Interests\Ocean Surfing.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Interests\Weekly Running.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Life\Football Career.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Life\Growing Up In Bay Area.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Life\High School Football.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Life\Personal Life.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Overview\Growing Up and Football.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Overview\Matt Wong Resume.md
+C:\Users\Matt\custom-llm\personal-wiki\vault\wiki\Overview\Sports and Interests.md
+(exit 0, 0.0 s)
+
+==================== 6. Search (no model) ====================
+PS> wiki search 'backyard ultra 50 miles' --save
+
+(exit 0, 0.2 s)
+
+==================== 7. Retrieval check ====================
+PS> wiki eval --retrieval-only
+
+(exit 0, 0.1 s)
+
+==================== 8. Four ask-mode tests ====================
+PS> wiki eval
+
+(exit 0, 45.3 s)
+
+==================== 9. Status after (loaded memory) ====================
+PS> wiki status
+
+(exit 0, 8.4 s)
+
+==================== 10. Chat mode checks ====================
+PS> wiki chat --script evals/chat_script.txt
+
+(exit 0, 62.4 s)
+
+==================== 11. Ask after the chat claim (fresh process, must be insufficient) ====================
+PS> wiki ask 'Who was my head football coach at Moreau Catholic?'
+
+(exit 0, 17.1 s)
+
+==================== 12. Ollama memory ====================
+PS> ollama ps
+
+(exit 0, 0.3 s)
+**********************
+Windows PowerShell transcript end
+End time: 20260929110753
+**********************

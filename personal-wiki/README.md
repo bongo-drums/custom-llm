@@ -10,7 +10,7 @@ A command-line personal wiki about me: my resume, growing up in the Bay Area and
 
 Everything runs offline once the model is downloaded.
 
-> **Results in one paragraph.** Everything below ran on my laptop with Wi-Fi off on 29 September 2026 (`gemma4:e2b`, Q4_K_M, Ollama 0.34.3). Three of the four ask-mode tests passed with correct citations; test 3 is a documented failure (a cited, true, but wrong-period answer to a two-part question). The chat checks passed except one routing miss ("Where do I usually surf?" skipped the notes), which I fixed in the harness afterwards and re-ran. Every number in this README comes from a file in [`evidence/`](evidence/); nothing is typed in from memory.
+> **Results in one paragraph.** Everything below ran on my laptop with Wi-Fi off on 29 September 2026 (`gemma4:e2b`, Q4_K_M, Ollama 0.34.3). Three of the four ask-mode tests passed with correct citations; test 3 is a documented failure (a cited, true, but wrong-period answer to a two-part question). The chat checks passed except one routing miss ("Where do I usually surf?" skipped the notes), which I fixed in the harness afterwards and re-ran offline; the re-run passed. Every number in this README comes from a file in [`evidence/`](evidence/); nothing is typed in from memory.
 
 **Quick links:**
 
@@ -240,7 +240,7 @@ It also tells Gemma which note titles already exist so it reuses them. Once I se
 | Ingestion runs on the personal sources (online 26 Sep; offline 26 and 29 Sep) | [`evidence/ingest/`](evidence/ingest/) | ✅ |
 | Review of generated notes against the originals, with every correction | [`evidence/review-log.md`](evidence/review-log.md) | ✅ |
 | Four ask-mode evidence cards (offline, 29 Sep) | [`test-1`](evidence/ask/test-1.md) · [`test-2`](evidence/ask/test-2.md) · [`test-3`](evidence/ask/test-3.md) · [`test-4`](evidence/ask/test-4.md) | ✅ 3 pass, 1 fail |
-| Chat mode checks (offline, 29 Sep) and the re-run after the router fix | [`evidence/chat/chat-20260929-180635.md`](evidence/chat/chat-20260929-180635.md), `evidence/chat/chat-*-rerun.md` | ✅ / ⏳ re-run |
+| Chat mode checks (offline, 29 Sep) and the offline re-run after the router fix | [`chat-20260929-180635.md`](evidence/chat/chat-20260929-180635.md) (original, one failure), [`chat-20260929-183355.md`](evidence/chat/chat-20260929-183355.md) (re-run, all pass), [`chat-rerun log`](evidence/offline/chat-rerun-20260929-113344.txt) | ✅ |
 | Search check (no model) | [`evidence/search/search-backyard-ultra-50-miles.json`](evidence/search/search-backyard-ultra-50-miles.json) | ✅ |
 | Offline transcript and screenshot (Wi-Fi off in the taskbar) | [`evidence/offline/transcript-20260929-103013.txt`](evidence/offline/transcript-20260929-103013.txt), [`evidence/offline/wifi-off.png`](evidence/offline/wifi-off.png) | ✅ |
 | Obsidian screenshots: open note, index, graph (`path:wiki/`, attachments off) | [`note`](evidence/obsidian/note-weekly-running.png) · [`index`](evidence/obsidian/index.png) · [`graph`](evidence/obsidian/graph.png) | ✅ |
@@ -276,7 +276,7 @@ Script: [`evals/chat_script.txt`](evals/chat_script.txt). Each turn's transcript
 |---|---|---|---|
 | "what can we do?" / "what can you help me with?" | capabilities, no notes lookup, no refusal | Two bullet lists of real capabilities, `no notes lookup — question about the assistant's capabilities`, ends with a suggested starting point. | **PASS** |
 | "Draft a short training plan for my first 100-miler next year." then "make that shorter" | a shorter version of *that* plan | Three-phase plan labelled "Suggestion:"; the follow-up returned the same three phases in one line each, `no notes lookup — follow-up edit of the previous reply`. | **PASS** |
-| "Where do I usually surf?" | notes retrieved, reply cites [S#] | Router said `answerable from the conversation alone`; Scout replied "I don't have any information in Matt's wiki about where he usually surfs." The fact (Ocean Beach) is in the wiki. | **FAIL** (routing) → harness rule added, re-run ⏳ |
+| "Where do I usually surf?" | notes retrieved, reply cites [S#] | **First run:** router said `answerable from the conversation alone`; Scout replied "I don't have any information in Matt's wiki about where he usually surfs." The fact (Ocean Beach) is in the wiki. **Re-run offline after the harness fix** ([transcript](evidence/chat/chat-20260929-183355.md)): `harness rule: a question about Matt's own life always checks the notes` → "Matt usually surfs at Ocean Beach in San Francisco [S4]", citation check `cited`. | **FAIL → fixed, PASS on re-run** |
 | chat claim "my football coach at Moreau was Andrew Cotter", then `wiki ask` the coach question in a fresh process | `INSUFFICIENT EVIDENCE` | Scout: "Got it. Thanks for letting me know about Andrew Cotter." Fresh `wiki ask`: `INSUFFICIENT EVIDENCE`, 6 passages shown, none cited. | **PASS** |
 | `wiki search "backyard ultra 50 miles"` | passages and paths only, no model | Top passage `raw/surfing-golf-and-running.md:13-16` (Running), bm25, scope raw, no Ollama call. | **PASS** |
 
@@ -296,7 +296,7 @@ Screenshots in [`evidence/obsidian/`](evidence/obsidian/): [`Weekly Running` ope
 
 **Limitation 3, from the offline run: a cited answer to the wrong question (test 3).** Asked what I did at community college besides study, Gemma cited a true resume line about advising the college's Economics department, which is what I do there now, not as a student, while the football/student-athlete passage sat unused in its context. Every automatic check passed. Cause: a two-part question, a small model, and two passages that both mention "College of San Mateo". Improvement to try: ask Gemma to answer each part of a multi-part question separately with its own citation, and add a check that the cited passage's time period matches the question's ("did" vs "do"). I'd also add a second answerable two-source question so the eval has more than one data point on this.
 
-**Limitation 4, from the offline run: the chat router.** The 2B router decided "Where do I usually surf?" needed no lookup. Fixed by a harness rule (a question about the user's own life always checks the notes) and re-run; the original failing transcript is kept.
+**Limitation 4, from the offline run: the chat router.** The 2B router decided "Where do I usually surf?" needed no lookup. Fixed by a harness rule (a question about the user's own life always checks the notes) and re-run offline: the same script then answered from the notes with a citation. Both transcripts are kept. A smaller thing from the re-run: told the coach's name, Scout replied "I'll make a note that…", which it cannot do (saving is the user's explicit `/save`). Right behaviour, wrong wording; a persona line to tighten.
 
 **Limitation 5, seen three times: the same conflated sentence.** In three separate ingests Gemma merged "started playing football in the sixth grade" and "at Moreau Catholic through senior year" into one wrong sentence, even though the source keeps them a sentence apart. Each time the review caught it; `reviewed: true` is what stops it coming back. Details in [`evidence/review-log.md`](evidence/review-log.md).
 

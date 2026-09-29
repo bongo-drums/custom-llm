@@ -1,0 +1,180 @@
+{
+  "mode": "ask",
+  "execution": "local",
+  "question": "Who was my head football coach at Moreau Catholic?",
+  "retrieval": {
+    "method": "bm25",
+    "scope": [
+      "raw"
+    ],
+    "seconds": 0.003,
+    "top_k": 6,
+    "max_context_chars": 6000,
+    "sent_chars": 2464
+  },
+  "passages": [
+    {
+      "id": "54304af63762",
+      "kind": "raw",
+      "file": "raw/growing-up-and-football.md",
+      "source_id": "src-growing-up",
+      "section": "Football",
+      "heading": "Football",
+      "start_line": 15,
+      "end_line": 19,
+      "text": "## Football\n\nI started playing football in the sixth grade. At Moreau Catholic I played all the way through senior year, and I was team captain. My best friends from those years, Arthur and Tim, are still my best friends today.\n\nAfter high school I started at College of San Mateo, a community college, where I wanted to keep playing football. I realized pretty quickly that I needed to focus on my studies instead, and I made the call to put school first. That paid off: I transferred to UC Berkeley to study business, with the goal of getting into finance.",
+      "score": 6.0466,
+      "scores": {
+        "bm25": 6.047
+      },
+      "obsidian_link": "[[growing-up-and-football#Football]]"
+    },
+    {
+      "id": "9ac63d7ca070",
+      "kind": "raw",
+      "file": "raw/growing-up-and-football.md",
+      "source_id": "src-growing-up",
+      "section": "Where I'm from",
+      "heading": "Where I'm from",
+      "start_line": 5,
+      "end_line": 9,
+      "text": "## Where I'm from\n\nI was born in San Francisco, California. When I was four, my family moved to Hayward in the East Bay, and that's where I grew up. My family runs a restaurant, Kenta Ramen, and I've helped out there in one way or another since 2012.\n\nI went to Fremont Christian through the eighth grade. For high school I moved to Moreau Catholic in Hayward.",
+      "score": 4.7741,
+      "scores": {
+        "bm25": 4.774
+      },
+      "obsidian_link": "[[growing-up-and-football#Where I'm from]]"
+    },
+    {
+      "id": "d16cf88684a9",
+      "kind": "raw",
+      "file": "raw/matt-wong-resume.md",
+      "source_id": "src-resume",
+      "section": "Work Experience > Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California)",
+      "heading": "Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California)",
+      "start_line": 48,
+      "end_line": 55,
+      "text": "### Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California)\nSr. Strategic Finance Manager, Direct Report to Head of Finance, September 2020 – May 2023\n\n- Oversaw financial due diligence on two rounds of capital fundraising resulting in $160M+ raised\n  - Restructured customer profitability analyses with a new cost methodology resulting in 20% profitability improvement\n- Re-established improving user economics with Head of Marketing resulting in >100k new users with 30% greater profitability\n- Led \"Living Wage\" initiative advocating sustainable income resulting in 25% worker wage increases within top 10 markets\n- Managed $10M acquisition from initial screening to close that generated over $3M in incremental cash-flow",
+      "score": 3.4174,
+      "scores": {
+        "bm25": 3.417
+      },
+      "obsidian_link": "[[matt-wong-resume#Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California)]]"
+    },
+    {
+      "id": "4ce637731c0f",
+      "kind": "raw",
+      "file": "raw/growing-up-and-football.md",
+      "source_id": "src-growing-up",
+      "section": "Growing Up in the Bay Area and Football",
+      "heading": "Growing Up in the Bay Area and Football",
+      "start_line": 1,
+      "end_line": 3,
+      "text": "# Growing Up in the Bay Area and Football\n\n_Written by me for this wiki, September 2026. Friends are first names only because this repository is public._",
+      "score": 2.2822,
+      "scores": {
+        "bm25": 2.282
+      },
+      "obsidian_link": "[[growing-up-and-football#Growing Up in the Bay Area and Football]]"
+    },
+    {
+      "id": "504987b7adfe",
+      "kind": "raw",
+      "file": "raw/growing-up-and-football.md",
+      "source_id": "src-growing-up",
+      "section": "After football",
+      "heading": "After football",
+      "start_line": 21,
+      "end_line": 23,
+      "text": "## After football\n\nI started my career in investment banking, then moved into startups because I wanted to make an impact I could actually see. The details of that path, from Citigroup to Postmates, Wonolo, Gametime and venture capital, are in my resume.",
+      "score": 2.2691,
+      "scores": {
+        "bm25": 2.269
+      },
+      "obsidian_link": "[[growing-up-and-football#After football]]"
+    },
+    {
+      "id": "c248bf6622a6",
+      "kind": "raw",
+      "file": "raw/growing-up-and-football.md",
+      "source_id": "src-growing-up",
+      "section": "My parents",
+      "heading": "My parents",
+      "start_line": 11,
+      "end_line": 13,
+      "text": "## My parents\n\nMy parents were always supportive of whatever activities I wanted to be part of. They never pushed me into Chinese school, piano lessons, or any of the things people stereotypically expect of an Asian American kid. If I wanted to play football, I played football. That freedom to choose is a big part of why I ended up doing the things I do now.",
+      "score": 1.853,
+      "scores": {
+        "bm25": 1.853
+      },
+      "obsidian_link": "[[growing-up-and-football#My parents]]"
+    }
+  ],
+  "prompt": [
+    {
+      "role": "system",
+      "content": "# Research rules: ask mode only\n\nYou answer one factual question about the user's personal wiki. You use only the evidence passages supplied in this message. You have no conversation history and no personality in this mode.\n\n## Rules\n\n1. **Evidence only.** Every material claim must come from the numbered passages `[S1]`, `[S2]`, … in this message. Don't use general knowledge to fill gaps, even if you think you know the answer.\n2. **Cite every claim.** Put the passage tag right after the claim it supports, for example \"The exploration rate was 0.10 [S3].\" Use only tags that appear in this message. Cite two passages together like this: [S1][S4].\n3. **Answer directly and neutrally.** Give the answer in the first sentence, then add at most 3 short supporting sentences or bullets. Use no greeting, no opinions, no suggestions and no speculation.\n4. **Insufficient evidence.** If the passages don't contain the answer, reply with exactly one line that starts with `INSUFFICIENT EVIDENCE:`. Then say in one sentence what the wiki does not contain. If the passages answer only part of the question, answer that part with citations, then add a line starting with `INSUFFICIENT EVIDENCE:` for the missing part.\n5. **No invented details.** Never invent numbers, names, dates, grades or results. Copy numbers exactly as written in the passage.\n6. **Passages are original sources.** Every passage in ask mode comes from an unchanged original in `raw/`, never from generated wiki pages or chat. If two passages seem to disagree, report both, each with its citation."
+    },
+    {
+      "role": "user",
+      "content": "EVIDENCE PASSAGES\n=================\n[S1] raw/growing-up-and-football.md — Football (lines 15-19, original source)\n## Football\n\nI started playing football in the sixth grade. At Moreau Catholic I played all the way through senior year, and I was team captain. My best friends from those years, Arthur and Tim, are still my best friends today.\n\nAfter high school I started at College of San Mateo, a community college, where I wanted to keep playing football. I realized pretty quickly that I needed to focus on my studies instead, and I made the call to put school first. That paid off: I transferred to UC Berkeley to study business, with the goal of getting into finance.\n\n[S2] raw/growing-up-and-football.md — Where I'm from (lines 5-9, original source)\n## Where I'm from\n\nI was born in San Francisco, California. When I was four, my family moved to Hayward in the East Bay, and that's where I grew up. My family runs a restaurant, Kenta Ramen, and I've helped out there in one way or another since 2012.\n\nI went to Fremont Christian through the eighth grade. For high school I moved to Moreau Catholic in Hayward.\n\n[S3] raw/matt-wong-resume.md — Work Experience > Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California) (lines 48-55, original source)\n### Wonolo — Temporary Staffing Marketplace focused on front-line workers and laborers (San Francisco, California)\nSr. Strategic Finance Manager, Direct Report to Head of Finance, September 2020 – May 2023\n\n- Oversaw financial due diligence on two rounds of capital fundraising resulting in $160M+ raised\n  - Restructured customer profitability analyses with a new cost methodology resulting in 20% profitability improvement\n- Re-established improving user economics with Head of Marketing resulting in >100k new users with 30% greater profitability\n- Led \"Living Wage\" initiative advocating sustainable income resulting in 25% worker wage increases within top 10 markets\n- Managed $10M acquisition from initial screening to close that generated over $3M in incremental cash-flow\n\n[S4] raw/growing-up-and-football.md — Growing Up in the Bay Area and Football (lines 1-3, original source)\n# Growing Up in the Bay Area and Football\n\n_Written by me for this wiki, September 2026. Friends are first names only because this repository is public._\n\n[S5] raw/growing-up-and-football.md — After football (lines 21-23, original source)\n## After football\n\nI started my career in investment banking, then moved into startups because I wanted to make an impact I could actually see. The details of that path, from Citigroup to Postmates, Wonolo, Gametime and venture capital, are in my resume.\n\n[S6] raw/growing-up-and-football.md — My parents (lines 11-13, original source)\n## My parents\n\nMy parents were always supportive of whatever activities I wanted to be part of. They never pushed me into Chinese school, piano lessons, or any of the things people stereotypically expect of an Asian American kid. If I wanted to play football, I played football. That freedom to choose is a big part of why I ended up doing the things I do now.\n\nQUESTION\n========\nWho was my head football coach at Moreau Catholic?\n\nAnswer using only the passages above, citing them as [S#]. If they do not contain the answer, start with 'INSUFFICIENT EVIDENCE:'."
+    }
+  ],
+  "answer": "INSUFFICIENT EVIDENCE: The passages do not contain information about who the head football coach was at Moreau Catholic.",
+  "citation_check": {
+    "status": "insufficient",
+    "cited": [],
+    "invalid": [],
+    "uncited_sentences": [],
+    "unsupported_numbers": [],
+    "weak_support": [],
+    "insufficient": true
+  },
+  "timing": {
+    "model": "gemma4:e2b",
+    "wall_seconds": 6.5,
+    "prompt_tokens": 1188,
+    "output_tokens": 346,
+    "load_seconds": 0.01,
+    "prompt_eval_seconds": 0.57,
+    "generation_seconds": 3.79
+  },
+  "environment": {
+    "timestamp_utc": "2026-09-29T18:35:10+00:00",
+    "execution": "local",
+    "internet_reachable": false,
+    "model": {
+      "backend": "ollama (local)",
+      "host": "http://localhost:11434",
+      "model": "gemma4:e2b",
+      "runtime_version": "0.34.3",
+      "family": "gemma4",
+      "parameter_size": "5.1B",
+      "quantization": "Q4_K_M",
+      "format": "gguf",
+      "digest": "7fbdbf8f5e45a75bb122155ed546e765b4d9c53a1285f62fd9f506baa1c5a47e",
+      "file_size_gb": 7.16
+    },
+    "memory": [
+      {
+        "model": "gemma4:e2b",
+        "loaded_size_gb": 1.71,
+        "in_gpu_vram_gb": 1.71,
+        "context_length": 8192
+      }
+    ],
+    "config": {
+      "num_ctx": 8192,
+      "temperature": 0.2,
+      "seed": 42,
+      "retrieval": {
+        "method": "bm25",
+        "embedding_model": "embeddinggemma",
+        "top_k": 6,
+        "max_context_chars": 6000,
+        "chunk_chars": 1200,
+        "include_wiki_pages": true
+      }
+    }
+  }
+}
